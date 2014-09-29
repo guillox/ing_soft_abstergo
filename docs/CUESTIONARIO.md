@@ -1,4 +1,4 @@
-![Logo de la empresa](/path/to/img.jpg)
+![Abstergo](http://sopradoresdecartucho.files.wordpress.com/2012/01/abstergo_industries_by_vesferatu-d39vask.gif)
 # Cuestionario
 
 Proyecto: [Nombre del proyecto] <br/>
