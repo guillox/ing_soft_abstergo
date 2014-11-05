@@ -1,16 +1,16 @@
 class CategoriaController < ApplicationController
-  def index
-  end
-
   def new
   end
 
-  def destroy
+  def show
+  end
+
+  def index
   end
 
   def update
   end
 
-  def show
+  def destroy
   end
 end

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'categorias/new'
+
+  get 'categorias/show'
+
+  get 'categorias/index'
+
+  get 'categorias/update'
+
+  get 'categorias/destroy'
+
   get 'categoria/edit'
 
   get 'categoria/index'

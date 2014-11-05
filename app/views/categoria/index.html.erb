@@ -1,2 +1,10 @@
-<h1>Categoria#index</h1>
-<p>Find me in app/views/categoria/index.html.erb</p>
+<h1>Indice de Categorias</h1>
+
+<ul>
+<% categoria = Categoria.all%>
+<% categoria.each do |categoria| %>
+<li>
+	<%= categoria.nombre %>
+</li>
+<% end %>
+</ul>
