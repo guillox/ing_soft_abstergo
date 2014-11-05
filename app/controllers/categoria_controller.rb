@@ -12,5 +12,8 @@ class CategoriaController < ApplicationController
   end
 
   def destroy
+	@categoria = Categoria.find(params[:id])
+	@categoria.destroy
+	redirect_to categoria_index_path
   end
 end
