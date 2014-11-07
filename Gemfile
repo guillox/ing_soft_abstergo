@@ -18,6 +18,13 @@ group :development, :test do
  gem 'sqlite3'
 end
 
+# Use Bootstrap-sass for styles
+gem 'bootstrap-sass', '~> 3.3.0.1'
+
+# It is also recommended to use Autoprefixer with Bootstrap to add browser
+# vendor prefixes automatically
+gem 'autoprefixer-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
