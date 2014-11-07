@@ -3,24 +3,28 @@ class CategoriesController < ApplicationController
   end
 
   def new
-  	@categoria = Category.new
+  	@category = Category.new
   end
 
   def edit
   end
 
   def create
-  	@categoria = Category.new(params[:post])
-  	@categoria.save
+  	@category = Category.new(params[:category])    # Not the final implementation!
+    if @category.save
+      render 'index'
+    else
+      render 'new'
+    end
   end
 
   def destroy  	
-    getCategoria
-  	@categoria.destroy
+    get_categoria
+  	@category.destroy
   	redirect_to category_path
   end
 
-  def getCategoria
-    @categoria = Category.find(params[:id])
+  def get_categoria
+    @category = Category.find(params[:id])
   end
 end

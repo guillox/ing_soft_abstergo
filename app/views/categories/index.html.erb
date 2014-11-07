@@ -13,7 +13,7 @@
 		<% categoria.each do |categoria| %>
 			<tr>
 				<td class="cold-md-3"><%= categoria.nombre %></td>
-				<td class="cold-md-1"><%= link_to "Editar", categoria, method: :update, class: 'btn btn-info' %></button></td>
+				<td class="cold-md-1"><%= link_to "Editar", categoria, method: :update, class: 'btn btn-info'%></td>
 				<td class="cold-md-1"><%= link_to "Eliminar", categoria, method: :delete, data:{confirm:'¿Estás seguro?'}, class: 'btn btn-danger' %></td>
 			</tr>
 		<% end %>  
