@@ -1,0 +1,8 @@
+<h1>Editar Categorias</h1>
+<% categoria = Category.find(params[:id])%>
+
+<% form_tag("/edit", method: "update") do%>
+	<%= label_tag(:nombre, "Nombre de la categoria")%>
+	<%= text_field(:category, :nombre)%>
+	<%= submit_tag("Aceptar")%>
+<% end %>

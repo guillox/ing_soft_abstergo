@@ -1,0 +1,14 @@
+<h1>Categories#new</h1>
+
+<%= form_for @categoria do |f| %>
+		
+		<div class="row">
+			<div class="col-md-6">
+				<%= f.label :nombre %>
+  			<%= f.text_field :nombre, class: 'form-control', label: 'Nombre', placeholder: 'Nombre' %>
+  			</div>
+  		</div>
+
+  		<%= f.submit "Crear categoría", class: 'btn btn-primary' %>
+  	</div>
+<% end %>
