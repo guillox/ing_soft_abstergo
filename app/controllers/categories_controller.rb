@@ -21,7 +21,7 @@ class CategoriesController < ApplicationController
   def destroy  	
     get_categoria
   	@category.destroy
-  	redirect_to category_path
+  	redirect_to categories_path
   end
 
   def get_categoria
