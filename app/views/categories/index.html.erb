@@ -3,8 +3,8 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th class="col-md-3">Nombre</th>
-			<th class="col-md-1">Acción</th>
+			<th class="col-sm-10">Nombre</th>
+			<th class="col-sm-2">Acción</th>
 		</tr>
 	</thead>
 
@@ -12,11 +12,11 @@
 		<% categoria = Category.all %>
 		<% categoria.each do |categoria| %>
 			<tr>
-				<td class="cold-md-3"><%= categoria.nombre %></td>
+				<td><%= categoria.nombre %></td>
 
-				<td class="cold-md-1"><%= link_to "Editar", edit_category_path(categoria), class: 'btn btn-info' %></td>
+				<td><%= link_to "Editar", edit_category_path(categoria), class: 'btn btn-info' %></td>
 				
-				<td class="cold-md-1"><%= link_to "Eliminar", categoria, method: :delete, data:{confirm:'¿Estás seguro?'}, class: 'btn btn-danger' %></td>
+				<td><%= link_to "Eliminar", categoria, method: :delete, data:{confirm:'¿Estás seguro?'}, class: 'btn btn-danger' %></td>
 			</tr>
 		<% end %>  
 	</tbody>

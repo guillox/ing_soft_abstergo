@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-  	@category = Category.new(params[:category])    # Not the final implementation!
+  	@category = Category.new(category_params)
     if @category.save
       render 'index'
     else
@@ -27,4 +27,11 @@ class CategoriesController < ApplicationController
   def get_categoria
     @category = Category.find(params[:id])
   end
+###############################################################################
+  private
+
+  def category_params
+    params.require(:category).permit(:nombre)
+  end
+
 end
