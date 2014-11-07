@@ -14,7 +14,7 @@
 			<tr>
 				<td class="cold-md-3"><%= categoria.nombre %></td>
 				<td class="cold-md-1"><button type="button" class="btn btn-info">Editar</button></td>
-				<td class="cold-md-1"><%= link_to "Eliminar", categoria, method: :delete,class: 'btn btn-danger' %></td>
+				<td class="cold-md-1"><%= link_to "Eliminar", categoria, method: :delete, data:{confirm:'¿Estás seguro?'}, class: 'btn btn-danger' %></td>
 			</tr>
 		<% end %>  
 	</tbody>
