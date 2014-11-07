@@ -1,11 +1,21 @@
-<h1>Indice de Categorias</h1>
+<h1>Categorias</h1>
 
-<ul>
-<% categoria = Categoria.all%>
-<% categoria.each do |categoria| %>
-<li>
-	<%= categoria.nombre %>
-	<%= link_to "Eliminar", categoria, method: :delete,class: 'btn btn-danger btn-sm' %>
-</li>
-<% end %>
-</ul>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th class="col-md-3">Nombre</th>
+			<th class="col-md-1">Acción</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% categoria = Categoria.all%>
+		<% categoria.each do |categoria| %>
+			<tr>
+				<td class="cold-md-3"><%= categoria.nombre %></td>
+				<td class="cold-md-1"><button type="button" class="btn btn-info">Editar</button></td>
+				<td class="cold-md-1"><%= link_to "Eliminar", categoria, method: :delete,class: 'btn btn-danger' %></td>
+			</tr>
+		<% end %>  
+	</tbody>
+</table>
