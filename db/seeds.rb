@@ -15,8 +15,4 @@ Category.create(:nombre => 'SmartPhones')
 Category.create(:nombre => 'Autos')
 Category.create(:nombre => 'Ropa')
 Category.create(:nombre => 'Peliculas')
-<<<<<<< HEAD
 Category.create(:nombre => 'Smart TV')
-=======
-Category.create(:nombre => 'Smart TV')
->>>>>>> 5b85021f54719d20cbd2cb7a236394b727c1f668
