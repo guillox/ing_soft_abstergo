@@ -18,3 +18,6 @@
 	 "bootstrap/variables"  for the icon fonts to work */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ #navbar-brand { padding: 0px 15px; }
+ #navbar-form-control { width: 300px; }
