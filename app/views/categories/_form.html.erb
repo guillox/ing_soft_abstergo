@@ -1,3 +1,14 @@
+<% if @category.errors.any?  %>
+<div class="alert alert-danger" role="alert">
+<%= pluralize(@category.errors.count, "error") %>: La categoria no pudo ser guardada por:
+	<ul>
+	<% @category.errors.full_messages.each do |msg|%>
+		<li><%= msg %></li>
+	<% end %>
+	</ul>
+<% end %>
+</div>
+
 <%= form_for @category do |f| %>		
 	<div class="form-group">
 		<%= f.label :nombre %>
@@ -5,4 +16,5 @@
 	</div>
 
 	<%= f.submit "Guardar", class: 'btn btn-primary' %>
+	<%= link_to "Cancelar",categories_path, class: 'btn btn-danger' %>
 <% end %>
