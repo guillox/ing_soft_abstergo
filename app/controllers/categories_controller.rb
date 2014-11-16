@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :get_category, only: [:edit, :update, :destroy]
+  respond_to :html, :xml, :json
 
   def index
     @category = Category.all
@@ -14,7 +15,8 @@ class CategoriesController < ApplicationController
   	@category = Category.new(category_params)
 
     if @category.save
-      redirect_to categories_path
+      flash[:success] = "Categoria '#{@category.nombre}' creada con éxito."
+      respond_with(@category, location: categories_path)
     else
       render 'new'
     end
@@ -25,7 +27,9 @@ class CategoriesController < ApplicationController
 
   def update
     if @category.update(category_params)
-      redirect_to categories_path
+      #redirect_to categories_path
+      flash[:success] = "Categoría editada con éxito."
+      respond_with(@category, location: categories_path)
     else
       render 'edit'
      end
@@ -33,7 +37,9 @@ class CategoriesController < ApplicationController
 
   def destroy  	
   	@category.destroy
-  	redirect_to categories_path
+    #flash[:alert] = "Categoría '#{category.nombre}' eliminada con éxito."
+    flash[:alert] = "Categoría eliminada con éxito."
+    respond_with(@category, location: categories_path)
   end  
 ###############################################################################
   private
