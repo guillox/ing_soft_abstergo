@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# Utiliza NoamB/sorcery para manejar las sesiones de usuario
+# https://github.com/NoamB/sorcery
+gem 'sorcery'
+
 # Usamos Hirb para poder visualizar mejor las db
 gem 'hirb'
 # Usamos rspec para probar los modelos
