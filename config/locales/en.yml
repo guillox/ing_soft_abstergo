@@ -19,5 +19,14 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+# ADVERTENCIA: NO USAR TAB, SOLO LA BARRA ESPACIADORA, SINO EL PROGRAMA NO FUNCIONA
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        category:
+          attributes:
+            nombre:
+              blank: "No se puede crear una categoría vacía."
+              taken: "La categoría ingresada ya existe."
+              too_long: "La cantidad de caracteres máxima permitida es 30."
