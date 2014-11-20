@@ -1,6 +1,5 @@
-<h1>Editar Perfil</h1>
+<h1> Ayuda </h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>
