@@ -75,4 +75,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Solves 'missing host to link please provide host parameter or set default url option' problem
+  # config.action_mailer.default_url_options = { :host => "HEROKU_URL" }
 end
