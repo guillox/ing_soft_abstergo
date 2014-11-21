@@ -6,12 +6,17 @@ class UserSessionsController < ApplicationController
   end
 
   def create
-  	if @user = login(params[:username], params[:password], params[:remember_me])
-  		redirect_back_or_to(:users, notice: 'Login sucessful!')
-  	else
-  		flash.now[:alert] = 'Login failed'
-  		render action: 'new'
-    end
+		unless User.where(username: params[:username], activo:true).empty?
+			if @user = login(params[:username], params[:password], params[:remember_me])
+				redirect_back_or_to(:users, notice: 'Login sucessful!')
+			else
+				render action: 'new'
+				flash.keep[:alert] = 'Login failed'
+			end
+		else
+			render action: 'new'
+			flash.keep[:alert] = 'Usuario no activo, comuniquese con un administrador'
+		end
   end
 
   def destroy

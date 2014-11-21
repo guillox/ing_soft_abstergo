@@ -18,7 +18,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
+		@user.admin = false
+		@user.activo = true
     if @user.save
      redirect_to(:users, notice: 'User was succesfully created!')
     else
@@ -39,11 +40,14 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    @user.activo = false
+		@user.save
+		logout
+		redirect_to(:users, notice: 'User was succesfully deleted!')
+    # respond_to do |format|
+    #  format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+    #  format.json { head :no_content }
+    #end
   end
 
   private
