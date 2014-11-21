@@ -1,4 +1,14 @@
 Rails.application.routes.draw do  
+  get 'auctions/new'
+
+  get 'auctions/edit'
+
+  get 'auctions/delete'
+
+  get 'auctions/index'
+
+  get 'auctions/show'
+
   get 'password_resets/new'
 
   root :to => 'users#index'
