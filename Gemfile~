@@ -4,9 +4,6 @@ source 'https://rubygems.org'
 # https://github.com/NoamB/sorcery
 gem 'sorcery'
 
-#Gema para validar emails
-gem 'validates_email_format_of'
-
 # Usamos Hirb para poder visualizar mejor las db
 gem 'hirb'
 # Usamos rspec para probar los modelos
@@ -15,6 +12,9 @@ group :development, :test do
 end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
+
+
+gem 'addressable' , '2.3.6'
 
 # Usamos postgress por compatibilidad con heroku
 group :production do
@@ -52,6 +52,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
+
+#Validar la URL de la foto
+gem 'validate_url'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
