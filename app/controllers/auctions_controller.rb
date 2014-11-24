@@ -5,25 +5,16 @@ class AuctionsController < ApplicationController
   end
 
   def create
-<<<<<<< HEAD
    @auction = Auction.new(params[:auction_params])
     @auction.name = params[:auction][:name]
-	
 	 @auction.name = params[:auction][:name]
 	 @auction.description = params[:auction][:description]
 	 @auction.link = params[:auction][:link]
-=======
-   @auction = Auction.new(auction_params)
-	 @auction.name = params[:name]
-	 @auction.description = params[:description]
-	 @auction.link = params[:link]
+	 @auction.active = true
 	 @auction.owner = current_user.username
->>>>>>> e83676e0f9a698dc318e3d0188d44fe16588c053
 	 #auction.dayC = params[:dayC]
 	 #auction.monthC = params[:monthC]
 	 #@auction.category = params[:category]
-	 @auction.active = true
-	 @auction.user_id = 24
 	 if @auction.save
 		redirect_to(:auctions, notice: 'Auction was succesfully created!')
 	 else

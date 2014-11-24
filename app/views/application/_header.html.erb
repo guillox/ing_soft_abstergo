@@ -28,7 +28,7 @@
 			<li><%= link_to "Categorias", categories_path %></li>
     	  <% end %>
 	  <li><%= link_to "Nueva Subasta",  new_auction_path %></li>
-          <li><%= link_to "Editar perfil", edit_user_path(current_user.id) %></li>
+          <li><%= link_to "Editar perfil", edit_user_path(current_user) %></li>
           <li><%= link_to "Salir", :logout, method: :post %></li>
 	  
         <% else %>
