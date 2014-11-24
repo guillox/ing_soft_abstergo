@@ -1,4 +1,5 @@
 class Auction < ActiveRecord::Base
+	belongs_to :user
 
 	validates :name, presence: true
 	validates_format_of :name, :with => /\A((?:[-a-z0-9]+))\z/i, :message => "can only contain letters and numbers."

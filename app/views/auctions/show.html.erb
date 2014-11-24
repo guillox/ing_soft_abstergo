@@ -29,7 +29,7 @@
 		</tr>
 		<tbody>
 			<tr>
-	    		<td><%= current_user.name %></td>
+	    		<td><%= User.find(@auction.user_id).name %></td>
 	    		<td>Esta pagina esta en periodo de Prueba...</td>	
 			</tr>
 		</tbody>

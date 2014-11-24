@@ -13,7 +13,7 @@ class AuctionsController < ApplicationController
 	 #auction.monthC = params[:monthC]
 	 #@auction.category = params[:category]
 	 #@auctions.active = true
-	 #@auctions.owner = ...
+	 @auction.user_id = current_user.id
 	 if @auction.save
 		redirect_to(:auctions, notice: 'Auction was succesfully created!')
 	 else

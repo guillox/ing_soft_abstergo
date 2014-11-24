@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	has_many :auctions, dependent: :destroy
   authenticates_with_sorcery!
 	authenticates_with_sorcery!
 
