@@ -1,5 +1,5 @@
 <h1>Editar Subasta</h1>
-<% if ((current_user.id = @auction.owner) || (current_user.admin?))%>
+<% if current_user.id = @auction.owner %>
 	<p><%= render 'form' %></p>
 <% else %>
 	<div class="alert alert-danger" role="alert">ATENCIÓN: No tiene los permisos para acceder a esta pagina</div>

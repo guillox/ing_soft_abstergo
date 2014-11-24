@@ -30,7 +30,7 @@
 	  <li><%= link_to "Nueva Subasta",  new_auction_path %></li>
           <li><%= link_to "Editar perfil", edit_user_path(current_user.id) %></li>
           <li><%= link_to "Salir", :logout, method: :post %></li>
-	  
+	  <li><strong><%= current_user.username %></strong></li>
         <% else %>
           <li><%= link_to "Regístrate", new_user_path %></li>
           <li><%= link_to "Ingresa", :login %></li>

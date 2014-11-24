@@ -9,7 +9,7 @@ class AuctionsController < ApplicationController
 	 @auction.name = params[:name]
 	 @auction.description = params[:description]
 	 @auction.link = params[:link]
-	 @auction.owner = current_user.username
+	 @auction.owner = current_user
 	 #auction.dayC = params[:dayC]
 	 #auction.monthC = params[:monthC]
 	 #@auction.category = params[:category]
@@ -29,7 +29,7 @@ class AuctionsController < ApplicationController
 
   def update
     respond_to do |format|
-	    if ((@auction.owner == current_user.username) || (current_user.admin?)) 
+	    if ((@auction.owner == current_user) || (current_user.admin?)) 
 		if @auction.update(auction_params)
 		  format.html { redirect_to @auction, notice: 'Auction was successfully updated.' }
 		  format.json { render :auctions, status: :ok, location: @auction }
@@ -45,7 +45,7 @@ class AuctionsController < ApplicationController
   end
 
   def destroy
-	if ((@auction.owner == current_user.username) || (current_user.admin?))
+	if ((@auction.owner == current_user) || (current_user.admin?))
 		@auction.active = false
 		@auction.save
 		redirect_to(:auctions, notice: 'Auction was succesfully deleted!')
