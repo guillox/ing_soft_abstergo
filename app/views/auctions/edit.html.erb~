@@ -1,0 +1,2 @@
+<h1>Editar Subasta</h1>
+<p><%= render "form" %></p>

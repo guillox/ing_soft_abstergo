@@ -1,4 +1,6 @@
 <h1>Nueva Subasta</h1>
+
+<%= render 'tabs' %>
 <p><%= render "form" %></p>
 
 <%= link_to 'Back', auctions_path %>

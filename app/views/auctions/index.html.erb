@@ -1,9 +1,27 @@
 <h1>Listado de Subastas</h1>
 <%= render 'tabs' %>
-<% Auction.all.each do |a| %>
-  <tr>
-    	<td><strong>Nombre: </strong><%= a.name %></td>
-	<td><strong>Link: </strong><link><%= a.link %></link></td>
-	<td><strong>Descripcion: </strong><%= a.description %></td>
-  </tr>
-<% end %>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th class="col-sm-2">Nombre</th>
+			<th class="col-sm-4">Descripcion</th>
+			<th class="col-sm-3">Link</th>
+			<th class="col-sm-2">Acción</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% Auction.all.each do |a| %>
+			<tr>
+				<td><%= a.name %></td>
+				<td><%= a.description %></td>
+				<td><link><%= a.link %></link></td>
+				<td>
+				<%= link_to "Editar", edit_auction_path(a), class: 'btn btn-info' %>
+				<%= link_to "Eliminar", a, method: :delete, data:{confirm:"¿Está seguro?"}, class: 'btn btn-danger' %>
+				</td>
+			</tr>
+		<% end %>  
+	</tbody>
+</table>

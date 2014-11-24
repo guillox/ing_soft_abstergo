@@ -23,9 +23,13 @@
       <ul class="nav navbar-nav navbar-right">
 	<li><%= link_to "Subastas",  auctions_path %></li>        
 	<% if current_user %>
+	  <% if current_user.admin? %>
+		<li><%= link_to "Usuarios", users_path %></li>
+		<li><%= link_to "Categorias", categories_path %></li>
+          <% end %>
 	  <li><%= link_to "Nueva Subasta",  new_auction_path %></li>
           <li><%= link_to "Editar perfil", edit_user_path(current_user.id) %></li>
-          <li><%= link_to "Salir", :logout, method: :post %></li>
+          <li><%= link_to "Salir", :logout, method: :post %></li> 
         <% else %>
           <li><%= link_to "Regístrate", new_user_path %></li>
           <li><%= link_to "Ingresa", :login %></li>
