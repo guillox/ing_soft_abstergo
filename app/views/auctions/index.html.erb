@@ -23,10 +23,10 @@
 					<td>
 					<%= link_to 'Ofertar', edit_auction_path(a), class: 'btn btn-success' %>
 					<%= link_to 'Ver', auction_path(a), class: 'btn btn-warning'%>
-					<% if current_user.admin? %>				
+					<% if current_user.admin? || a.user_id == current_user.id %>				
 						<%= link_to "Eliminar", a, method: :delete, data:{confirm:"¿Está seguro?"}, class: 'btn btn-danger' %>
-					<% end %>
-					<%= link_to 'Editar', edit_auction_path(a), class: 'btn btn-info' %>				
+						<%= link_to 'Editar', edit_auction_path(a), class: 'btn btn-info' %>				
+					<% end %>					
 					</td>
 				</tr>
 			<% end %>
