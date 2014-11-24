@@ -1,4 +1,0 @@
-<ul class="nav nav-tabs">
-	<li class="<%= 'active' if current_page?(:controller => 'auctions', :action => 'index') %>"><%= link_to "Ver todas", auctions_path %></li>
-	<li class="<%= 'active' if current_page?(:controller => 'auctions', :action => 'new') %>"><%= link_to "Crear Subasta", new_auction_path %></li>
-</ul>

@@ -12,7 +12,7 @@ class AuctionsController < ApplicationController
 	 #auction.dayC = params[:dayC]
 	 #auction.monthC = params[:monthC]
 	 #@auction.category = params[:category]
-	 #@auctions.active = true
+	 @auction.active = true
 	 @auction.user_id = current_user.id
 	 if @auction.save
 		redirect_to(:auctions, notice: 'Auction was succesfully created!')
@@ -44,9 +44,9 @@ class AuctionsController < ApplicationController
 
   def destroy
 	#if ((@auction.owner = current_user) | ((@auction.monthC = Time.month)&(@auction.dayC + 60 = Time.day)))
-	#@auctions.active = false
-		@auctions.save
-		redirect_to(:auctionss, notice: 'Auction was succesfully deleted!')
+		@auction.active = false
+		@auction.save
+		redirect_to(:auctions, notice: 'Auction was succesfully deleted!')
   end
 
   def index
