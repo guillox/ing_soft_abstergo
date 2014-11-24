@@ -1,8 +1,7 @@
-
 <%= form_for(@auction) do |f| %>
   <% if @auction.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@auction.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(@auction.errors.count, "error") %> prohibited this auction from being saved:</h2>
 
       <ul>
       <% @auction.errors.full_messages.each do |message| %>
@@ -26,7 +25,12 @@
   </div>
   <div class="field">
     <%= f.label :Categoria %><br>
-    <select><option> LISTA DE CATEGORIAS </option><select>
+	 <select>
+	    <% Category.all.each do |categ| %>
+	    	<option><% categ.nombre %></option> <%#REVISAR: deberia decir todas las categorias, para seleccionar una%>
+		<%#AGREGAR CAMPO CATEGORIA EN EL MODELO auction%>
+  	    <% end %>
+	 </select>
   </div>
   <div class="actions">
     <%= f.submit %>

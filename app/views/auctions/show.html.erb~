@@ -1,8 +1,6 @@
 <h1>Mostrar Subasta</h1>
-
-  <tr>
-    	<td><h2><%= @auction.name %></h2></td>
-			<td><%= @auction.link %></td>
-			<td><%= @auction.description %></td>
-	</tr>
+<tr>
+    <td><%= params[:name], @auction %></td>
+			
+</tr>
 

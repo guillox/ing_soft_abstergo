@@ -1,6 +1,5 @@
 <h1>Editar Perfil</h1>
 
 <%= render 'form' %>
-<%= link_to 'Cerrar Cuenta', @user, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'Show', @user %> |
+<%= link_to 'Delete Account', @user, method: :delete, data: { confirm: '¿Estas Seguro?' } %> |
 <%= link_to 'Back', auctions_path %>

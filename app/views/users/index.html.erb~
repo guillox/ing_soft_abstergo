@@ -26,7 +26,7 @@
 		  </tbody>
 		</table>
 	</td>
-	<td><h2>Listado de Usuarios In-Activos</h2>
+	<td><h2>Listado de Usuarios Inactivos</h2>
 		<table class="table table-striped">
 			<thead>
 				<tr>
@@ -42,7 +42,7 @@
 					<td><%= user.email %></td>
 			       		<td>
 					<%= link_to 'Ver Cuenta', user , class: 'btn btn-primary'%>
-					<%= link_to 'Re-Activar Cuenta', users_path, method: :reActivate, data: { confirm: '¿Estas Seguro?' } , class: 'btn btn-danger' %>
+					<%= link_to 'Re-Activar Cuenta', user, method: :reactive, data: { confirm: '¿Estas Seguro?' } , class: 'btn btn-danger' %>
 					</td>
 				</tr>
 		    	<% end %>
@@ -52,5 +52,5 @@
 	</td>
 	</tr>
 <% else %>
-	<13 style="color:red">ATENCIÓN: No tiene los permisos para acceder a esta pagina</h1>
+	<div class="alert alert-danger" role="alert">ATENCIÓN: No tiene los permisos para acceder a esta pagina</div>
 <% end %>

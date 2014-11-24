@@ -1,8 +1,9 @@
 <h1>Mostrar Subasta</h1>
+<tr>
+    <td><strong>Nombre: </strong><%= @auction.name %></td>
+    <td><strong>Descripcion: </strong><%= @auction.description %></td>
+    <td><strong>Link: </strong><%= @auction.link %></td>	
+</tr>
 
-  <tr>
-    	<td><h2><%= @auction.name %></h2></td>
-			<td><%= @auction.link %></td>
-			<td><%= @auction.description %></td>
-	</tr>
-
+<%= link_to 'Edit', edit_auction_path(@user) %> |
+<%= link_to 'Back', auction_path %>
