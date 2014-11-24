@@ -1,4 +1,5 @@
-<%= form_for(@auction) do |auc| %>
+<%= form_for :auction, url: auctions_path do |auc| %>
+
   <% if @auction.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@auction.errors.count, "error") %> prohibited this auction from being saved:</h2>

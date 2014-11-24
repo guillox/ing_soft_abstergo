@@ -5,10 +5,12 @@ class AuctionsController < ApplicationController
   end
 
   def create
-   @auction = Auction.new(auction_params)
-	 @auction.name = params[:name]
-	 @auction.description = params[:description]
-	 @auction.link = params[:link]
+   @auction = Auction.new(params[:auction_params])
+    @auction.name = params[:auction][:name]
+	
+	 @auction.name = params[:auction][:name]
+	 @auction.description = params[:auction][:description]
+	 @auction.link = params[:auction][:link]
 	 #auction.dayC = params[:dayC]
 	 #auction.monthC = params[:monthC]
 	 #@auction.category = params[:category]
@@ -17,7 +19,7 @@ class AuctionsController < ApplicationController
 	 if @auction.save
 		redirect_to(:auctions, notice: 'Auction was succesfully created!')
 	 else
-		render :new	
+		render action: 'new'	
 	 end
   end
   
@@ -62,7 +64,8 @@ private
       @auction = Auction.find(params[:id])
     end  
 
+
   def auction_params
-    params.require(:auction).permit(:name, :description, :link)
+    params.require(:auction).permit(:name, :description, :link, :categ.nombre)
   end
 end

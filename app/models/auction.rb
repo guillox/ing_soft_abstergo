@@ -4,8 +4,7 @@ class Auction < ActiveRecord::Base
 	validates :name, presence: true
 	validates_format_of :name, :with => /\A((?:[-a-z0-9]+))\z/i, :message => "can only contain letters and numbers."
 	validates :description, presence: true
-	validates :description, length: { minimum: 15 }, on: :create
-	validates :description, length: { maximum: 150 }, on: :create	
+	validates :description, length: {in: 15..150 , message: "debe tener entre 15 y 150 caracteres" }	
 	validates_format_of :description, :with => /./
 	validates :link, url: true
 
