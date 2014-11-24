@@ -1,9 +1,60 @@
 <h1>Mostrar Subasta</h1>
-<tr>
-    <td><strong>Nombre: </strong><%= @auction.name %></td>
-    <td><strong>Descripcion: </strong><%= @auction.description %></td>
-    <td><strong>Link: </strong><%= @auction.link %></td>	
-</tr>
 
-<%= link_to 'Edit', edit_auction_path(@user) %> |
-<%= link_to 'Back', auction_path %>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th class="col-sm-2">Nombre</th>
+			<th class="col-sm-2">Descripcion</th>
+			<th class="col-sm-3">Categoria</th>
+			<th class="col-sm-4">Link</th>
+		</tr>
+	
+
+		<tbody>
+			<tr>
+	    		<td><%= @auction.name %></td>
+	    		<td><%= @auction.description %></td>
+			<td>CATEGORIA</td>	
+	    		<td><%= @auction.link %></td>	
+			</tr>
+		</tbody>
+	</thead>
+</table>
+
+<table>
+	<thead>
+		<tr>
+			<th class="col-sm-4">Nombre del Usuario</th>
+			<th class="col-sm-7">Comentario</th>
+		</tr>
+		<tbody>
+			<tr>
+	    		<td><%= current_user.name %></td>
+	    		<td>Esta pagina esta en periodo de Prueba...</td>	
+			</tr>
+		</tbody>
+	</thead>
+</table>
+
+<table class="table table-striped">
+	<thead>
+		<td></td>
+		<tr>
+			<th class="col-sm-11">Ingrese un comentario o Consulta</th>
+		</tr>
+		<tbody>
+			<form action= method="post" enctype="text/plain"><table align="center">
+				<tr><td width="50%" alignn="left"><textarea name="Comentarios" cols="60" rows="7"></textarea></td></tr>
+				<tr><td width="50%" align="right"><input type="submit" value="Enviar"></td>
+				<td width="50%" align="left"><input type="reset" value="Borrar"></td></tr>
+			</form>
+		</tbody>
+	</thead>
+</table>
+
+
+		
+
+
+
+<%= link_to 'Back', auctions_path %>

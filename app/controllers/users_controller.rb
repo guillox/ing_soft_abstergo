@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :reactive]
   before_filter :require_login, only: [:index]
 
   def index
@@ -53,9 +53,9 @@ class UsersController < ApplicationController
   end
 
   def reactive
-	@user.activo = true
-    		@user.save
-		redirect_to(:users, notice: 'User was succesfully Re-Activated')
+    @user.activo = true
+    @user.save
+    redirect_to(:users, notice: 'User was succesfully re-activated!')
   end
 
   private
