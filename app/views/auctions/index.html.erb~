@@ -29,8 +29,7 @@
 					<%= link_to 'Ver', auction_path(a), class: 'btn btn-warning'%>
 					<% if ((current_user.username == a.owner) || (current_user.admin?)) %>				
 						<%= link_to "Eliminar", a, method: :delete, data:{confirm:"¿Está seguro?"}, class: 'btn btn-danger' %>
-						<%= link_to 'Editar', edit_auction_path(a), class: 'btn btn-info' %>
-						<%= link_to 'Elegir Ganador', :auctions , class: 'btn btn-success' %>				
+						<%= link_to 'Editar', edit_auction_path(a), class: 'btn btn-info' %>				
 					<% end %>					
 					</td>
 				</tr>
