@@ -26,11 +26,11 @@
   </div>
 
   <div class="field">
-	<%= auc.label :Categoria %><br><select>
+	<%= auc.label :Categoria %><br><%@auction.category =<p><select>
    	 <% for category in Category.all %><ul><option>
         	<li><strong><%= category.nombre %></strong></li>
 		</option></ul>
-	 <%end%></select>
+	 <%end%></select></p> %>
 	</br>
   </div>
  
