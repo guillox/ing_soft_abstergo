@@ -13,7 +13,7 @@ class AuctionsController < ApplicationController
 	 @auction.category = params[:auction][:category]
 	 @auction.active = true
 	 @auction.owner = current_user.username
-	 @auction.user_id = current_user
+	 @auction.user_id = current_user #campo obsoleto, eliminar
 	 #auction.dayC = params[:dayC]
 	 #auction.monthC = params[:monthC]
 	 if @auction.save

@@ -10,12 +10,12 @@ class AuctionsController < ApplicationController
 	 @auction.name = params[:auction][:name]
 	 @auction.description = params[:auction][:description]
 	 @auction.link = params[:auction][:link]
+	 @auction.category = params[:auction][:category]
 	 @auction.active = true
 	 @auction.owner = current_user.username
-	 @auction.user_id = current_user
+	 @auction.user_id = current_user #campo obsoleto, eliminar
 	 #auction.dayC = params[:dayC]
 	 #auction.monthC = params[:monthC]
-	 #@auction.category = params[:category]
 	 if @auction.save
 		redirect_to(:auctions, notice: 'Auction was succesfully created!')
 	 else
