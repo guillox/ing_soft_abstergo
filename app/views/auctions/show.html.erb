@@ -1,0 +1,26 @@
+<h1>Mostrar Subasta</h1>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th class="col-sm-2">Nombre</th>
+			<th class="col-sm-2">Descripcion</th>
+			<th class="col-sm-2">Categoria</th>
+			<th class="col-sm-1">Creador</th>
+			<th class="col-sm-4">Link</th>
+		</tr>
+	
+
+		<tbody>
+			<tr>
+	    		<td><%= @auction.name %></td>
+	    		<td><%= @auction.description %></td>
+			<td>CATEGORIA</td>
+			<td><%= @auction.owner %></td>	
+	    		<td><%= @auction.link %></td>	
+			</tr>
+		</tbody>
+	</thead>
+</table>
+
+<%= link_to 'Back', auctions_path %>
