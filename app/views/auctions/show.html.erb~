@@ -23,8 +23,9 @@
 	</thead>
 </table>
 
-<!--
-    <table>
+<<<<<<< HEAD
+=======
+<table>
 	<thead>
 		<tr>
 			<th class="col-sm-4">Nombre del Usuario</th>
@@ -55,9 +56,10 @@
 	</thead>
 </table>
 
--->
+
 		
 
 
 
+>>>>>>> aa2e427d3cadd1cba61c18bcb9f6ca53f141b9bb
 <%= link_to 'Back', auctions_path %>

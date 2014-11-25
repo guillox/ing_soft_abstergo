@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% if ((current_user == @user) || (current_user.admin?))%>
 	<%= form_for(@user) do |f| %>
 	  <% if @user.errors.any? %>
@@ -34,6 +35,44 @@
 	    <%= f.label :email_confirmation %><br>
 	    <%= f.text_field :email_confirmation %>
 	  </div>
+=======
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <% unless current_user %>
+	  <div class="field">
+	    <%= f.label :username %><br>
+	    <%= f.text_field :username %>
+	  </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :email_confirmation %><br>
+    <%= f.text_field :email_confirmation %>
+  </div>
+  <% if(not(current_user)) %>
+>>>>>>> aa2e427d3cadd1cba61c18bcb9f6ca53f141b9bb
 	  <div class="field">
 	    <%= f.label :password %><br>
 	    <%= f.password_field :password %>
@@ -42,8 +81,37 @@
 	    <%= f.label :password_confirmation %><br>
 	    <%= f.password_field :password_confirmation %>
 	  </div>
+<<<<<<< HEAD
 	  <div class="actions">
 	    <%= f.submit %>
 	  </div>
 	<% end %>
 <%end%>
+=======
+  <% else %>
+	<div class="field">
+	    <%= f.label :password %><br>
+	    <%= f.password_field :password %>
+	    <% if (@user.password == f)%>
+		<div class="field">
+		   <%= f.label :New_password %><br>
+		   <%= f.password_field :password %>
+		 </div>
+		 <div class="field">
+		   <%= f.label :New_password_confirmation %><br>
+		   <%= f.password_field :password_confirmation %>
+		 </div>
+	    <% end %>
+	  </div>
+	
+  <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+
+
+
+>>>>>>> aa2e427d3cadd1cba61c18bcb9f6ca53f141b9bb

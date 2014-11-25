@@ -23,6 +23,7 @@
 					<td><link><%= a.link %></link></td>
 					<td><link><%= a.owner %></link></td>
 					<td>
+<<<<<<< HEAD
 					<% if current_user%>					
 						<% unless (a.owner == current_user.username) %>
 							<%= link_to 'Ofertar', :auctions , class: 'btn btn-success' %>
@@ -37,6 +38,18 @@
 						<% if (current_user.username == a.owner) %>
 							<%= link_to 'Elegir Ganador', :auctions , class: 'btn btn-success' %>				
 						<% end %>
+=======
+					<% unless (a.owner == current_user.username) %>
+						<%= link_to 'Ofertar', :auctions , class: 'btn btn-success' %>
+					<% end %>
+					<%= link_to 'Ver', auction_path(a), class: 'btn btn-warning'%>
+					<% if ((current_user.username == a.owner) || (current_user.admin?)) %>				
+						<%= link_to "Eliminar", a, method: :delete, data:{confirm:"¿Está seguro?"}, class: 'btn btn-danger' %>
+						<%= link_to 'Editar', update_auction_path(a), class: 'btn btn-info' %>
+					<% end %>
+					<% if (current_user.username == a.owner) %>
+						<%= link_to 'Elegir Ganador', :auctions , class: 'btn btn-success' %>				
+>>>>>>> aa2e427d3cadd1cba61c18bcb9f6ca53f141b9bb
 					<% end %>					
 					</td>
 				</tr>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% if current_user %>
 	 <% if current_user.admin? %>
 	<h1>Categorias</h1>
@@ -31,3 +32,34 @@
 <% else %>
 	<div class="alert alert-danger" role="alert">ATENCIÓN: No tiene los permisos para acceder a esta pagina</div>
 <% end %>
+=======
+ <% if current_user.admin? %>
+<h1>Categorias</h1>
+
+<%= render 'tabs' %>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th class="col-sm-9">Nombre</th>
+			<th class="col-sm-2">Acción</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @category.each do |category| %>
+			<tr>
+				<td><%= category.nombre %></td>
+				<td>
+					<%= link_to "Editar", edit_category_path(category), class: 'btn btn-info' %>					
+
+				  <%= link_to "Eliminar", category, method: :delete, data:{confirm:"¿Está seguro que desea borrar la categoria seleccionada?"}, class: 'btn btn-danger' %>
+				</td>
+			</tr>
+		<% end %>  
+	</tbody>
+</table>
+ <% else %>
+	<div class="alert alert-danger" role="alert">ATENCIÓN: No tiene los permisos para acceder a esta pagina</div>
+ <% end %>
+>>>>>>> aa2e427d3cadd1cba61c18bcb9f6ca53f141b9bb

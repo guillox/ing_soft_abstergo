@@ -2169,3 +2169,49 @@ Processing by AuctionsController#show as HTML
   Rendered auctions/show.html.erb within layouts/application (0.4ms)
   Rendered application/_header.html.erb (0.5ms)
 Completed 200 OK in 200ms (Views: 198.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/auctions/34" for 127.0.0.1 at 2014-11-25 18:37:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/home/xsailoc/ProyecyoIS/app/controllers/application_controller.rb:6: syntax error, unexpected <<, expecting keyword_end
+<<<<<<< HEAD
+  ^
+/home/xsailoc/ProyecyoIS/app/controllers/application_controller.rb:10: syntax error, unexpected >>, expecting keyword_end
+>>>>>>> aa2e427d3cadd1cba61c18bcb9f6ca53f141b9bb
+  ^):
+  app/controllers/application_controller.rb:6: syntax error, unexpected <<, expecting keyword_end
+  app/controllers/application_controller.rb:10: syntax error, unexpected >>, expecting keyword_end
+  app/controllers/auctions_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.5ms)
+
+
+Started GET "/auctions/34" for 127.0.0.1 at 2014-11-25 18:37:56 -0300
+Processing by AuctionsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mAuction Load (0.3ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 34]]
+  Rendered auctions/show.html.erb within layouts/application (19.5ms)
+Completed 500 Internal Server Error in 36ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/views/auctions/show.html.erb:36:in `_app_views_auctions_show_html_erb___102239867__575247358'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.1ms)
+
+
+Started GET "/auctions/34" for 127.0.0.1 at 2014-11-25 18:38:33 -0300
+Processing by AuctionsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mAuction Load (0.1ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 34]]
+  Rendered auctions/show.html.erb within layouts/application (0.8ms)
+  Rendered application/_header.html.erb (7.9ms)
+Completed 200 OK in 353ms (Views: 352.1ms | ActiveRecord: 0.1ms)

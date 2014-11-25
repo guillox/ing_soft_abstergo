@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% if current_user %>
 	 <% if current_user.admin? %>
 		<ul class="nav nav-tabs">
@@ -6,3 +7,9 @@
 		</ul>
 	<%end%>
 <%end%>
+=======
+<ul class="nav nav-tabs">
+	<li class="<%= 'active' if current_page?(:controller => 'categories', :action => 'index') %>"><%= link_to "Ver todas", categories_path %></li>
+	<li class="<%= 'active' if current_page?(:controller => 'categories', :action => 'new') %>"><%= link_to "Crear categoría", new_category_path %></li>
+</ul>
+>>>>>>> aa2e427d3cadd1cba61c18bcb9f6ca53f141b9bb
