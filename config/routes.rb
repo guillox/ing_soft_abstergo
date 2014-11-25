@@ -2,12 +2,12 @@ Rails.application.routes.draw do
 
 	resources :auctions
 
-  get 'password_resets/new'
+  # get 'password_resets/new'
+  resources :password_resets
 
-  root :to => 'auctions#index'
+  root :to => 'user_sessions#new'
   resources :user_sessions
   resources :users
-  resources :password_resets
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout

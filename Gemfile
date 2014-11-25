@@ -9,6 +9,8 @@ gem 'hirb'
 # Usamos rspec para probar los modelos
 group :development, :test do
 	gem 'rspec-rails','~> 3.0.0'
+	gem 'letter_opener'
+	gem 'quiet_assets'
 end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'

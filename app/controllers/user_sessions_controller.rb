@@ -6,9 +6,9 @@ class UserSessionsController < ApplicationController
   end
 
   def create
-		unless User.where(username: params[:username], activo:true).empty?
+		unless User.where(username: params[:username], activo: true).empty?
 			if @user = login(params[:username], params[:password], params[:remember_me])
-				redirect_to(:auctions, notice: 'Login sucessful!')
+				redirect_to(auctions_path, notice: 'Login sucessful!')
 			else
 				render action: 'new'
 				flash.keep[:alert] = 'Login failed'

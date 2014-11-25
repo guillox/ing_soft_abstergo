@@ -37,4 +37,6 @@ Rails.application.configure do
 
   # Solves 'missing host to link please provide host parameter or set default url option' problem
   config.action_mailer.default_url_options = { :host => "localhost:3000" }
+
+  config.action_mailer.delivery_method = :letter_opener
 end
