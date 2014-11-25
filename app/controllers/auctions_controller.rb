@@ -12,6 +12,7 @@ class AuctionsController < ApplicationController
 	 @auction.link = params[:auction][:link]
 	 @auction.active = true
 	 @auction.owner = current_user.username
+	 @auction.user_id = current_user
 	 #auction.dayC = params[:dayC]
 	 #auction.monthC = params[:monthC]
 	 #@auction.category = params[:category]
