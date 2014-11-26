@@ -7,15 +7,15 @@ class UserSessionsController < ApplicationController
   end
 
   def create
-		if @user = login(params[:username], params[:password], params[:remember_me])
-			redirect_to(auctions_path, notice: '¡Has iniciado sesión!')
-		elsif User.where(username: params[:username], activo: true).blank?
-			flash.keep[:alert] = 'Nombre de usuario o contraseña incorrectos'
-      render action: 'new'		  
-    else
-		  flash.keep[:alert] = 'Usuario no activo, comuniquese con un administrador'
+    if User.where(username: params[:username], activo: true).blank?
+      flash.keep[:alert] = 'El usuario no existe o no se encuentra activo'
       render action: 'new'
-		 end
+    elsif @user = login(params[:username], params[:password], params[:remember_me])
+      redirect_to(auctions_path, notice: '¡Has iniciado sesión!')
+    else
+      flash.keep[:alert] = 'Nombre de usuario o contraseña incorrectos'
+      render action: 'new'  
+    end
   end
 
   def destroy
