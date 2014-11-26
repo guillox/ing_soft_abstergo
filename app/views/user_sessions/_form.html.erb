@@ -16,7 +16,18 @@
 	</div>	
 
 	<div class="actions">
-		<%= submit_tag "Ingresar", :class => 'btn btn-primary' %>
+		<%= submit_tag "Ingresar", id: "myButton", class: "btn btn-primary", data: {"loading-text" => "Espere..."} %>
 		<%= link_to '¿Olvidaste tu contraseña?', new_password_reset_path %>
 	</div>
 <% end %>
+
+<script>
+  $("#myButton").click(function() {
+    var $btn = $(this);
+    $btn.button('loading');
+    // simulating a timeout
+    setTimeout(function () {
+        $btn.button('reset');
+    }, 1000);
+	});
+</script>

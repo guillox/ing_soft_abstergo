@@ -1,14 +1,13 @@
-<h1>Listado de Subastas</h1>
+<h1>Subastas</h1>
 <%= render 'tabs' %>
 
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th class="col-sm-2">Nombre</th>
-			<th class="col-sm-2">Descripcion</th>
+			<th class="col-sm-3">Nombre</th>
+			<th class="col-sm-4">Descripcion</th>
 			<th class="col-sm-1">Categoria</th>
-			<th class="col-sm-2">Link</th>
-			<th class="col-sm-1">Creador</th>
+			<th class="col-sm-1">Imagen</th>
 			<th class="col-sm-3">Acción</th>
 		</tr>
 	</thead>
@@ -18,10 +17,9 @@
 			<% if a.active %>
 				<tr>
 					<td><%= a.name %></td>
-					<td><%= a.description %></td>
+					<td><%= truncate(a.description, length: 120, omission: '...') %></td>
 					<td><%= a.category %></td>
-					<td><link><%= a.link %></link></td>
-					<td><link><%= a.owner %></link></td>
+					<td><%= link_to "Ver", a.link, class: "btn btn-link", target: "_blank" %></td>
 					<td>
 					<% if current_user%>					
 						<% unless (a.owner == current_user.username) %>

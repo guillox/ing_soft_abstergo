@@ -1,46 +1,39 @@
-<% if current_user %>
-	<%= form_for :auction, url: auctions_path do |f| %>
+<%= form_for :auction, url: auctions_path do |f| %>
 
-	  <% if @auction.errors.any? %>
-	    <div id="error_explanation">
-	      <h2><%= pluralize(@auction.errors.count, "error") %> prohibited this auction from being saved:</h2>
-
-	      <ul>
+  <% if @auction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@auction.errors.count, "error") %> prohibited this auction from being saved:</h2>
+      <ul>
 	      <% @auction.errors.full_messages.each do |message| %>
-		<li><%= message %></li>
-	      <% end %>
-	      </ul>
-	    </div>
-	  <% end %>
+					<li><%= message %></li>
+      	<% end %>
+      </ul>
+    </div>
+  <% end %>
 
-	  <div class="field">
-	    <%= f.label :Nombre %><br>
-	    <%= f.text_field :name %>
-	  </div>
-	  <div class="field">
-	    <%= f.label :Descripción %><br>
-	    <%= f.text_field :description %>
-	  </div>
-	  <div class="field">
-	    <%= f.label :Link %><br>
-	    <%= f.text_field :link %>
-	  </div>
+  <div class="form-group">
+    <%= f.label :name, "Nombre" %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
 
-	<div class="field">
-		<%= f.label :Categoria %>
-			<br>
-				<%= f.select :category, Category.all, {:include_blank => '--Seleccione una Opción--'}, :required => false %>
-			</br>  
+  <div class="form-group">
+    <%= f.label :description, "Descripción" %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :link, "URL de la Imagen" %>
+    <%= f.text_field :link, class: "form-control", placeholder: "http://" %>
+  </div>
+
+	<div class="form-group">
+		<%= f.label :category, "Categoría" %>
+		<%= f.select :category, options_from_collection_for_select(Category.all, :nombre, :nombre), {:include_blank => '--Seleccione una Opción--'}, :required => false, class: "form-control" %>
 	</div>
 
+  <div class="actions">
+  	<%= link_to 'Cancelar', auctions_path, class: "btn btn-danger" %>
+    <%= f.submit "Crear subasta", class: "btn btn-primary" %>
+  </div>
 
-
-	  <div class="actions">
-	    <%= f.submit %>
-	  </div>
-
-	<% end %>
-<% else %>
-	<div class="alert alert-danger" role="alert">ATENCIÓN: No tiene los permisos para acceder a esta pagina</div>
 <% end %>
-

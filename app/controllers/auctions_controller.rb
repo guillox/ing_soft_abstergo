@@ -1,32 +1,30 @@
 class AuctionsController < ApplicationController
   before_action :set_auction, only: [:show, :edit, :update, :destroy]
 
- 	 def new
-		@auction = Auction.new
+ 	def new
+    @auction = Auction.new
   end
 
   def create
-   @auction = Auction.new(params[:auction_params])
+    @auction = Auction.new(params[:auction_params])
     @auction.name = params[:auction][:name]
-	 @auction.name = params[:auction][:name]
-	 @auction.description = params[:auction][:description]
-	 @auction.link = params[:auction][:link]
-	 @auction.category = params[:auction][:category]
-	 @auction.active = true
-	 @auction.owner = current_user.username
-	 @auction.user_id = current_user #campo obsoleto, eliminar
-	 #auction.dayC = params[:dayC]
-	 #auction.monthC = params[:monthC]
-	 if @auction.save
-		redirect_to(:auctions, notice: 'Auction was succesfully created!')
-	 else
-		render action: 'new'	
-	 end
-  end
-  
+    @auction.name = params[:auction][:name]
+    @auction.description = params[:auction][:description]
+    @auction.link = params[:auction][:link]
+    @auction.category = params[:auction][:category]
+    @auction.active = true
+    @auction.owner = current_user.username
+    @auction.user_id = current_user #campo obsoleto, eliminar
+    #auction.dayC = params[:dayC]
+    #auction.monthC = params[:monthC]
+    if @auction.save
+      redirect_to(:auctions, notice: 'Auction was succesfully created!')
+    else
+      render action: 'new'	
+    end
+  end  
  
-  def edit
-   
+  def edit   
   end
 
   def update

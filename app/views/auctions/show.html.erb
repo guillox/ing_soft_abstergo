@@ -1,26 +1,8 @@
-<h1>Mostrar Subasta</h1>
+<p><%= link_to 'Volver al listado', auctions_path %> | Publicación #<%= @auction.id %></p>
 
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th class="col-sm-2">Nombre</th>
-			<th class="col-sm-2">Descripcion</th>
-			<th class="col-sm-2">Categoria</th>
-			<th class="col-sm-1">Creador</th>
-			<th class="col-sm-4">Link</th>
-		</tr>
-	
+<div class="page-header">
+  <h1><%= @auction.name %> <small><%= @auction.category %></small> <%= link_to "Ver imagen", @auction.link, class: "btn btn-xs btn-success", target: "_blank" %></h1>
+</div>
 
-		<tbody>
-			<tr>
-	    		<td><%= @auction.name %></td>
-	    		<td><%= @auction.description %></td>
-			<td>CATEGORIA</td>
-			<td><%= @auction.owner %></td>	
-	    		<td><%= @auction.link %></td>	
-			</tr>
-		</tbody>
-	</thead>
-</table>
-
-<%= link_to 'Back', auctions_path %>
+<h3>Descripción</h3>
+<%= @auction.description %>

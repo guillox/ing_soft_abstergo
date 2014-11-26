@@ -12,8 +12,8 @@
 				<%= f.text_field :nombre, class: 'form-control', placeholder: 'Ej: muebles, vestimentas, etc.' %>
 			</div>
 
-			<%= f.submit "Guardar", class: 'btn btn-primary' %>
 			<%= link_to "Cancelar",categories_path, class: 'btn btn-danger' %>
+			<%= f.submit "Guardar", class: 'btn btn-primary' %>			
 		<% end %>
 	<% else %>
 		<div class="alert alert-danger" role="alert">ATENCIÓN: No tiene los permisos para acceder a esta pagina</div>
