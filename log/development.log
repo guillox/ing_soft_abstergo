@@ -1,0 +1,66 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 00:42:35 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (4.7ms)
+  [1m[35mAuction Load (0.3ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (17.9ms)
+  Rendered application/_header.html.erb (2.1ms)
+Completed 200 OK in 1882ms (Views: 1867.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 00:42:37 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (0.1ms)
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (3.0ms)
+  Rendered application/_header.html.erb (0.4ms)
+Completed 200 OK in 143ms (Views: 141.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-26 00:42:39 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (1.6ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered application/_header.html.erb (1.2ms)
+Completed 200 OK in 168ms (Views: 149.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-11-26 00:42:40 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (19.4ms)
+  Rendered users/new.html.erb within layouts/application (20.7ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 162ms (Views: 160.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-11-26 00:42:42 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WmTorCt1jlHK81xCZJDtiDsoLxzO7Mjea5Z6PCe+Dhg=", "user"=>{"name"=>"", "last_name"=>"", "username"=>"", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrarme"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = '' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/_form.html.erb (7.6ms)
+  Rendered users/new.html.erb within layouts/application (8.6ms)
+  Rendered application/_header.html.erb (0.4ms)
+Completed 200 OK in 171ms (Views: 152.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-26 00:42:43 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (1.7ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.8ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 155ms (Views: 154.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-26 00:42:45 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WmTorCt1jlHK81xCZJDtiDsoLxzO7Mjea5Z6PCe+Dhg=", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."username" = '' AND "users"."activo" = 't'
+  Rendered user_sessions/_form.html.erb (0.7ms)
+  Rendered user_sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered application/_header.html.erb (0.4ms)
+Completed 200 OK in 144ms (Views: 138.7ms | ActiveRecord: 0.3ms)
