@@ -20,6 +20,6 @@ class UserSessionsController < ApplicationController
 
   def destroy
   	logout
-  	redirect_to(:users, notice: 'Logged out!')
+  	redirect_to(:auctions, notice: '¡Has cerrado sesión!')
   end
 end
