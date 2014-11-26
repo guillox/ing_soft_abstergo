@@ -51,13 +51,24 @@
     <div class="actions">
       <%= link_to 'Volver', auctions_path, class: "btn btn-success" %>
       <%= link_to 'Eliminar cuenta', @user, method: :delete, :class => 'btn btn-danger', data: { confirm: '¿Estas Seguro?' } %>
-      <%= f.submit "Guardar cambios", class: "btn btn-primary" %>
+      <%= f.submit "Guardar cambios", id: "myButton", class: "btn btn-primary", data: {"loading-text" => "Espere..."} %>
     </div>
   <% else %>
     <div class="actions">
       <%= link_to 'Cancelar', users_path, class: "btn btn-danger" %>
-      <%= f.submit "Registrarme", class: "btn btn-primary" %>
+      <%= f.submit "Registrarme", id: "myButton", class: "btn btn-primary", data: {"loading-text" => "Espere..."} %>
     </div>
   <% end %>
   
 <% end %>
+
+<script>
+  $("#myButton").click(function() {
+    var $btn = $(this);
+    $btn.button('loading');
+    // simulating a timeout
+    setTimeout(function () {
+        $btn.button('reset');
+    }, 1000);
+  });
+</script>
