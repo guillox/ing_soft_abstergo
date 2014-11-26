@@ -41,7 +41,7 @@
 				<tr>	
 					<td><%= user.email %></td>
 			       		<td>
-					<%= link_to 'Ver Cuenta', user , class: 'btn btn-warning'%>
+					<%= link_to 'Ver Cuenta', user , class: 'btn btn-primary'%>
 					<%= link_to 'Re-Activar Cuenta', user, method: :reactive, data: { confirm: '¿Estas Seguro?' } , class: 'btn btn-danger' %>
 					</td>
 				</tr>
