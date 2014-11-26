@@ -1,55 +1,54 @@
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+    <div class="alert alert-danger" role="alert">
+      <h2><%= pluralize(@user.errors.count, "error") %>:</h2>
 
       <ul>
-      <% @user.errors.full_messages.each do |message| %>
-<<<<<<< HEAD
-	<li><%= message %></li>
-=======
-        <li><%= message %></li>
->>>>>>> aa2e427d3cadd1cba61c18bcb9f6ca53f141b9bb
-      <% end %>
+        <% @user.errors.full_messages.each do |message| %>
+          <li class="alert-link"><%= message %></li>
+        <% end %>
       </ul>
+
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name, "Nombre *" %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+
+  <div class="form-group">
+    <%= f.label :last_name, "Apellido *" %>
+    <%= f.text_field :last_name, class: "form-control" %>
   </div>
-  <% unless current_user %>
-	  <div class="field">
-	    <%= f.label :username %><br>
-	    <%= f.text_field :username %>
+
+	  <div class="form-group">
+	    <%= f.label :username, "Nombre de usuario *" %>
+	    <%= f.text_field :username, class: "form-control" %>
 	  </div>
-  <% end %>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+
+  <div class="form-group">
+    <%= f.label :email, "E-mail *" %>
+    <%= f.text_field :email, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :email_confirmation %><br>
-    <%= f.text_field :email_confirmation %>
+
+  <div class="form-group">
+    <%= f.label :email_confirmation, "Confirmar e-mail *" %>
+    <%= f.text_field :email_confirmation, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
+
+  <div class="form-group">
+    <%= f.label :password, "Contraseña *" %>
+    <%= f.password_field :password, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation, "Confirmar contraseña *" %>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
   </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= link_to 'Cancelar', users_path, class: "btn btn-danger" %>
+    <%= f.submit "Registrarme", class: "btn btn-primary" %>
   </div>
 <% end %>
-<<<<<<< HEAD
-
-=======
->>>>>>> aa2e427d3cadd1cba61c18bcb9f6ca53f141b9bb

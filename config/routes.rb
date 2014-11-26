@@ -1,18 +1,14 @@
 Rails.application.routes.draw do  
+  root :to => 'auctions#index'
 
-	resources :auctions
-
-  # get 'password_resets/new'
-  resources :password_resets
-
-  root :to => 'user_sessions#new'
   resources :user_sessions
   resources :users
+  resources :password_resets
+  resources :auctions
+  resources :categories
 
   get 'login' => 'user_sessions#new', :as => :login
-  post 'logout' => 'user_sessions#destroy', :as => :logout
-
-	resources :categories
+  post 'logout' => 'user_sessions#destroy', :as => :logout	
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <% if current_user %>	
 	<h1>Editar Perfil</h1>
 
@@ -6,10 +5,3 @@
 	<%= link_to 'Delete Account', @user, method: :delete, data: { confirm: '¿Estas Seguro?' } %> |
 	<%= link_to 'Back', auctions_path %>
 <%end%>
-=======
-<h1>Editar Perfil</h1>
-
-<%= render 'form' %>
-<%= link_to 'Delete Account', @user, method: :delete, data: { confirm: '¿Estas Seguro?' } %> |
-<%= link_to 'Back', auctions_path %>
->>>>>>> aa2e427d3cadd1cba61c18bcb9f6ca53f141b9bb

@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
 	has_many :auctions, dependent: :destroy
   authenticates_with_sorcery!
-	authenticates_with_sorcery!
 
 	validates :name, presence: true
 	validates_format_of :name, :with => /\A((?:[-a-z]+))\z/i, :message => "can only contain letters."

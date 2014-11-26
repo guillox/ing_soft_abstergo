@@ -1,5 +1,6 @@
 class AuctionsController < ApplicationController
   before_action :set_auction, only: [:show, :edit, :update, :destroy]
+
  	 def new
 		@auction = Auction.new
   end
@@ -54,7 +55,7 @@ class AuctionsController < ApplicationController
   end
 
   def index
-	@auction = Auction.all
+	 @auction = Auction.all
   end
 
   def show
