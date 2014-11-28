@@ -12,24 +12,29 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :name, "Nombre" %>
+    <%= f.label "Nombre" %>
     <%= f.text_field :name, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :description, "Descripción" %>
+    <%= f.label "Descripción" %>
     <%= f.text_area :description, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :link, "URL de la Imagen" %>
+    <%= f.label "URL de la Imagen" %>
     <%= f.text_field :link, class: "form-control", placeholder: "http://" %>
   </div>
 
 	<div class="form-group">
-		<%= f.label :category, "Categoría" %>
-		<%= f.select :category, options_from_collection_for_select(Category.all, :nombre, :nombre), {:include_blank => '--Seleccione una Opción--'}, :required => false, class: "form-control" %>
+		<%= f.label "Categoría" %>
+		<%= f.select :category, options_from_collection_for_select(Category.all, :id, :name, 25), {}, class: "form-control" %>
 	</div>
+
+  <div class="form-group">
+    <%= f.label "Imagen" %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div> 
 
   <div class="actions">
   	<%= link_to 'Cancelar', auctions_path, class: "btn btn-danger" %>

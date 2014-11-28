@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# Usamos 'dragonfly' para subir imagenes al sitio
+# http://markevans.github.io/dragonfly/rails/
+gem 'dragonfly', '~> 1.0.7'
+
 # Utiliza NoamB/sorcery para manejar las sesiones de usuario
 # https://github.com/NoamB/sorcery
 gem 'sorcery'

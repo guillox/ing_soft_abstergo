@@ -7618,3 +7618,1905 @@ Completed 200 OK in 153ms (Views: 152.1ms | ActiveRecord: 0.2ms)
   [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateImages (20141128031302)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "photos" ADD "image_uid" varchar(255)[0m
+SQLite3::SQLException: no such table: photos: ALTER TABLE "photos" ADD "image_uid" varchar(255)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateImages (20141128031302)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "photos" ADD "image_uid" varchar(255)[0m
+SQLite3::SQLException: no such table: photos: ALTER TABLE "photos" ADD "image_uid" varchar(255)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateImages (20141128031302)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "images" ADD "image_uid" varchar(255)[0m
+SQLite3::SQLException: no such table: images: ALTER TABLE "images" ADD "image_uid" varchar(255)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateImages (20141128031302)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image_uid" varchar(255), "image_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141128031302"]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (2.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCategories (20141107125405)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141107125405"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to SorceryCore (20141117041754)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "last_name" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "salt" varchar(255) NOT NULL, "active" boolean, "admin" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141117041754"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to SorceryRememberMe (20141117153510)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD "remember_me_token" varchar(255)[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "remember_me_token_expires_at" datetime
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  CREATE  INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141117153510"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Migrating to SorceryResetPassword (20141121124143)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "reset_password_token" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "reset_password_token_expires_at" datetime[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "reset_password_email_sent_at" datetime
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141121124143"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAuctions (20141121145556)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "auctions" ADD "image_id" integer[0m
+SQLite3::SQLException: no such table: auctions: ALTER TABLE "auctions" ADD "image_id" integer
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (7.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (2.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCategories (20141107125405)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141107125405"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Migrating to SorceryCore (20141117041754)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "last_name" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "salt" varchar(255) NOT NULL, "active" boolean, "admin" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141117041754"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to SorceryRememberMe (20141117153510)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "remember_me_token" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "remember_me_token_expires_at" datetime
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141117153510"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to SorceryResetPassword (20141121124143)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "reset_password_token" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "reset_password_token_expires_at" datetime[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "reset_password_email_sent_at" datetime
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141121124143"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAuctions (20141121145556)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "auctions" ADD "image_id" integer[0m
+SQLite3::SQLException: no such table: auctions: ALTER TABLE "auctions" ADD "image_id" integer
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (7.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (2.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCategories (20141107125405)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141107125405"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Migrating to SorceryCore (20141117041754)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "last_name" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "salt" varchar(255) NOT NULL, "active" boolean, "admin" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141117041754"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to SorceryRememberMe (20141117153510)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "remember_me_token" varchar(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "remember_me_token_expires_at" datetime
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141117153510"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Migrating to SorceryResetPassword (20141121124143)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "reset_password_token" varchar(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "reset_password_token_expires_at" datetime[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "reset_password_email_sent_at" datetime
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141121124143"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAuctions (20141121145556)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "auctions" ADD "user_id" integer[0m
+SQLite3::SQLException: no such table: auctions: ALTER TABLE "auctions" ADD "user_id" integer
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCategories (20141107125405)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "auctions" ADD "category_id" integer
+SQLite3::SQLException: no such table: auctions: ALTER TABLE "auctions" ADD "category_id" integer
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (2.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCategories (20141107125405)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "auctions" ADD "category_id" integer
+SQLite3::SQLException: no such table: auctions: ALTER TABLE "auctions" ADD "category_id" integer
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAuctions (20141107125400)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "auctions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "link" varchar(255), "active" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141107125400"]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCategories (20141107125405)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "auctions" ADD "category_id" integer[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_auctions_on_category_id" ON "auctions" ("category_id")[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141107125405"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Migrating to SorceryCore (20141117041754)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "auctions" ADD "user_id" integer
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  CREATE  INDEX "index_auctions_on_user_id" ON "auctions" ("user_id")
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "last_name" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "salt" varchar(255) NOT NULL, "active" boolean, "admin" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141117041754"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Migrating to SorceryRememberMe (20141117153510)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "remember_me_token" varchar(255)
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "remember_me_token_expires_at" datetime[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.5ms)[0m  [1mCREATE  INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141117153510"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to SorceryResetPassword (20141121124143)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "reset_password_token" varchar(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "reset_password_token_expires_at" datetime
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "reset_password_email_sent_at" datetime[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141121124143"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Migrating to CreateImages (20141128031302)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "auctions" ADD "image_id" integer
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image_uid" varchar(255), "image_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141128031302"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mAuction Load (1.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[36mCategory Load (1.1ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Accesorios para Vehículos' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.861547"], ["nombre", "Accesorios para Vehículos"], ["updated_at", "2014-11-28 04:09:13.861547"]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Animales y Mascotas' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.872701"], ["nombre", "Animales y Mascotas"], ["updated_at", "2014-11-28 04:09:13.872701"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Antigüedades' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.878702"], ["nombre", "Antigüedades"], ["updated_at", "2014-11-28 04:09:13.878702"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Arte y Artesanías' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.881921"], ["nombre", "Arte y Artesanías"], ["updated_at", "2014-11-28 04:09:13.881921"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Bebés' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.895053"], ["nombre", "Bebés"], ["updated_at", "2014-11-28 04:09:13.895053"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Cámaras y Accesorios' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.898832"], ["nombre", "Cámaras y Accesorios"], ["updated_at", "2014-11-28 04:09:13.898832"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Celulares y Teléfonos' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.901819"], ["nombre", "Celulares y Teléfonos"], ["updated_at", "2014-11-28 04:09:13.901819"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Coleccionables y Hobbies' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.904856"], ["nombre", "Coleccionables y Hobbies"], ["updated_at", "2014-11-28 04:09:13.904856"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Computación' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.910212"], ["nombre", "Computación"], ["updated_at", "2014-11-28 04:09:13.910212"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Consolas y Videojuegos' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.914575"], ["nombre", "Consolas y Videojuegos"], ["updated_at", "2014-11-28 04:09:13.914575"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Delicatessen y Vinos' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.918822"], ["nombre", "Delicatessen y Vinos"], ["updated_at", "2014-11-28 04:09:13.918822"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Deportes y Fitness' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.923140"], ["nombre", "Deportes y Fitness"], ["updated_at", "2014-11-28 04:09:13.923140"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Electrodomésticos y Aires Ac.' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.925700"], ["nombre", "Electrodomésticos y Aires Ac."], ["updated_at", "2014-11-28 04:09:13.925700"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Electrónica, Audio y Vídeo' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.928571"], ["nombre", "Electrónica, Audio y Vídeo"], ["updated_at", "2014-11-28 04:09:13.928571"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Entradas para Eventos' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.933922"], ["nombre", "Entradas para Eventos"], ["updated_at", "2014-11-28 04:09:13.933922"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Hogar, Muebles y Jardín' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.938593"], ["nombre", "Hogar, Muebles y Jardín"], ["updated_at", "2014-11-28 04:09:13.938593"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Industrias y Oficinas' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.943006"], ["nombre", "Industrias y Oficinas"], ["updated_at", "2014-11-28 04:09:13.943006"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Instrumentos Musicales' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.947257"], ["nombre", "Instrumentos Musicales"], ["updated_at", "2014-11-28 04:09:13.947257"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Joyas y Relojes' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.950488"], ["nombre", "Joyas y Relojes"], ["updated_at", "2014-11-28 04:09:13.950488"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Juegos y Juguetes' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.953842"], ["nombre", "Juegos y Juguetes"], ["updated_at", "2014-11-28 04:09:13.953842"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Libros, Revistas y Comics' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.959810"], ["nombre", "Libros, Revistas y Comics"], ["updated_at", "2014-11-28 04:09:13.959810"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Música, Películas y Series' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.964754"], ["nombre", "Música, Películas y Series"], ["updated_at", "2014-11-28 04:09:13.964754"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Ropa y Accesorios' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.967931"], ["nombre", "Ropa y Accesorios"], ["updated_at", "2014-11-28 04:09:13.967931"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Salud y Belleza' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.971223"], ["nombre", "Salud y Belleza"], ["updated_at", "2014-11-28 04:09:13.971223"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Otras categorías' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-28 04:09:13.974649"], ["nombre", "Otras categorías"], ["updated_at", "2014-11-28 04:09:13.974649"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mCategory Load (4.8ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC[0m
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-28 01:16:21 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (4.4ms)
+  [1m[35mAuction Load (0.2ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (9.2ms)
+  Rendered application/_header.html.erb (2.0ms)
+Completed 200 OK in 329ms (Views: 313.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-28 01:16:21 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (0.3ms)
+  [1m[36mAuction Load (0.2ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (1.3ms)
+  Rendered application/_header.html.erb (0.4ms)
+Completed 200 OK in 157ms (Views: 155.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 01:16:24 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (1.4ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered application/_header.html.erb (1.4ms)
+Completed 200 OK in 169ms (Views: 146.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-11-28 01:16:25 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (25.5ms)
+  Rendered users/new.html.erb within layouts/application (26.5ms)
+  Rendered application/_header.html.erb (0.4ms)
+Completed 200 OK in 166ms (Views: 164.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-11-28 01:17:10 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D/vFiOYBUBadxA/xgx0frKjV/VYUagvZIssqJHuMMDs=", "user"=>{"name"=>"Kevin", "last_name"=>"Gomez", "username"=>"kevin91j", "email"=>"kevin91j@hotmail.com", "email_confirmation"=>"kevin91j@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrarme"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `activo=' for #<User:0x007f6174e145d8>):
+  app/controllers/users_controller.rb:22:in `create'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.7ms)
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started POST "/users" for 127.0.0.1 at 2014-11-28 01:18:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D/vFiOYBUBadxA/xgx0frKjV/VYUagvZIssqJHuMMDs=", "user"=>{"name"=>"Kevin", "last_name"=>"Gomez", "username"=>"kevin91j", "email"=>"kevin91j@hotmail.com", "email_confirmation"=>"kevin91j@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrarme"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kevin91j' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'kevin91j@hotmail.com' LIMIT 1
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("active", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["active", "t"], ["admin", "f"], ["created_at", "2014-11-28 04:18:47.785388"], ["crypted_password", "$2a$10$Gfnftb9FbrI988pldz/jn.DfDn6p7tepjs80sFzp1uGQtas2mqL6y"], ["email", "kevin91j@hotmail.com"], ["last_name", "Gomez"], ["name", "Kevin"], ["salt", "sFkpa3kQyUHw7VqHgTwp"], ["updated_at", "2014-11-28 04:18:47.785388"], ["username", "kevin91j"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users
+Completed 302 Found in 166ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-28 01:18:47 -0300
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 01:18:47 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (1.5ms)
+  Rendered user_sessions/new.html.erb within layouts/application (4.5ms)
+  Rendered application/_header.html.erb (2.2ms)
+Completed 200 OK in 257ms (Views: 256.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 01:18:53 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D/vFiOYBUBadxA/xgx0frKjV/VYUagvZIssqJHuMMDs=", "username"=>"kevin91j", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."username" = 'kevin91j' AND "users"."activo" = 't'[0m
+SQLite3::SQLException: no such column: users.activo: SELECT "users".* FROM "users"  WHERE "users"."username" = 'kevin91j' AND "users"."activo" = 't'
+Completed 500 Internal Server Error in 8ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.activo: SELECT "users".* FROM "users"  WHERE "users"."username" = 'kevin91j' AND "users"."activo" = 't'):
+  app/controllers/user_sessions_controller.rb:10:in `create'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateImages (20141128031302)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "images"
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20141128031302'[0m
+  [1m[35m (6.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (8.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (1.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateAuctions (20141107125400)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "auctions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "link" varchar(255), "active" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141107125400"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Migrating to CreateCategories (20141107125405)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "auctions" ADD "category_id" integer
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_auctions_on_category_id" ON "auctions" ("category_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141107125405"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to SorceryCore (20141117041754)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "auctions" ADD "user_id" integer
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_auctions_on_user_id" ON "auctions" ("user_id")
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "last_name" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "salt" varchar(255) NOT NULL, "active" boolean, "admin" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141117041754"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Migrating to SorceryRememberMe (20141117153510)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "remember_me_token" varchar(255)
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "remember_me_token_expires_at" datetime[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1mCREATE  INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141117153510"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to SorceryResetPassword (20141121124143)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "reset_password_token" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "reset_password_token_expires_at" datetime
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "reset_password_email_sent_at" datetime[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141121124143"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Migrating to CreateImages (20141128031302)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "auctions" ADD "image_id" integer
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image_uid" varchar(255), "image_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141128031302"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC[0m
+SQLite3::SQLException: no such column: categories.nombre: SELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC
+  [1m[36m (6.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateAuctions (20141107125400)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "auctions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "link" varchar(255), "active" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141107125400"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Migrating to CreateCategories (20141107125405)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "auctions" ADD "category_id" integer
+  [1m[36m (0.3ms)[0m  [1mCREATE  INDEX "index_auctions_on_category_id" ON "auctions" ("category_id")[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141107125405"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to SorceryCore (20141117041754)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "auctions" ADD "user_id" integer
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  CREATE  INDEX "index_auctions_on_user_id" ON "auctions" ("user_id")
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "last_name" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "salt" varchar(255) NOT NULL, "active" boolean, "admin" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.6ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141117041754"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Migrating to SorceryRememberMe (20141117153510)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "remember_me_token" varchar(255)
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "remember_me_token_expires_at" datetime[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1mCREATE  INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141117153510"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to SorceryResetPassword (20141121124143)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "reset_password_token" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "reset_password_token_expires_at" datetime
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "reset_password_email_sent_at" datetime[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141121124143"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Migrating to CreateImages (20141128031302)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "auctions" ADD "image_id" integer
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image_uid" varchar(255), "image_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141128031302"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC[0m
+SQLite3::SQLException: no such column: categories.nombre: SELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (2.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateAuctions (20141107125400)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "auctions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "link" varchar(255), "active" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141107125400"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to CreateCategories (20141107125405)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "auctions" ADD "category_id" integer
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_auctions_on_category_id" ON "auctions" ("category_id")[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141107125405"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to SorceryCore (20141117041754)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "auctions" ADD "user_id" integer
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  CREATE  INDEX "index_auctions_on_user_id" ON "auctions" ("user_id")
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "last_name" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "salt" varchar(255) NOT NULL, "active" boolean, "admin" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141117041754"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Migrating to SorceryRememberMe (20141117153510)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "remember_me_token" varchar(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "remember_me_token_expires_at" datetime[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141117153510"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to SorceryResetPassword (20141121124143)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "reset_password_token" varchar(255)[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "reset_password_token_expires_at" datetime
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "reset_password_email_sent_at" datetime[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  CREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141121124143"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Migrating to CreateImages (20141128031302)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "auctions" ADD "image_id" integer
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image_uid" varchar(255), "image_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141128031302"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC[0m
+SQLite3::SQLException: no such column: categories.nombre: SELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC
+  [1m[36m (6.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateAuctions (20141107125400)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "auctions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "link" varchar(255), "active" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141107125400"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Migrating to CreateCategories (20141107125405)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "auctions" ADD "category_id" integer
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_auctions_on_category_id" ON "auctions" ("category_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141107125405"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to SorceryCore (20141117041754)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "auctions" ADD "user_id" integer
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_auctions_on_user_id" ON "auctions" ("user_id")
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "last_name" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "salt" varchar(255) NOT NULL, "active" boolean, "admin" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141117041754"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Migrating to SorceryRememberMe (20141117153510)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "remember_me_token" varchar(255)
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "remember_me_token_expires_at" datetime[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1mCREATE  INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141117153510"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to SorceryResetPassword (20141121124143)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD "reset_password_token" varchar(255)[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "reset_password_token_expires_at" datetime
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "reset_password_email_sent_at" datetime[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  CREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141121124143"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Migrating to CreateImages (20141128031302)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "auctions" ADD "image_id" integer
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image_uid" varchar(255), "image_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141128031302"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Accesorios para Vehículos' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.672854"], ["name", "Accesorios para Vehículos"], ["updated_at", "2014-11-28 04:21:30.672854"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Animales y Mascotas' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.677598"], ["name", "Animales y Mascotas"], ["updated_at", "2014-11-28 04:21:30.677598"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Antigüedades' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.680253"], ["name", "Antigüedades"], ["updated_at", "2014-11-28 04:21:30.680253"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Arte y Artesanías' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.682614"], ["name", "Arte y Artesanías"], ["updated_at", "2014-11-28 04:21:30.682614"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.4ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Bebés' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.688349"], ["name", "Bebés"], ["updated_at", "2014-11-28 04:21:30.688349"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Cámaras y Accesorios' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.693748"], ["name", "Cámaras y Accesorios"], ["updated_at", "2014-11-28 04:21:30.693748"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.2ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Celulares y Teléfonos' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.697607"], ["name", "Celulares y Teléfonos"], ["updated_at", "2014-11-28 04:21:30.697607"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.2ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Coleccionables y Hobbies' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.702113"], ["name", "Coleccionables y Hobbies"], ["updated_at", "2014-11-28 04:21:30.702113"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.2ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Computación' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.706157"], ["name", "Computación"], ["updated_at", "2014-11-28 04:21:30.706157"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Consolas y Videojuegos' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.709744"], ["name", "Consolas y Videojuegos"], ["updated_at", "2014-11-28 04:21:30.709744"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Delicatessen y Vinos' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.713266"], ["name", "Delicatessen y Vinos"], ["updated_at", "2014-11-28 04:21:30.713266"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Deportes y Fitness' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.732068"], ["name", "Deportes y Fitness"], ["updated_at", "2014-11-28 04:21:30.732068"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Electrodomésticos y Aires Ac.' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.737836"], ["name", "Electrodomésticos y Aires Ac."], ["updated_at", "2014-11-28 04:21:30.737836"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Electrónica, Audio y Vídeo' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.745311"], ["name", "Electrónica, Audio y Vídeo"], ["updated_at", "2014-11-28 04:21:30.745311"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Entradas para Eventos' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.749317"], ["name", "Entradas para Eventos"], ["updated_at", "2014-11-28 04:21:30.749317"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Hogar, Muebles y Jardín' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.754704"], ["name", "Hogar, Muebles y Jardín"], ["updated_at", "2014-11-28 04:21:30.754704"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Industrias y Oficinas' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.759562"], ["name", "Industrias y Oficinas"], ["updated_at", "2014-11-28 04:21:30.759562"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Instrumentos Musicales' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.762555"], ["name", "Instrumentos Musicales"], ["updated_at", "2014-11-28 04:21:30.762555"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.2ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Joyas y Relojes' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.766822"], ["name", "Joyas y Relojes"], ["updated_at", "2014-11-28 04:21:30.766822"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Juegos y Juguetes' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.771387"], ["name", "Juegos y Juguetes"], ["updated_at", "2014-11-28 04:21:30.771387"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Libros, Revistas y Comics' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.775008"], ["name", "Libros, Revistas y Comics"], ["updated_at", "2014-11-28 04:21:30.775008"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Música, Películas y Series' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.778564"], ["name", "Música, Películas y Series"], ["updated_at", "2014-11-28 04:21:30.778564"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Ropa y Accesorios' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.782162"], ["name", "Ropa y Accesorios"], ["updated_at", "2014-11-28 04:21:30.782162"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Salud y Belleza' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.785737"], ["name", "Salud y Belleza"], ["updated_at", "2014-11-28 04:21:30.785737"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.2ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Otras categorías' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 04:21:30.789602"], ["name", "Otras categorías"], ["updated_at", "2014-11-28 04:21:30.789602"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-28 01:21:59 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (4.5ms)
+  [1m[35mAuction Load (0.2ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (9.6ms)
+  Rendered application/_header.html.erb (2.2ms)
+Completed 200 OK in 270ms (Views: 256.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-28 01:21:59 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (0.4ms)
+  [1m[36mAuction Load (0.2ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (1.6ms)
+  Rendered application/_header.html.erb (0.4ms)
+Completed 200 OK in 149ms (Views: 148.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 01:22:01 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (1.5ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.6ms)
+  Rendered application/_header.html.erb (1.6ms)
+Completed 200 OK in 171ms (Views: 148.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 01:22:04 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D/vFiOYBUBadxA/xgx0frKjV/VYUagvZIssqJHuMMDs=", "username"=>"kevin91j", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."username" = 'kevin91j' AND "users"."active" = 't'
+  Rendered user_sessions/_form.html.erb (1.3ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.1ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 154ms (Views: 145.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-11-28 01:22:08 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (30.0ms)
+  Rendered users/new.html.erb within layouts/application (32.6ms)
+  Rendered application/_header.html.erb (0.4ms)
+Completed 200 OK in 184ms (Views: 183.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-11-28 01:22:26 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D/vFiOYBUBadxA/xgx0frKjV/VYUagvZIssqJHuMMDs=", "user"=>{"name"=>"Kevin", "last_name"=>"Gomez", "username"=>"kevin91j", "email"=>"kevin91j@hotmail.com", "email_confirmation"=>"kevin91j@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrarme"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kevin91j' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'kevin91j@hotmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("active", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["active", "t"], ["admin", "f"], ["created_at", "2014-11-28 04:22:26.313770"], ["crypted_password", "$2a$10$vALFVGfmGSii6K/CUKDGOujVxHrqBPakpLGZsYhFYLRV.bIFxntJy"], ["email", "kevin91j@hotmail.com"], ["last_name", "Gomez"], ["name", "Kevin"], ["salt", "NN884hxf5LGVNMuprhHp"], ["updated_at", "2014-11-28 04:22:26.313770"], ["username", "kevin91j"]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 132ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-28 01:22:26 -0300
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 01:22:26 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (1.1ms)
+  Rendered user_sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 154ms (Views: 153.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 01:22:28 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (1.5ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 158ms (Views: 157.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 01:22:32 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D/vFiOYBUBadxA/xgx0frKjV/VYUagvZIssqJHuMMDs=", "username"=>"kevin91j", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."username" = 'kevin91j' AND "users"."active" = 't'
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE (username = 'kevin91j')  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 117ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 01:22:32 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (2.0ms)
+  [1m[36mAuction Load (0.2ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (3.4ms)
+  Rendered application/_header.html.erb (0.7ms)
+Completed 200 OK in 144ms (Views: 142.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:22:34 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.4ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (28.7ms)
+  Rendered auctions/new.html.erb within layouts/application (33.5ms)
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (undefined method `nombre' for #<Category:0x007fa28a59e2f8>):
+    28: 
+    29: 	<div class="form-group">
+    30: 		<%= f.label :category, "Categoría" %>
+    31: 		<%= f.select :category, options_from_collection_for_select(Category.all, :nombre, :nombre), {:include_blank => '--Seleccione una Opción--'}, :required => false, class: "form-control" %>
+    32: 	</div>
+    33: 
+    34:   <div class="form-group">
+  app/views/auctions/_form.html.erb:31:in `block in _app_views_auctions__form_html_erb___2557437759395989255_70168041829780'
+  app/views/auctions/_form.html.erb:1:in `_app_views_auctions__form_html_erb___2557437759395989255_70168041829780'
+  app/views/auctions/new.html.erb:5:in `_app_views_auctions_new_html_erb__4442872618255852442_70168041941180'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.7ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:22:35 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (2.1ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (5.2ms)
+  Rendered auctions/new.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `nombre' for #<Category:0x007fa28a29aca0>):
+    28: 
+    29: 	<div class="form-group">
+    30: 		<%= f.label :category, "Categoría" %>
+    31: 		<%= f.select :category, options_from_collection_for_select(Category.all, :nombre, :nombre), {:include_blank => '--Seleccione una Opción--'}, :required => false, class: "form-control" %>
+    32: 	</div>
+    33: 
+    34:   <div class="form-group">
+  app/views/auctions/_form.html.erb:31:in `block in _app_views_auctions__form_html_erb___2557437759395989255_70168039833260'
+  app/views/auctions/_form.html.erb:1:in `_app_views_auctions__form_html_erb___2557437759395989255_70168039833260'
+  app/views/auctions/new.html.erb:5:in `_app_views_auctions_new_html_erb__4442872618255852442_70168039910480'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.9ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:26:14 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.3ms)
+  Rendered auctions/_form.html.erb (2.5ms)
+  Rendered auctions/new.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (wrong number of arguments (2 for 3..4)):
+    28: 
+    29: 	<div class="form-group">
+    30: 		<%= f.label :category, "Categoría" %>
+    31: 		<%= f.select :category, options_from_collection_for_select(Category.all, :name), class: "form-control" %>
+    32: 	</div>
+    33: 
+    34:   <div class="form-group">
+  app/views/auctions/_form.html.erb:31:in `block in _app_views_auctions__form_html_erb___2557437759395989255_70168038541440'
+  app/views/auctions/_form.html.erb:1:in `_app_views_auctions__form_html_erb___2557437759395989255_70168038541440'
+  app/views/auctions/new.html.erb:5:in `_app_views_auctions_new_html_erb__4442872618255852442_70168039910480'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.4ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:28:52 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.5ms)
+  Rendered auctions/_form.html.erb (2.7ms)
+  Rendered auctions/new.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (wrong number of arguments (1 for 3..4)):
+    28: 
+    29: 	<div class="form-group">
+    30: 		<%= f.label :category, "Categoría" %>
+    31: 		<%= f.select :category, options_from_collection_for_select(Category.all), class: "form-control" %>
+    32: 	</div>
+    33: 
+    34:   <div class="form-group">
+  app/views/auctions/_form.html.erb:31:in `block in _app_views_auctions__form_html_erb___2557437759395989255_70168025724440'
+  app/views/auctions/_form.html.erb:1:in `_app_views_auctions__form_html_erb___2557437759395989255_70168025724440'
+  app/views/auctions/new.html.erb:5:in `_app_views_auctions_new_html_erb__4442872618255852442_70168039910480'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.9ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:29:41 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.3ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (23.7ms)
+  Rendered auctions/new.html.erb within layouts/application (26.1ms)
+  Rendered application/_header.html.erb (0.8ms)
+Completed 200 OK in 186ms (Views: 185.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:30:32 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.2ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (4.9ms)
+  Rendered auctions/new.html.erb within layouts/application (7.1ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 162ms (Views: 160.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:32:19 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (4.8ms)
+  Rendered auctions/new.html.erb within layouts/application (7.0ms)
+  Rendered application/_header.html.erb (0.8ms)
+Completed 200 OK in 158ms (Views: 156.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:32:26 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.5ms)
+  Rendered auctions/_form.html.erb (2.7ms)
+  Rendered auctions/new.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (wrong number of arguments (2 for 3..4)):
+    28: 
+    29: 	<div class="form-group">
+    30: 		<%= f.label "Categoría" %>
+    31: 		<%= f.select :category, options_from_collection_for_select(Category.all, :name), class: "form-control" %>
+    32: 	</div>
+    33: 
+    34:   <div class="form-group">
+  app/views/auctions/_form.html.erb:31:in `block in _app_views_auctions__form_html_erb___2557437759395989255_70168040549700'
+  app/views/auctions/_form.html.erb:1:in `_app_views_auctions__form_html_erb___2557437759395989255_70168040549700'
+  app/views/auctions/new.html.erb:5:in `_app_views_auctions_new_html_erb__4442872618255852442_70168039910480'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.5ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:34:02 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.6ms)
+  Rendered auctions/_form.html.erb (1.3ms)
+  Rendered auctions/new.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/home/oby/Documents/ing-soft-abstergo/app/views/auctions/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+...lect(Category.all, :id, :name), class: "form-control" );@out...
+...                               ^):
+  app/views/auctions/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+  app/views/auctions/new.html.erb:5:in `_app_views_auctions_new_html_erb__4442872618255852442_70168039910480'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.9ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:34:04 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.2ms)
+  Rendered auctions/_form.html.erb (0.9ms)
+  Rendered auctions/new.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 5ms
+
+SyntaxError (/home/oby/Documents/ing-soft-abstergo/app/views/auctions/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+...lect(Category.all, :id, :name), class: "form-control" );@out...
+...                               ^):
+  app/views/auctions/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+  app/views/auctions/new.html.erb:5:in `_app_views_auctions_new_html_erb__4442872618255852442_70168039910480'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.7ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.6ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:34:29 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.5ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (5.7ms)
+  Rendered auctions/new.html.erb within layouts/application (8.6ms)
+  Rendered application/_header.html.erb (0.7ms)
+Completed 200 OK in 168ms (Views: 166.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:34:44 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.2ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (4.1ms)
+  Rendered auctions/new.html.erb within layouts/application (6.2ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 163ms (Views: 161.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:35:24 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.7ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (6.5ms)
+  Rendered auctions/new.html.erb within layouts/application (9.5ms)
+  Rendered application/_header.html.erb (7.7ms)
+Completed 200 OK in 208ms (Views: 206.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:36:41 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.3ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (5.1ms)
+  Rendered auctions/new.html.erb within layouts/application (7.6ms)
+  Rendered application/_header.html.erb (0.7ms)
+Completed 200 OK in 165ms (Views: 164.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:37:14 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.6ms)
+  Rendered auctions/_form.html.erb (1.3ms)
+  Rendered auctions/new.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/home/oby/Documents/ing-soft-abstergo/app/views/auctions/_form.html.erb:31: syntax error, unexpected ')', expecting =>
+...ect(Category.all, :id, :name) );@output_buffer.safe_append='
+...                               ^
+/home/oby/Documents/ing-soft-abstergo/app/views/auctions/_form.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;@output_buffer.to_s
+             ^
+/home/oby/Documents/ing-soft-abstergo/app/views/auctions/_form.html.erb:45: syntax error, unexpected keyword_ensure, expecting ')'
+/home/oby/Documents/ing-soft-abstergo/app/views/auctions/_form.html.erb:47: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/auctions/_form.html.erb:31: syntax error, unexpected ')', expecting =>
+  app/views/auctions/_form.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+  app/views/auctions/_form.html.erb:45: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/auctions/_form.html.erb:47: syntax error, unexpected keyword_end, expecting ')'
+  app/views/auctions/new.html.erb:5:in `_app_views_auctions_new_html_erb__4442872618255852442_70168039910480'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.2ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:37:22 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.1ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (4.7ms)
+  Rendered auctions/new.html.erb within layouts/application (6.8ms)
+  Rendered application/_header.html.erb (0.7ms)
+Completed 200 OK in 165ms (Views: 163.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:37:59 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.5ms)
+  Rendered auctions/_form.html.erb (1.1ms)
+  Rendered auctions/new.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/home/oby/Documents/ing-soft-abstergo/app/views/auctions/_form.html.erb:32: syntax error, unexpected '<', expecting ')'
+	</div>
+	 ^
+/home/oby/Documents/ing-soft-abstergo/app/views/auctions/_form.html.erb:37: unknown regexp options - dv
+/home/oby/Documents/ing-soft-abstergo/app/views/auctions/_form.html.erb:39: syntax error, unexpected '<'
+  <div class="actions">
+   ^
+/home/oby/Documents/ing-soft-abstergo/app/views/auctions/_form.html.erb:40: syntax error, unexpected tCONSTANT, expecting ')'
+...ffer.append=( link_to 'Cancelar', auctions_path, class: "btn...
+...                               ^
+/home/oby/Documents/ing-soft-abstergo/app/views/auctions/_form.html.erb:42: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+/home/oby/Documents/ing-soft-abstergo/app/views/auctions/_form.html.erb:42: unterminated regexp meets end of file):
+  app/views/auctions/_form.html.erb:32: syntax error, unexpected '<', expecting ')'
+  app/views/auctions/_form.html.erb:37: unknown regexp options - dv
+  app/views/auctions/_form.html.erb:39: syntax error, unexpected '<'
+  app/views/auctions/_form.html.erb:40: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/auctions/_form.html.erb:42: syntax error, unexpected '<', expecting ')'
+  app/views/auctions/_form.html.erb:42: unterminated regexp meets end of file
+  app/views/auctions/new.html.erb:5:in `_app_views_auctions_new_html_erb__4442872618255852442_70168039910480'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.4ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:38:08 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.3ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (12.5ms)
+  Rendered auctions/new.html.erb within layouts/application (14.9ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 169ms (Views: 167.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:38:24 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (29.2ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (30.2ms)
+  Rendered auctions/new.html.erb within layouts/application (63.2ms)
+  Rendered application/_header.html.erb (2.6ms)
+Completed 200 OK in 337ms (Views: 319.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:39:31 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.4ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (10.2ms)
+  Rendered auctions/new.html.erb within layouts/application (13.4ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 164ms (Views: 162.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:39:37 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.6ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (6.7ms)
+  Rendered auctions/new.html.erb within layouts/application (9.6ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 158ms (Views: 156.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:39:54 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (6.4ms)
+  Rendered auctions/new.html.erb within layouts/application (8.7ms)
+  Rendered application/_header.html.erb (0.7ms)
+Completed 200 OK in 161ms (Views: 159.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:40:20 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (2.2ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (6.9ms)
+  Rendered auctions/new.html.erb within layouts/application (10.9ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 169ms (Views: 167.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:40:28 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.2ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (4.6ms)
+  Rendered auctions/new.html.erb within layouts/application (6.7ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 163ms (Views: 161.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:41:01 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.6ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (6.2ms)
+  Rendered auctions/new.html.erb within layouts/application (8.9ms)
+  Rendered application/_header.html.erb (0.8ms)
+Completed 200 OK in 165ms (Views: 163.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:41:38 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.4ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (4.9ms)
+  Rendered auctions/new.html.erb within layouts/application (7.3ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 165ms (Views: 164.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:42:30 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (5.4ms)
+  Rendered auctions/new.html.erb within layouts/application (7.8ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 170ms (Views: 168.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:42:31 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (2.1ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (4.9ms)
+  Rendered auctions/new.html.erb within layouts/application (8.8ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 158ms (Views: 156.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:42:34 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.4ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (5.4ms)
+  Rendered auctions/new.html.erb within layouts/application (7.9ms)
+  Rendered application/_header.html.erb (0.7ms)
+Completed 200 OK in 171ms (Views: 170.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:43:02 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.4ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (5.7ms)
+  Rendered auctions/new.html.erb within layouts/application (8.1ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 169ms (Views: 167.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:44:02 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.4ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (5.6ms)
+  Rendered auctions/new.html.erb within layouts/application (8.3ms)
+  Rendered application/_header.html.erb (0.7ms)
+Completed 200 OK in 168ms (Views: 166.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:44:12 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (2.4ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (6.3ms)
+  Rendered auctions/new.html.erb within layouts/application (10.5ms)
+  Rendered application/_header.html.erb (0.8ms)
+Completed 200 OK in 193ms (Views: 190.7ms | ActiveRecord: 0.9ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:46:24 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"  WHERE "categories"."id" = 25  ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (5.6ms)
+  Rendered auctions/new.html.erb within layouts/application (7.9ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 155ms (Views: 153.7ms | ActiveRecord: 0.5ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"  WHERE "categories"."id" = 25  ORDER BY "categories"."name" ASC[0m
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:47:41 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.7ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (5.9ms)
+  Rendered auctions/new.html.erb within layouts/application (8.9ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 163ms (Views: 161.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:49:45 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.3ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (5.4ms)
+  Rendered auctions/new.html.erb within layouts/application (7.6ms)
+  Rendered application/_header.html.erb (0.8ms)
+Completed 200 OK in 168ms (Views: 167.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:50:02 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.2ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (5.1ms)
+  Rendered auctions/new.html.erb within layouts/application (7.3ms)
+  Rendered application/_header.html.erb (0.7ms)
+Completed 200 OK in 159ms (Views: 158.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 01:50:05 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.5ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (6.7ms)
+  Rendered auctions/new.html.erb within layouts/application (9.4ms)
+  Rendered application/_header.html.erb (0.7ms)
+Completed 200 OK in 173ms (Views: 171.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-28 01:52:23 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D/vFiOYBUBadxA/xgx0frKjV/VYUagvZIssqJHuMMDs=", "auction"=>{"name"=>"Radeon HD 6870 XFX", "description"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut orci tempor, tincidunt felis ut, suscipit diam. Nullam id interdum lacus, eget cursus orci. Suspendisse pellentesque vulputate congue. Nunc a libero eros. Pellentesque volutpat sodales ultrices. Sed sed feugiat massa. Suspendisse bibendum maximus nisi eu vestibulum. Morbi elementum mollis ipsum, eget tempus nunc eleifend mollis. Ut lobortis, felis ut fringilla cursus, enim purus facilisis enim, eget aliquam mauris leo sed odio. Pellentesque vel vulputate lectus, nec auctor arcu. Nulla ut tortor a magna convallis mattis sit amet non est. Sed mollis condimentum orci quis porta. Nulla rhoncus feugiat neque, vitae elementum nunc venenatis et. Maecenas non nisi mi.\r\n", "link"=>"http://google.com", "category"=>"25"}, "commit"=>"Crear subasta"}
+Completed 500 Internal Server Error in 10ms
+
+ActiveRecord::AssociationTypeMismatch (Category(#69895289663800) expected, got String(#69895255812920)):
+  app/controllers/auctions_controller.rb:15:in `create'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)

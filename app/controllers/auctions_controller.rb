@@ -16,6 +16,7 @@ class AuctionsController < ApplicationController
     @auction.active = true
     @auction.owner = current_user.username
     @auction.user_id = current_user #campo obsoleto, eliminar
+    
     #auction.dayC = params[:dayC]
     #auction.monthC = params[:monthC]
     if @auction.save

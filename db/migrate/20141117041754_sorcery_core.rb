@@ -8,6 +8,13 @@ class SorceryCore < ActiveRecord::Migration
       t.string :crypted_password, :null => false
       t.string :salt,             :null => false
 
+      # Agregados
+      add_reference :auctions, :user, index: true
+
+      t.boolean :active
+      t.boolean :admin
+      ############################################
+
       t.timestamps
     end
 

@@ -7,7 +7,7 @@ class UserSessionsController < ApplicationController
   end
 
   def create
-    if User.where(username: params[:username], activo: true).blank?
+    if User.where(username: params[:username], active: true).blank?
       flash.keep[:alert] = 'El usuario no existe o no se encuentra activo'
       render action: 'new'
     elsif @user = login(params[:username], params[:password], params[:remember_me])

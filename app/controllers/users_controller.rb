@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 		@user.admin = false
-		@user.activo = true
+		@user.active = true
     if @user.save
      redirect_to(:users, notice: 'User was succesfully created!')
     else
@@ -40,9 +40,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user.activo = false
+    @user.active = false
 		@user.save
-		if current_user.activo == false
+		if current_user.active == false
 			logout
 		end
 		redirect_to(:users, notice: 'User was succesfully deleted!')
@@ -53,7 +53,7 @@ class UsersController < ApplicationController
   end
 
   def reactive
-    @user.activo = true
+    @user.active = true
     @user.save
     redirect_to(:users, notice: 'User was succesfully re-activated!')
   end
