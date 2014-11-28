@@ -1,7 +1,7 @@
 <p><%= link_to 'Volver al listado', auctions_path %> | Publicación #<%= @auction.id %></p>
 
 <div class="page-header">
-  <h1><%= @auction.name %> <small><%= @auction.category %></small> <%= link_to "Ver imagen", @auction.link, class: "btn btn-xs btn-success", target: "_blank" %></h1>
+  <h1><%= @auction.name %> <small><%= @auction.category.name %></small> <%= link_to "Ver imagen", @auction.link, class: "btn btn-xs btn-success", target: "_blank" %></h1>
 </div>
 
 <h3>Descripción</h3>

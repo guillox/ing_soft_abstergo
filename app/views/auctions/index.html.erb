@@ -18,21 +18,21 @@
 				<tr>
 					<td><%= a.name %></td>
 					<td><%= truncate(a.description, length: 120, omission: '...') %></td>
-					<td><%= a.category %></td>
+					<td><%= a.category.name %></td>
 					<td><%= link_to "Ver", a.link, class: "btn btn-link", target: "_blank" %></td>
 					<td>
-					<% if current_user%>					
-						<% unless (a.owner == current_user.username) %>
+					<% if current_user %>					
+						<% unless (a.user_id == current_user.id) %>
 							<%= link_to 'Ofertar', :auctions , class: 'btn btn-success' %>
 						<% end %>
 					<%end%>
 					<%= link_to 'Ver', auction_path(a), class: 'btn btn-warning'%>
 					<% if current_user%>	
-						<% if ((current_user.username == a.owner) || (current_user.admin?)) %>				
+						<% if ((current_user.id == a.user_id) || (current_user.admin?)) %>				
 							<%= link_to "Eliminar", a, method: :delete, data:{confirm:"¿Está seguro?"}, class: 'btn btn-danger' %>		
 							<%= link_to 'Editar', edit_auction_path(a), class: 'btn btn-info' %>
 						<% end %>
-						<% if (current_user.username == a.owner) %>
+						<% if (current_user.id == a.user_id) %>
 							<%= link_to 'Elegir Ganador', :auctions , class: 'btn btn-success' %>				
 						<% end %>
 					<% end %>					

@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20141128031302) do
     t.string   "name"
     t.text     "description"
     t.string   "link"
-    t.boolean  "active"
+    t.boolean  "active",      default: true
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"

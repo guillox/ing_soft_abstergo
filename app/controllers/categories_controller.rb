@@ -30,7 +30,7 @@ class CategoriesController < ApplicationController
       respond_with(@category, location: categories_path)
     else
       render 'edit'
-     end
+    end
   end
 
   def destroy  	
@@ -42,12 +42,12 @@ class CategoriesController < ApplicationController
 
   private
 
-  def get_category
-    @category = Category.find(params[:id])
-  end
+    def get_category
+      @category = Category.find(params[:id])
+    end
 
-  def category_params
-    params.require(:category).permit(:name)
-  end
+    def category_params
+      params.require(:category).permit(:name)
+    end
 
 end

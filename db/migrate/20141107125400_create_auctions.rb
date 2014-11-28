@@ -4,7 +4,7 @@ class CreateAuctions < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.string :link
-      t.boolean :active     
+      t.boolean :active, default: true
       
       t.timestamps
     end
