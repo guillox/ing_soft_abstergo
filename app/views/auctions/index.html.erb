@@ -1,14 +1,15 @@
 <h1>Subastas</h1>
+
 <%= render 'tabs' %>
 
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th class="col-sm-3">Nombre</th>
+			<th class="col-sm-2">Nombre</th>
 			<th class="col-sm-4">Descripcion</th>
 			<th class="col-sm-1">Categoria</th>
 			<th class="col-sm-1">Imagen</th>
-			<th class="col-sm-3">Acción</th>
+			<th class="col-sm-4">Acción</th>
 		</tr>
 	</thead>
 
@@ -20,22 +21,20 @@
 					<td><%= truncate(a.description, length: 120, omission: '...') %></td>
 					<td><%= a.category.name %></td>
 					<td><%= link_to "Ver", a.link, class: "btn btn-link", target: "_blank" %></td>
+
 					<td>
-					<% if current_user %>					
-						<% unless (a.user_id == current_user.id) %>
-							<%= link_to 'Ofertar', :auctions , class: 'btn btn-success' %>
+						<%= link_to 'Ver', auction_path(a), class: 'btn btn-warning' %>				
+
+						<% if current_user %>
+							<% if a.user_owner?(current_user) %>
+								<%= link_to 'Elegir Ganador', :auctions , class: 'btn btn-success' %>
+								<%= link_to 'Editar', edit_auction_path(a), class: 'btn btn-info' %>
+								<%= link_to "Eliminar", a, method: :delete, data: { confirm:"¿Está seguro?" }, class: 'btn btn-danger' %>		
+							<% else %>
+								<%= link_to 'Ofertar', :auctions , class: 'btn btn-success' %>
+							<% end %>
 						<% end %>
-					<%end%>
-					<%= link_to 'Ver', auction_path(a), class: 'btn btn-warning'%>
-					<% if current_user%>	
-						<% if ((current_user.id == a.user_id) || (current_user.admin?)) %>				
-							<%= link_to "Eliminar", a, method: :delete, data:{confirm:"¿Está seguro?"}, class: 'btn btn-danger' %>		
-							<%= link_to 'Editar', edit_auction_path(a), class: 'btn btn-info' %>
-						<% end %>
-						<% if (current_user.id == a.user_id) %>
-							<%= link_to 'Elegir Ganador', :auctions , class: 'btn btn-success' %>				
-						<% end %>
-					<% end %>					
+
 					</td>
 				</tr>
 			<% end %>

@@ -10,5 +10,13 @@ class Auction < ActiveRecord::Base
 	validates_format_of :description, :with => /./
   
 	validates :link, url: true
+
+  def user_owner?(current_user)
+    if current_user.id == self.user_id || current_user.admin?
+        return true
+      end
+
+    return false
+  end
 end
 
