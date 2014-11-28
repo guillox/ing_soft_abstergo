@@ -16693,3 +16693,2454 @@ Processing by AuctionsController#index as HTML
   Rendered auctions/index.html.erb within layouts/application (6.0ms)
   Rendered application/_header.html.erb (0.7ms)
 Completed 200 OK in 156ms (Views: 154.8ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.6ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+
+  [1m[36m (0.6ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.6ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mCategory Load (6.7ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 1]]
+  [1m[35m (238.2ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 2]]
+  [1m[36m (138.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 3]]
+  [1m[35m (140.5ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 4]]
+  [1m[36m (118.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 5]]
+  [1m[35m (118.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 7]]
+  [1m[36m (118.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 8]]
+  [1m[35m (118.6ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 9]]
+  [1m[36m (118.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 10]]
+  [1m[35m (140.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 6]]
+  [1m[36m (151.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 11]]
+  [1m[35m (151.5ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 12]]
+  [1m[36m (140.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 13]]
+  [1m[35m (118.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 14]]
+  [1m[36m (118.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 15]]
+  [1m[35m (118.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 16]]
+  [1m[36m (118.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 17]]
+  [1m[35m (118.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 18]]
+  [1m[36m (118.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 19]]
+  [1m[35m (140.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 20]]
+  [1m[36m (151.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 21]]
+  [1m[35m (151.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 22]]
+  [1m[36m (151.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 25]]
+  [1m[35m (141.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 23]]
+  [1m[36m (118.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 24]]
+  [1m[35m (118.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Accesorios para Vehículos' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:30:58.891952"], ["name", "Accesorios para Vehículos"], ["updated_at", "2014-11-28 17:30:58.891952"]]
+  [1m[35m (139.9ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Animales y Mascotas' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:30:59.043741"], ["name", "Animales y Mascotas"], ["updated_at", "2014-11-28 17:30:59.043741"]]
+  [1m[35m (144.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Antigüedades' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:30:59.198345"], ["name", "Antigüedades"], ["updated_at", "2014-11-28 17:30:59.198345"]]
+  [1m[35m (156.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.6ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Arte y Artesanías' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:30:59.364565"], ["name", "Arte y Artesanías"], ["updated_at", "2014-11-28 17:30:59.364565"]]
+  [1m[35m (178.1ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.8ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Bebés' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:30:59.554884"], ["name", "Bebés"], ["updated_at", "2014-11-28 17:30:59.554884"]]
+  [1m[35m (151.9ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.6ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Cámaras y Accesorios' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:30:59.718766"], ["name", "Cámaras y Accesorios"], ["updated_at", "2014-11-28 17:30:59.718766"]]
+  [1m[35m (167.0ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Celulares y Teléfonos' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:30:59.895962"], ["name", "Celulares y Teléfonos"], ["updated_at", "2014-11-28 17:30:59.895962"]]
+  [1m[35m (167.0ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.7ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Coleccionables y Hobbies' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:00.073947"], ["name", "Coleccionables y Hobbies"], ["updated_at", "2014-11-28 17:31:00.073947"]]
+  [1m[35m (144.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Computación' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:00.229452"], ["name", "Computación"], ["updated_at", "2014-11-28 17:31:00.229452"]]
+  [1m[35m (144.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.6ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Consolas y Videojuegos' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:00.384395"], ["name", "Consolas y Videojuegos"], ["updated_at", "2014-11-28 17:31:00.384395"]]
+  [1m[35m (145.2ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.6ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Delicatessen y Vinos' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:00.540365"], ["name", "Delicatessen y Vinos"], ["updated_at", "2014-11-28 17:31:00.540365"]]
+  [1m[35m (143.7ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Deportes y Fitness' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:00.694961"], ["name", "Deportes y Fitness"], ["updated_at", "2014-11-28 17:31:00.694961"]]
+  [1m[35m (144.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Electrodomésticos y Aires Ac.' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:00.849544"], ["name", "Electrodomésticos y Aires Ac."], ["updated_at", "2014-11-28 17:31:00.849544"]]
+  [1m[35m (178.1ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.9ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Electrónica, Audio y Vídeo' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:01.039251"], ["name", "Electrónica, Audio y Vídeo"], ["updated_at", "2014-11-28 17:31:01.039251"]]
+  [1m[35m (152.6ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Entradas para Eventos' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:01.203815"], ["name", "Entradas para Eventos"], ["updated_at", "2014-11-28 17:31:01.203815"]]
+  [1m[35m (166.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Hogar, Muebles y Jardín' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:01.380941"], ["name", "Hogar, Muebles y Jardín"], ["updated_at", "2014-11-28 17:31:01.380941"]]
+  [1m[35m (167.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Industrias y Oficinas' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:01.558076"], ["name", "Industrias y Oficinas"], ["updated_at", "2014-11-28 17:31:01.558076"]]
+  [1m[35m (145.0ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Instrumentos Musicales' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:01.713286"], ["name", "Instrumentos Musicales"], ["updated_at", "2014-11-28 17:31:01.713286"]]
+  [1m[35m (146.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Joyas y Relojes' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:01.869875"], ["name", "Joyas y Relojes"], ["updated_at", "2014-11-28 17:31:01.869875"]]
+  [1m[35m (145.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Juegos y Juguetes' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:02.024728"], ["name", "Juegos y Juguetes"], ["updated_at", "2014-11-28 17:31:02.024728"]]
+  [1m[35m (145.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.6ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Libros, Revistas y Comics' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:02.180364"], ["name", "Libros, Revistas y Comics"], ["updated_at", "2014-11-28 17:31:02.180364"]]
+  [1m[35m (155.7ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.5ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Música, Películas y Series' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:02.347017"], ["name", "Música, Películas y Series"], ["updated_at", "2014-11-28 17:31:02.347017"]]
+  [1m[35m (177.1ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.8ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Ropa y Accesorios' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:02.537742"], ["name", "Ropa y Accesorios"], ["updated_at", "2014-11-28 17:31:02.537742"]]
+  [1m[35m (150.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.6ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Salud y Belleza' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:02.700171"], ["name", "Salud y Belleza"], ["updated_at", "2014-11-28 17:31:02.700171"]]
+  [1m[35m (144.8ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.6ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."name" = 'Otras categorías' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 17:31:02.855074"], ["name", "Otras categorías"], ["updated_at", "2014-11-28 17:31:02.855074"]]
+  [1m[35m (144.9ms)[0m  commit transaction
+  [1m[36mUser Load (6.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mAuction Load (1.0ms)[0m  [1mSELECT "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "auctions" WHERE "auctions"."id" = ?  [["id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "auctions" WHERE "auctions"."id" = ?[0m  [["id", 3]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "auctions" WHERE "auctions"."id" = ?  [["id", 4]]
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "auctions" WHERE "auctions"."id" = ?[0m  [["id", 5]]
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  [1m[36m (115.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mAuction Load (0.5ms)[0m  [1mSELECT "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "auctions" WHERE "auctions"."id" = ?  [["id", 2]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "auctions" WHERE "auctions"."id" = ?[0m  [["id", 6]]
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "auctions" WHERE "auctions"."id" = ?  [["id", 7]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "auctions" WHERE "auctions"."id" = ?[0m  [["id", 8]]
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 2]]
+  [1m[36m (127.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mUser Load (6.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (5.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'bestnid' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'admin@bestnid.com.ar' LIMIT 1
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "users" ("active", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["active", "t"], ["admin", "t"], ["created_at", "2014-11-28 17:34:34.246500"], ["crypted_password", "$2a$10$LSgQz.4TDgk89wP1U2QRUuwnN3zacnLSduJVqZUvjsHpdog2sf832"], ["email", "admin@bestnid.com.ar"], ["last_name", "bestnid"], ["name", "bestnid"], ["salt", "BfzYhfhU6fvUaPyw3MZ6"], ["updated_at", "2014-11-28 17:34:34.246500"], ["username", "bestnid"]]
+  [1m[35m (208.9ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'oby' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oby@bestnid.com.ar' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("active", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["active", "t"], ["admin", "t"], ["created_at", "2014-11-28 17:34:34.984459"], ["crypted_password", "$2a$10$kQe4ir1/KZ/21IFpT0bfq.qKQ8QFzztC./1dHteZr1y1/EOuD40VW"], ["email", "oby@bestnid.com.ar"], ["last_name", "silva"], ["name", "agustin"], ["salt", "7qs4fEp8qwM4oHCz31Vd"], ["updated_at", "2014-11-28 17:34:34.984459"], ["username", "oby"]]
+  [1m[36m (164.1ms)[0m  [1mcommit transaction[0m
+  [1m[36mUser Load (6.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mAuction Load (0.7ms)[0m  [1mSELECT "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mSQL (1.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 3]]
+  [1m[36m (209.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 4]]
+  [1m[36m (137.3ms)[0m  [1mcommit transaction[0m
+  [1m[36mUser Load (5.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (5.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (6.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mUser Load (5.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mUser Load (5.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (5.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'bestnid' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'admin@bestnid.com.ar' LIMIT 1
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "users" ("active", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["active", "t"], ["admin", "t"], ["created_at", "2014-11-28 17:40:32.477161"], ["crypted_password", "$2a$10$Mz2JODDior7nNmIY84sErunKBUBGwG/gFKuLQb6mzHeaF.glebeYW"], ["email", "admin@bestnid.com.ar"], ["last_name", "bestnid"], ["name", "bestnid"], ["salt", "cyXF65zLQDpkyDc1gUqK"], ["updated_at", "2014-11-28 17:40:32.477161"], ["username", "bestnid"]]
+  [1m[35m (169.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'oby' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oby@bestnid.com.ar' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("active", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["active", "t"], ["admin", "t"], ["created_at", "2014-11-28 17:40:33.180489"], ["crypted_password", "$2a$10$LOc4G0RHNtghC1xvyK/O7eEbPndCKFJC2tR03UDIiAG3HSwClHKHi"], ["email", "oby@bestnid.com.ar"], ["last_name", "silva"], ["name", "agustin"], ["salt", "avqELA3h7KiLTexUB2qc"], ["updated_at", "2014-11-28 17:40:33.180489"], ["username", "oby"]]
+  [1m[36m (173.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mUser Load (6.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mAuction Load (0.7ms)[0m  [1mSELECT "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35mSQL (1.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 5]]
+  [1m[36m (168.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 6]]
+  [1m[36m (127.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'bestnid' LIMIT 1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'admin@bestnid.com.ar' LIMIT 1
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "users" ("active", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["active", "t"], ["admin", "t"], ["created_at", "2014-11-28 17:42:20.890532"], ["crypted_password", "$2a$10$XDpknToMjl4z1gGcszGj5e.c9ZxzH9P9c.wGhcC4luYpS2lX0.Xbm"], ["email", "admin@bestnid.com.ar"], ["last_name", "bestnid"], ["name", "bestnid"], ["salt", "mbtGNiKVfAEsoqP5bQgy"], ["updated_at", "2014-11-28 17:42:20.890532"], ["username", "bestnid"]]
+  [1m[35m (196.7ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'oby' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oby@bestnid.com.ar' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("active", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["active", "t"], ["admin", "t"], ["created_at", "2014-11-28 17:42:21.601755"], ["crypted_password", "$2a$10$JDjh6Dtw18hzhU5kqlW8FeR19zXfPdPpMNkge8rjUfEk..bXMDt4i"], ["email", "oby@bestnid.com.ar"], ["last_name", "silva"], ["name", "agustin"], ["salt", "BurMzgxXAUNFQvwDghL7"], ["updated_at", "2014-11-28 17:42:21.601755"], ["username", "oby"]]
+  [1m[36m (215.1ms)[0m  [1mcommit transaction[0m
+  [1m[36mUser Load (6.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mAuction Load (0.7ms)[0m  [1mSELECT "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 7]]
+  [1m[36m (419.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ?[0m  [["user_id", 8]]
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 8]]
+  [1m[36m (126.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'bestnid' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'admin@bestnid.com.ar' LIMIT 1
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "users" ("active", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["active", "t"], ["admin", "t"], ["created_at", "2014-11-28 17:43:08.051575"], ["crypted_password", "$2a$10$Qkah6cT7OB6JdxOapKrTVe4.5Yrqz5tc.MSXAMR99jbWeKpyYi6aO"], ["email", "admin@bestnid.com.ar"], ["last_name", "bestnid"], ["name", "bestnid"], ["salt", "CWNGbBBXJeGXLP6aJUUo"], ["updated_at", "2014-11-28 17:43:08.051575"], ["username", "bestnid"]]
+  [1m[35m (172.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'oby' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oby@bestnid.com.ar' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("active", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["active", "t"], ["admin", "t"], ["created_at", "2014-11-28 17:43:08.733444"], ["crypted_password", "$2a$10$yW1E8Hr4NzMOBKj6pttRRuaJdAwabwPXZuL2kdfEkAfPi64TDYaji"], ["email", "oby@bestnid.com.ar"], ["last_name", "silva"], ["name", "agustin"], ["salt", "1eWuZFfY6CMPMzfR38cp"], ["updated_at", "2014-11-28 17:43:08.733444"], ["username", "oby"]]
+  [1m[36m (187.2ms)[0m  [1mcommit transaction[0m
+  [1m[36mUser Load (6.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mAuction Load (0.7ms)[0m  [1mSELECT "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 9]]
+  [1m[36m (502.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 10]]
+  [1m[36m (115.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'bestnid' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'admin@bestnid.com.ar' LIMIT 1
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "users" ("active", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["active", "t"], ["admin", "t"], ["created_at", "2014-11-28 17:43:58.137336"], ["crypted_password", "$2a$10$HU72aktstgDAdaTbwJbcc.PUdqzKhpGsoiJ7B8FN5H2nTEIDycUHa"], ["email", "admin@bestnid.com.ar"], ["last_name", "bestnid"], ["name", "bestnid"], ["salt", "zUYBH6xpaFaxo8UztNMe"], ["updated_at", "2014-11-28 17:43:58.137336"], ["username", "bestnid"]]
+  [1m[35m (196.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'oby' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oby@bestnid.com.ar' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("active", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["active", "t"], ["admin", "t"], ["created_at", "2014-11-28 17:43:58.845915"], ["crypted_password", "$2a$10$ALBNz5wkA4VDA6jAetIgA.OF.kJ99TJJdItjs4LDtJ6wni0BZfP6q"], ["email", "oby@bestnid.com.ar"], ["last_name", "silva"], ["name", "agustin"], ["salt", "h2e8KhxonBpUvdDz5Pcs"], ["updated_at", "2014-11-28 17:43:58.845915"], ["username", "oby"]]
+  [1m[36m (208.2ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-28 14:46:27 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (58.2ms)
+  [1m[35mAuction Load (0.9ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (133.4ms)
+  Rendered application/_header.html.erb (19.0ms)
+Completed 200 OK in 34114ms (Views: 33919.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-28 14:47:08 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (2.3ms)
+  [1m[36mAuction Load (0.8ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (9.2ms)
+  Rendered application/_header.html.erb (3.3ms)
+Completed 200 OK in 1465ms (Views: 1461.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2014-11-28 14:47:25 -0300
+Processing by CategoriesController#index as HTML
+  Rendered categories/index.html.erb within layouts/application (4.7ms)
+  Rendered application/_header.html.erb (3.5ms)
+Completed 200 OK in 1585ms (Views: 1542.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-11-28 14:47:26 -0300
+Processing by CategoriesController#new as HTML
+  Rendered categories/_tabs.html.erb (4.4ms)
+  Rendered categories/_form.html.erb (5.4ms)
+  Rendered categories/new.html.erb within layouts/application (47.7ms)
+  Rendered application/_header.html.erb (2.6ms)
+Completed 200 OK in 1362ms (Views: 1325.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-11-28 14:48:19 -0300
+Processing by CategoriesController#new as HTML
+  Rendered categories/_tabs.html.erb (0.7ms)
+  Rendered categories/_form.html.erb (91.8ms)
+  Rendered categories/new.html.erb within layouts/application (101.3ms)
+Completed 500 Internal Server Error in 163ms
+
+ActionView::Template::Error (undefined method `admin?' for nil:NilClass):
+    1: <% if !current_user %>
+    2: 	 <% if current_user.admin? %>
+    3: 		<% if @category.errors.any?  %>
+    4: 			<div class="alert alert-danger" role="alert">
+    5: 				<%= @category.errors.get(:nombre).first %>
+  app/views/categories/_form.html.erb:2:in `_app_views_categories__form_html_erb__834764653__631045978'
+  app/views/categories/new.html.erb:4:in `_app_views_categories_new_html_erb__461226098__629940258'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.2ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.1ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-11-28 14:48:33 -0300
+Processing by CategoriesController#new as HTML
+  Rendered categories/_tabs.html.erb (0.7ms)
+  Rendered categories/_form.html.erb (17.6ms)
+  Rendered categories/new.html.erb within layouts/application (51.5ms)
+Completed 500 Internal Server Error in 88ms
+
+ActionView::Template::Error (undefined method `admin?' for nil:NilClass):
+    1: <% if !current_user %>
+    2: 	 <% if !current_user.admin? %>
+    3: 		<% if @category.errors.any?  %>
+    4: 			<div class="alert alert-danger" role="alert">
+    5: 				<%= @category.errors.get(:nombre).first %>
+  app/views/categories/_form.html.erb:2:in `_app_views_categories__form_html_erb__834764653__629769808'
+  app/views/categories/new.html.erb:4:in `_app_views_categories_new_html_erb__461226098__629940258'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.5ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.6ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (108.3ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-11-28 14:48:45 -0300
+Processing by CategoriesController#new as HTML
+  Rendered categories/_tabs.html.erb (0.9ms)
+  Rendered categories/_form.html.erb (5.0ms)
+  Rendered categories/new.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 43ms
+
+ActionView::Template::Error (undefined method `admin?' for nil:NilClass):
+    1: <% if !current_user %>
+    2: 	 <% if !current_user.admin? %>
+    3: 		<% if @category.errors.any?  %>
+    4: 			<div class="alert alert-danger" role="alert">
+    5: 				<%= @category.errors.get(:nombre).first %>
+  app/views/categories/_form.html.erb:2:in `_app_views_categories__form_html_erb__834764653__629769808'
+  app/views/categories/new.html.erb:4:in `_app_views_categories_new_html_erb__461226098__629940258'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.9ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.2ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.2ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-11-28 14:48:53 -0300
+Processing by CategoriesController#new as HTML
+  Rendered categories/_tabs.html.erb (0.6ms)
+  Rendered categories/_form.html.erb (21.8ms)
+  Rendered categories/new.html.erb within layouts/application (47.2ms)
+  Rendered application/_header.html.erb (2.6ms)
+Completed 200 OK in 1589ms (Views: 1579.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 14:49:01 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (9.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (26.8ms)
+  Rendered application/_header.html.erb (7.9ms)
+Completed 200 OK in 1113ms (Views: 1013.9ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 14:49:07 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Occw22HjcsYZC8JjJuP8sVqMEnNEadEnbZa2RagbUlo=", "username"=>"oby", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."username" = 'oby' AND "users"."active" = 't'
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE (username = 'oby')  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 689ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 14:49:08 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (9.6ms)
+  [1m[36mAuction Load (0.9ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (17.9ms)
+  Rendered application/_header.html.erb (6.7ms)
+Completed 200 OK in 1338ms (Views: 1309.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2014-11-28 14:49:15 -0300
+Processing by CategoriesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered categories/_tabs.html.erb (11.9ms)
+  [1m[36mCategory Load (1.7ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (43.3ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionView::Template::Error (undefined method `nombre' for #<Category:0xb4caf094>):
+    15: 		<tbody>
+    16: 			<% @category.each do |category| %>
+    17: 				<tr>
+    18: 					<td><%= category.nombre %></td>
+    19: 					<td>
+    20: 						<%= link_to "Editar", edit_category_path(category), class: 'btn btn-info' %>					
+    21: 
+  app/views/categories/index.html.erb:18:in `block in _app_views_categories_index_html_erb__793967815__632259968'
+  app/views/categories/index.html.erb:16:in `_app_views_categories_index_html_erb__793967815__632259968'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.5ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2014-11-28 14:49:16 -0300
+Processing by CategoriesController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered categories/_tabs.html.erb (6.2ms)
+  [1m[36mCategory Load (2.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (29.4ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (undefined method `nombre' for #<Category:0xb4f7696c>):
+    15: 		<tbody>
+    16: 			<% @category.each do |category| %>
+    17: 				<tr>
+    18: 					<td><%= category.nombre %></td>
+    19: 					<td>
+    20: 						<%= link_to "Editar", edit_category_path(category), class: 'btn btn-info' %>					
+    21: 
+  app/views/categories/index.html.erb:18:in `block in _app_views_categories_index_html_erb__793967815__631223208'
+  app/views/categories/index.html.erb:16:in `_app_views_categories_index_html_erb__793967815__631223208'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2014-11-28 14:49:43 -0300
+Processing by CategoriesController#index as HTML
+  [1m[35mUser Load (20.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered categories/_tabs.html.erb (23.2ms)
+  [1m[36mCategory Load (2.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (89.2ms)
+Completed 500 Internal Server Error in 138ms
+
+ActionView::Template::Error (undefined method `nombre' for #<Category:0xb4e231b4>):
+    15: 		<tbody>
+    16: 			<% @category.each do |category| %>
+    17: 				<tr>
+    18: 					<td><%= category.nombre %></td>
+    19: 					<td>
+    20: 						<%= link_to "Editar", edit_category_path(category), class: 'btn btn-info' %>					
+    21: 
+  app/views/categories/index.html.erb:18:in `block in _app_views_categories_index_html_erb__793967815__631223208'
+  app/views/categories/index.html.erb:16:in `_app_views_categories_index_html_erb__793967815__631223208'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.9ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2014-11-28 14:50:43 -0300
+Processing by CategoriesController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered categories/_tabs.html.erb (6.1ms)
+  [1m[36mCategory Load (2.3ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (94.5ms)
+  Rendered application/_header.html.erb (5.0ms)
+Completed 200 OK in 1308ms (Views: 1298.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-11-28 14:50:50 -0300
+Processing by CategoriesController#new as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered categories/_tabs.html.erb (10.8ms)
+  Rendered categories/_form.html.erb (177.0ms)
+  Rendered categories/new.html.erb within layouts/application (197.9ms)
+  Rendered application/_header.html.erb (3.9ms)
+Completed 200 OK in 1156ms (Views: 1150.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 14:53:22 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (113.1ms)
+  [1m[35mAuction Load (0.8ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (127.5ms)
+  Rendered application/_header.html.erb (4.8ms)
+Completed 200 OK in 1238ms (Views: 1211.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 14:53:24 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (167.3ms)
+  [1m[35mCategory Load (1.6ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (157.4ms)
+  Rendered auctions/new.html.erb within layouts/application (335.5ms)
+  Rendered application/_header.html.erb (4.0ms)
+Completed 200 OK in 1317ms (Views: 1299.7ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 14:53:32 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (9.5ms)
+  [1m[35mAuction Load (0.9ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (19.6ms)
+  Rendered application/_header.html.erb (3.7ms)
+Completed 200 OK in 1012ms (Views: 1005.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 14:53:35 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (6.8ms)
+  [1m[35mCategory Load (1.6ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (27.9ms)
+  Rendered auctions/new.html.erb within layouts/application (43.5ms)
+  Rendered application/_header.html.erb (5.0ms)
+Completed 200 OK in 1063ms (Views: 1056.6ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-28 14:53:45 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Occw22HjcsYZC8JjJuP8sVqMEnNEadEnbZa2RagbUlo=", "auction"=>{"name"=>"h", "description"=>"h", "link"=>"http://www.google.com", "category_id"=>"26"}, "commit"=>"Crear subasta"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "auctions" ("category_id", "created_at", "description", "link", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 26], ["created_at", "2014-11-28 17:53:45.595552"], ["description", "h"], ["link", "http://www.google.com"], ["name", "h"], ["updated_at", "2014-11-28 17:53:45.595552"], ["user_id", 12]]
+  [1m[35m (262.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 300ms (ActiveRecord: 266.9ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 14:53:45 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (9.3ms)
+  [1m[35mAuction Load (1.1ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (1.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (96.6ms)
+  Rendered application/_header.html.erb (7.1ms)
+Completed 200 OK in 1434ms (Views: 1425.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 14:53:52 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (1.5ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCategory Load (1.7ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (40.1ms)
+  Rendered auctions/edit.html.erb within layouts/application (49.3ms)
+  Rendered application/_header.html.erb (4.0ms)
+Completed 200 OK in 1100ms (Views: 1083.8ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-28 14:54:30 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Occw22HjcsYZC8JjJuP8sVqMEnNEadEnbZa2RagbUlo=", "auction"=>{"name"=>"", "description"=>"", "link"=>"", "category_id"=>"26"}, "commit"=>"Guardar cambios"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  Rendered auctions/_tabs.html.erb (2.5ms)
+  [1m[35mCategory Load (2.3ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (86.1ms)
+  Rendered auctions/new.html.erb within layouts/application (98.6ms)
+  Rendered application/_header.html.erb (6.9ms)
+Completed 200 OK in 1511ms (Views: 1468.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 14:54:49 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (8.4ms)
+  [1m[35mCategory Load (2.3ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (58.9ms)
+  Rendered auctions/new.html.erb within layouts/application (76.5ms)
+  Rendered application/_header.html.erb (5.8ms)
+Completed 200 OK in 1491ms (Views: 1483.0ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-28 14:54:55 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Occw22HjcsYZC8JjJuP8sVqMEnNEadEnbZa2RagbUlo=", "auction"=>{"name"=>"", "description"=>"", "link"=>"", "category_id"=>"26"}, "commit"=>"Crear subasta"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  Rendered auctions/_tabs.html.erb (2.7ms)
+  [1m[35mCategory Load (2.6ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (71.3ms)
+  Rendered auctions/new.html.erb within layouts/application (82.5ms)
+  Rendered application/_header.html.erb (5.7ms)
+Completed 200 OK in 1528ms (Views: 1476.2ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-28 14:55:13 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Occw22HjcsYZC8JjJuP8sVqMEnNEadEnbZa2RagbUlo=", "auction"=>{"name"=>"", "description"=>"", "link"=>"", "category_id"=>"26"}, "commit"=>"Guardar cambios"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  Rendered auctions/_tabs.html.erb (2.8ms)
+  [1m[35mCategory Load (2.4ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (75.7ms)
+  Rendered auctions/new.html.erb within layouts/application (87.0ms)
+Completed 500 Internal Server Error in 134ms
+
+ActionView::Template::Error (undefined method `new_record?' for nil:NilClass):
+    38: 
+    39:   <div class="actions">
+    40:   	<%= link_to 'Cancelar', auctions_path, class: "btn btn-danger" %>
+    41:     <% if @category.new_record? %>
+    42:       <%= f.submit "Crear subasta", class: "btn btn-primary" %>
+    43:     <% else %>
+    44:       <%= f.submit "Guardar cambios", class: "btn btn-primary" %>
+  app/views/auctions/_form.html.erb:41:in `block in _app_views_auctions__form_html_erb___966940218__629266018'
+  app/views/auctions/_form.html.erb:1:in `_app_views_auctions__form_html_erb___966940218__629266018'
+  app/views/auctions/new.html.erb:5:in `_app_views_auctions_new_html_erb__84814624__628139818'
+  app/controllers/auctions_controller.rb:25:in `create'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.2ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.5ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.1ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-28 14:55:23 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Occw22HjcsYZC8JjJuP8sVqMEnNEadEnbZa2RagbUlo=", "auction"=>{"name"=>"", "description"=>"", "link"=>"", "category_id"=>"26"}, "commit"=>"Guardar cambios"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  Rendered auctions/_tabs.html.erb (3.0ms)
+  [1m[35mCategory Load (2.3ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (80.0ms)
+  Rendered auctions/new.html.erb within layouts/application (91.1ms)
+  Rendered application/_header.html.erb (4.5ms)
+Completed 200 OK in 1586ms (Views: 1550.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 14:56:04 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (9.0ms)
+  [1m[35mAuction Load (1.0ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.9ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (39.8ms)
+  Rendered application/_header.html.erb (7.1ms)
+Completed 200 OK in 1592ms (Views: 1584.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 14:56:10 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (0.5ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCategory Load (2.2ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (49.0ms)
+  Rendered auctions/edit.html.erb within layouts/application (57.5ms)
+  Rendered application/_header.html.erb (4.6ms)
+Completed 200 OK in 1118ms (Views: 1101.2ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-28 14:56:14 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Occw22HjcsYZC8JjJuP8sVqMEnNEadEnbZa2RagbUlo=", "auction"=>{"name"=>"h", "description"=>"h", "link"=>"http://www.google.com", "category_id"=>"26"}, "commit"=>"Guardar cambios"}
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "auctions" ("category_id", "created_at", "description", "link", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 26], ["created_at", "2014-11-28 17:56:14.998407"], ["description", "h"], ["link", "http://www.google.com"], ["name", "h"], ["updated_at", "2014-11-28 17:56:14.998407"], ["user_id", 12]]
+  [1m[35m (207.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 245ms (ActiveRecord: 212.1ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 14:56:15 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (8.5ms)
+  [1m[35mAuction Load (1.4ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (42.3ms)
+  Rendered application/_header.html.erb (6.4ms)
+Completed 200 OK in 1472ms (Views: 1464.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 14:57:07 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mAuction Load (0.6ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCategory Load (1.4ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (41.9ms)
+  Rendered auctions/edit.html.erb within layouts/application (47.8ms)
+  Rendered application/_header.html.erb (4.5ms)
+Completed 200 OK in 1094ms (Views: 1077.8ms | ActiveRecord: 4.7ms)
+
+
+Started PATCH "/auctions/9" for 127.0.0.1 at 2014-11-28 14:57:11 -0300
+Processing by AuctionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Occw22HjcsYZC8JjJuP8sVqMEnNEadEnbZa2RagbUlo=", "auction"=>{"name"=>"h", "description"=>"h", "link"=>"http://www.google.com", "category_id"=>"26"}, "commit"=>"Guardar cambios", "id"=>"9"}
+  [1m[35mUser Load (4.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (0.6ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 39ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 14:57:11 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (8.9ms)
+  [1m[36mAuction Load (1.0ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.6ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (40.6ms)
+  Rendered application/_header.html.erb (5.5ms)
+Completed 200 OK in 1408ms (Views: 1399.4ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 14:58:11 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Occw22HjcsYZC8JjJuP8sVqMEnNEadEnbZa2RagbUlo="}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mSQL (132.2ms)[0m  [1mUPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 12[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 151ms (ActiveRecord: 133.4ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 14:58:11 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (3.1ms)
+  [1m[35mAuction Load (1.2ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.9ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (39.2ms)
+  Rendered application/_header.html.erb (3.7ms)
+Completed 200 OK in 1497ms (Views: 1483.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 14:58:25 -0300
+Processing by AuctionsController#new as HTML
+  Rendered auctions/_tabs.html.erb (5.2ms)
+  [1m[36mCategory Load (7.5ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (67.2ms)
+  Rendered auctions/new.html.erb within layouts/application (88.4ms)
+  Rendered application/_header.html.erb (3.5ms)
+Completed 200 OK in 1422ms (Views: 1409.6ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 14:59:07 -0300
+Processing by AuctionsController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 14:59:07 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (9.4ms)
+  Rendered user_sessions/new.html.erb within layouts/application (15.7ms)
+  Rendered application/_header.html.erb (2.5ms)
+Completed 200 OK in 1393ms (Views: 1323.9ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 15:00:32 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CmaXU3WdH/BNT95DaiFFs5sLIa9CZytEYGkKUJl2yHc=", "username"=>"oby", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."username" = 'oby' AND "users"."active" = 't'
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE (username = 'oby')  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 713ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 15:00:33 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (10.4ms)
+  [1m[36mAuction Load (1.4ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (1.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (151.2ms)
+  Rendered application/_header.html.erb (8.3ms)
+Completed 200 OK in 1790ms (Views: 1751.0ms | ActiveRecord: 8.8ms)
+  [1m[36mAuction Load (6.1ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAuction Load (0.8ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuction Load (1.1ms)[0m  [1mSELECT  "auctions".* FROM "auctions"   ORDER BY "auctions"."id" ASC LIMIT 1[0m
+  [1m[35mAuction Load (1.1ms)[0m  SELECT  "auctions".* FROM "auctions"   ORDER BY "auctions"."id" ASC LIMIT 1
+  [1m[36mSQL (185.4ms)[0m  [1mUPDATE "auctions" SET "user_id" = 11 WHERE "auctions"."id" = 9[0m
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 15:01:16 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (8.7ms)
+  [1m[36mAuction Load (1.0ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (2.5ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (41.7ms)
+  Rendered application/_header.html.erb (5.8ms)
+Completed 200 OK in 1346ms (Views: 1336.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/auctions/10/edit" for 127.0.0.1 at 2014-11-28 15:01:27 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (1.2ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 10]]
+  [1m[35mCategory Load (2.2ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (49.9ms)
+  Rendered auctions/edit.html.erb within layouts/application (58.0ms)
+  Rendered application/_header.html.erb (7.7ms)
+Completed 200 OK in 1667ms (Views: 1596.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 15:01:30 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mAuction Load (0.5ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1  [["user_id", 12], ["id", 9]]
+Completed 404 Not Found in 34ms
+
+ActiveRecord::RecordNotFound (Couldn't find Auction with 'id'=9 [WHERE "auctions"."user_id" = ?]):
+  app/controllers/auctions_controller.rb:52:in `get_auction'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.5ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.4ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (142.1ms)
+
+
+Started GET "/auctions/10/edit" for 127.0.0.1 at 2014-11-28 15:02:00 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mAuction Load (0.5ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1  [["user_id", 12], ["id", 10]]
+  [1m[36mCategory Load (2.3ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (51.6ms)
+  Rendered auctions/edit.html.erb within layouts/application (58.8ms)
+  Rendered application/_header.html.erb (6.7ms)
+Completed 200 OK in 1615ms (Views: 1594.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 15:02:07 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (0.5ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 9]]
+Completed 404 Not Found in 18ms
+
+ActiveRecord::RecordNotFound (Couldn't find Auction with 'id'=9 [WHERE "auctions"."user_id" = ?]):
+  app/controllers/auctions_controller.rb:52:in `get_auction'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.9ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.8ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (126.3ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 15:03:53 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (0.8ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 9]]
+Redirected to http://localhost:3000/auctions
+Filter chain halted as :get_auction rendered or redirected
+Completed 302 Found in 187ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 15:03:53 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (9.0ms)
+  [1m[36mAuction Load (1.1ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (1.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (141.0ms)
+  Rendered application/_header.html.erb (6.3ms)
+Completed 200 OK in 1532ms (Views: 1520.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 15:04:19 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (0.5ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 9]]
+Redirected to http://localhost:3000/auctions
+Filter chain halted as :get_auction rendered or redirected
+Completed 302 Found in 24ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 15:04:19 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (10.0ms)
+  [1m[36mAuction Load (1.8ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.7ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (56.4ms)
+  Rendered application/_header.html.erb (4.0ms)
+Completed 200 OK in 1028ms (Views: 1020.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/auctions/10/edit" for 127.0.0.1 at 2014-11-28 15:04:23 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (0.6ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 10]]
+  [1m[35mCategory Load (1.6ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (56.7ms)
+  Rendered auctions/edit.html.erb within layouts/application (63.6ms)
+  Rendered application/_header.html.erb (3.7ms)
+Completed 200 OK in 1058ms (Views: 1032.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 15:20:43 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (136.7ms)
+  [1m[35mAuction Load (0.7ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.8ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (266.4ms)
+  Rendered application/_header.html.erb (6.1ms)
+Completed 200 OK in 1695ms (Views: 1654.2ms | ActiveRecord: 12.7ms)
+
+
+Started DELETE "/auctions/9" for 127.0.0.1 at 2014-11-28 15:25:40 -0300
+Processing by AuctionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CmaXU3WdH/BNT95DaiFFs5sLIa9CZytEYGkKUJl2yHc=", "id"=>"9"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mAuction Load (1.3ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mAuction Load (1.2ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 9]]
+Redirected to http://localhost:3000/auctions
+Filter chain halted as :get_user_auctions rendered or redirected
+Completed 302 Found in 35ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 15:25:41 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (7.6ms)
+  [1m[36mAuction Load (1.0ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.8ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (41.9ms)
+  Rendered application/_header.html.erb (5.7ms)
+Completed 200 OK in 1379ms (Views: 1371.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 15:25:49 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (8.5ms)
+  [1m[36mAuction Load (1.9ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (45.2ms)
+  Rendered application/_header.html.erb (5.9ms)
+Completed 200 OK in 1391ms (Views: 1383.6ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 15:45:34 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CmaXU3WdH/BNT95DaiFFs5sLIa9CZytEYGkKUJl2yHc="}
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mSQL (181.7ms)[0m  [1mUPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 12[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 336ms (ActiveRecord: 189.5ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 15:45:35 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (2.3ms)
+  [1m[35mAuction Load (1.2ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (1.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (131.4ms)
+  Rendered application/_header.html.erb (3.0ms)
+Completed 200 OK in 1449ms (Views: 1410.2ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 15:45:41 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (7.8ms)
+  Rendered user_sessions/new.html.erb within layouts/application (12.9ms)
+  Rendered application/_header.html.erb (3.1ms)
+Completed 200 OK in 1103ms (Views: 1098.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-11-28 15:45:48 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (54.0ms)
+  Rendered users/new.html.erb within layouts/application (62.6ms)
+  Rendered application/_header.html.erb (2.6ms)
+Completed 200 OK in 1108ms (Views: 1102.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-11-28 15:46:01 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"liyyMSOtFCwABzWNLtCQSs2VM/MG6koj3zl8SIlY1+k=", "user"=>{"name"=>"Kevin", "last_name"=>"Gomez", "username"=>"kevin91j", "email"=>"kevin@hotmail.com", "email_confirmation"=>"kevin@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrarme"}
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kevin91j' LIMIT 1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'kevin@hotmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("active", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["active", "t"], ["admin", "f"], ["created_at", "2014-11-28 18:46:02.406587"], ["crypted_password", "$2a$10$fvjRzhlAYqNPuEmqHEJiwO3GXm1BPMWQVVU5NG.UqplcxZMgvsZtq"], ["email", "kevin@hotmail.com"], ["last_name", "Gomez"], ["name", "Kevin"], ["salt", "JdTsnyq1Px6Li1mLXQgH"], ["updated_at", "2014-11-28 18:46:02.406587"], ["username", "kevin91j"]]
+  [1m[36m (188.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 822ms (ActiveRecord: 191.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-28 15:46:02 -0300
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 15:46:02 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (6.2ms)
+  Rendered user_sessions/new.html.erb within layouts/application (11.5ms)
+  Rendered application/_header.html.erb (3.4ms)
+Completed 200 OK in 1412ms (Views: 1405.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 15:46:26 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"liyyMSOtFCwABzWNLtCQSs2VM/MG6koj3zl8SIlY1+k=", "username"=>"kevin91j", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[35mUser Load (3.8ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."username" = 'kevin91j' AND "users"."active" = 't'
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE (username = 'kevin91j')  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 577ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 15:46:27 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1
+  Rendered auctions/_tabs.html.erb (8.9ms)
+  [1m[36mAuction Load (1.2ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (39.9ms)
+  Rendered application/_header.html.erb (3.8ms)
+Completed 200 OK in 1427ms (Views: 1418.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/auctions/9" for 127.0.0.1 at 2014-11-28 15:47:09 -0300
+Processing by AuctionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mAuction Load (1.1ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/show.html.erb within layouts/application (13.2ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1
+  Rendered application/_header.html.erb (7.7ms)
+Completed 200 OK in 1076ms (Views: 1064.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 15:47:12 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (9.6ms)
+  [1m[35mAuction Load (1.6ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.8ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (35.9ms)
+  Rendered application/_header.html.erb (3.1ms)
+Completed 200 OK in 1070ms (Views: 1058.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/auctions/1/edit/" for 127.0.0.1 at 2014-11-28 15:48:18 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  [1m[35mAuction Load (0.5ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 13ms
+
+ActiveRecord::RecordNotFound (Couldn't find Auction with 'id'=1):
+  app/controllers/auctions_controller.rb:50:in `get_auction'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.5ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (101.4ms)
+
+
+Started GET "/auctions/edit/1" for 127.0.0.1 at 2014-11-28 15:48:32 -0300
+
+ActionController::RoutingError (No route matches [GET] "/auctions/edit/1"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.3) lib/quiet_assets.rb:23:in `call_with_quiet_assets'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  dragonfly (1.0.7) lib/dragonfly/cookie_monster.rb:9:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/oby/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/oby/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/oby/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.9ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (25.5ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.0ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (299.2ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 15:48:40 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"liyyMSOtFCwABzWNLtCQSs2VM/MG6koj3zl8SIlY1+k="}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  [1m[35mSQL (210.0ms)[0m  UPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 13
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 229ms (ActiveRecord: 211.2ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 15:48:41 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (6.3ms)
+  [1m[36mAuction Load (4.4ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (4.9ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (37.9ms)
+  Rendered application/_header.html.erb (2.3ms)
+Completed 200 OK in 1410ms (Views: 1397.0ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 15:48:47 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (7.5ms)
+  Rendered user_sessions/new.html.erb within layouts/application (13.2ms)
+  Rendered application/_header.html.erb (2.7ms)
+Completed 200 OK in 1070ms (Views: 1063.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 15:48:53 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+ar31izYSa+l8c+d4XqgMfq1zrONVXDQzTqok7XZhMI=", "username"=>"oby", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."username" = 'oby' AND "users"."active" = 't'
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE (username = 'oby')  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 575ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 15:48:53 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (3.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (10.5ms)
+  [1m[36mAuction Load (1.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (2.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (58.8ms)
+  Rendered application/_header.html.erb (4.1ms)
+Completed 200 OK in 1523ms (Views: 1510.8ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 15:49:04 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (0.6ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mAuction Load (2.4ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1  [["user_id", 12], ["id", 9]]
+Completed 404 Not Found in 29ms
+
+ActiveRecord::RecordNotFound (Couldn't find Auction with 'id'=9 [WHERE "auctions"."user_id" = ?]):
+  app/controllers/auctions_controller.rb:54:in `get_user_auctions'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (90.2ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 15:49:04 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mAuction Load (0.5ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mAuction Load (0.5ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 9]]
+Completed 404 Not Found in 20ms
+
+ActiveRecord::RecordNotFound (Couldn't find Auction with 'id'=9 [WHERE "auctions"."user_id" = ?]):
+  app/controllers/auctions_controller.rb:54:in `get_user_auctions'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.2ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (110.8ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 15:50:07 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (134.3ms)
+  [1m[36mAuction Load (0.8ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (1.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (264.3ms)
+  Rendered application/_header.html.erb (4.1ms)
+Completed 200 OK in 1630ms (Views: 1590.0ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 15:50:15 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (1.2ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 9]]
+Completed 404 Not Found in 24ms
+
+ActiveRecord::RecordNotFound (Couldn't find Auction with 'id'=9 [WHERE "auctions"."user_id" = ?]):
+  app/controllers/auctions_controller.rb:55:in `get_user_auctions'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.2ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.2ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (90.2ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 15:50:15 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (1.2ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 9]]
+Completed 404 Not Found in 17ms
+
+ActiveRecord::RecordNotFound (Couldn't find Auction with 'id'=9 [WHERE "auctions"."user_id" = ?]):
+  app/controllers/auctions_controller.rb:55:in `get_user_auctions'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.6ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.2ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (105.5ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 15:52:07 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (0.9ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 9]]
+Completed 404 Not Found in 187ms
+
+ActiveRecord::RecordNotFound (Couldn't find Auction with 'id'=9 [WHERE "auctions"."user_id" = ?]):
+  app/controllers/auctions_controller.rb:54:in `get_user_auctions'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.7ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.8ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (97.7ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 17:26:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (0.9ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 9]]
+Redirected to http://localhost:3000/auctions
+Filter chain halted as :get_user_auctions rendered or redirected
+Completed 302 Found in 586ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 17:26:50 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (4.7ms)
+  [1m[36mAuction Load (0.9ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.8ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (171.7ms)
+  Rendered application/_header.html.erb (34.7ms)
+Completed 200 OK in 2452ms (Views: 2418.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 17:26:54 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.9ms)
+  [1m[36mAuction Load (0.9ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (78.8ms)
+  Rendered application/_header.html.erb (4.4ms)
+Completed 200 OK in 1387ms (Views: 1345.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 17:27:02 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (0.6ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 9]]
+Redirected to http://localhost:3000/auctions
+Filter chain halted as :get_user_auctions rendered or redirected
+Completed 302 Found in 17ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 17:27:02 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (5.1ms)
+  [1m[36mAuction Load (1.0ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (42.1ms)
+  Rendered application/_header.html.erb (7.5ms)
+Completed 200 OK in 1063ms (Views: 1042.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/auctions/10/edit" for 127.0.0.1 at 2014-11-28 17:27:34 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (1.5ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 10]]
+  [1m[35mCategory Load (2.3ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (182.4ms)
+  Rendered auctions/edit.html.erb within layouts/application (191.8ms)
+  Rendered application/_header.html.erb (3.9ms)
+Completed 200 OK in 1767ms (Views: 1506.0ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 17:27:40 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mAuction Load (0.5ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1  [["user_id", 12], ["id", 9]]
+Completed 404 Not Found in 16ms
+
+ActiveRecord::RecordNotFound (Couldn't find Auction with 'id'=9 [WHERE "auctions"."user_id" = ?]):
+  app/controllers/auctions_controller.rb:56:in `get_user_auctions'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.9ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.5ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (85.4ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 17:27:40 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mAuction Load (0.5ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ? AND "auctions"."id" = ? LIMIT 1  [["user_id", 12], ["id", 9]]
+Completed 404 Not Found in 17ms
+
+ActiveRecord::RecordNotFound (Couldn't find Auction with 'id'=9 [WHERE "auctions"."user_id" = ?]):
+  app/controllers/auctions_controller.rb:56:in `get_user_auctions'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.9ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.7ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (100.9ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 17:31:45 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (1.1ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCategory Load (2.2ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (165.6ms)
+  Rendered auctions/edit.html.erb within layouts/application (190.5ms)
+  Rendered application/_header.html.erb (17.7ms)
+Completed 200 OK in 2628ms (Views: 2257.9ms | ActiveRecord: 11.4ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 17:32:37 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+ar31izYSa+l8c+d4XqgMfq1zrONVXDQzTqok7XZhMI="}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mSQL (180.4ms)[0m  UPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 12
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 208ms (ActiveRecord: 181.6ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 17:32:37 -0300
+Processing by AuctionsController#index as HTML
+Completed 500 Internal Server Error in 41ms
+
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  app/models/ability.rb:6:in `initialize'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.6ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (96.6ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 17:32:54 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 17:32:54 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (10.2ms)
+  Rendered user_sessions/new.html.erb within layouts/application (17.5ms)
+  Rendered application/_header.html.erb (2.6ms)
+Completed 200 OK in 1310ms (Views: 1304.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 17:33:05 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fn9GdvgOY0oS1Tp/Rz7lzFWTNaZLuusI8/CEdXwf+5U=", "username"=>"kevin91j", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."username" = 'kevin91j' AND "users"."active" = 't'[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE (username = 'kevin91j')  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 570ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 17:33:06 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (5.5ms)
+  [1m[35mAuction Load (1.0ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.9ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.3ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (94.8ms)
+  Rendered application/_header.html.erb (3.4ms)
+Completed 200 OK in 1399ms (Views: 1377.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 17:33:13 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  [1m[35mAuction Load (0.6ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 60ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-28 17:33:13 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1
+  Rendered auctions/_tabs.html.erb (2.9ms)
+  [1m[36mAuction Load (1.4ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.6ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (29.1ms)
+  Rendered application/_header.html.erb (4.5ms)
+Completed 200 OK in 1296ms (Views: 1267.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/13/edit" for 127.0.0.1 at 2014-11-28 17:33:21 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  Rendered users/_form.html.erb (54.8ms)
+  Rendered users/edit.html.erb within layouts/application (59.6ms)
+  Rendered application/_header.html.erb (7.2ms)
+Completed 200 OK in 1021ms (Views: 1011.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 17:34:20 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fn9GdvgOY0oS1Tp/Rz7lzFWTNaZLuusI8/CEdXwf+5U="}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1
+  [1m[36mSQL (170.7ms)[0m  [1mUPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 13[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 308ms (ActiveRecord: 177.0ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 17:34:21 -0300
+Processing by AuctionsController#index as HTML
+Completed 500 Internal Server Error in 33ms
+
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  app/models/ability.rb:6:in `initialize'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.7ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (102.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-28 17:39:20 -0300
+Processing by AuctionsController#index as HTML
+Completed 500 Internal Server Error in 46ms
+
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  app/models/ability.rb:8:in `initialize'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.7ms)
+  Rendered /home/oby/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (94.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-28 17:39:32 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (1.6ms)
+  [1m[35mAuction Load (0.9ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.9ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (119.8ms)
+  Rendered application/_header.html.erb (4.8ms)
+Completed 200 OK in 1577ms (Views: 1415.6ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 17:40:03 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (9.1ms)
+  Rendered user_sessions/new.html.erb within layouts/application (16.5ms)
+  Rendered application/_header.html.erb (2.3ms)
+Completed 200 OK in 1256ms (Views: 1251.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 17:40:12 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6WbcQggSXQYjd4sKT/SgWdEM2p1o+Scb2NI7dUJVT3I=", "username"=>"oby", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."username" = 'oby' AND "users"."active" = 't'[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE (username = 'oby')  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 562ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 17:40:12 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (3.0ms)
+  [1m[35mAuction Load (1.1ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (36.1ms)
+  Rendered application/_header.html.erb (4.8ms)
+Completed 200 OK in 1447ms (Views: 1426.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 17:41:19 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (2.8ms)
+  [1m[35mAuction Load (1.0ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (39.2ms)
+  Rendered application/_header.html.erb (4.5ms)
+Completed 200 OK in 1383ms (Views: 1362.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/auctions/9/edit" for 127.0.0.1 at 2014-11-28 17:41:28 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mAuction Load (1.1ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCategory Load (2.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (47.8ms)
+  Rendered auctions/edit.html.erb within layouts/application (55.2ms)
+  Rendered application/_header.html.erb (5.2ms)
+Completed 200 OK in 1504ms (Views: 1471.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-28 17:41:57 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (6.5ms)
+  [1m[36mAuction Load (1.1ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.9ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (210.4ms)
+  Rendered application/_header.html.erb (17.4ms)
+Completed 200 OK in 2758ms (Views: 2323.4ms | ActiveRecord: 11.1ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 17:42:57 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6WbcQggSXQYjd4sKT/SgWdEM2p1o+Scb2NI7dUJVT3I="}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mSQL (436.1ms)[0m  [1mUPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 12[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 454ms (ActiveRecord: 437.3ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 17:42:58 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (1.7ms)
+  [1m[35mAuction Load (1.1ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.7ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (27.5ms)
+  Rendered application/_header.html.erb (4.0ms)
+Completed 200 OK in 1578ms (Views: 1529.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 17:43:04 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (11.9ms)
+  Rendered user_sessions/new.html.erb within layouts/application (18.6ms)
+  Rendered application/_header.html.erb (6.1ms)
+Completed 200 OK in 1057ms (Views: 1054.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 17:43:09 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MA7x+8Krqvay7Z+Ebd76B/aQwpaj7l+hy029xtlreJQ=", "username"=>"kevin91j", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."username" = 'kevin91j' AND "users"."active" = 't'[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE (username = 'kevin91j')  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 582ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 17:43:10 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.8ms)
+  [1m[35mAuction Load (0.7ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (27.1ms)
+  Rendered application/_header.html.erb (4.6ms)
+Completed 200 OK in 1443ms (Views: 1366.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 17:43:17 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (6.2ms)
+  [1m[35mCategory Load (2.2ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (147.5ms)
+  Rendered auctions/new.html.erb within layouts/application (164.9ms)
+  Rendered application/_header.html.erb (3.4ms)
+Completed 200 OK in 1123ms (Views: 1099.6ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-28 17:43:36 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MA7x+8Krqvay7Z+Ebd76B/aQwpaj7l+hy029xtlreJQ=", "auction"=>{"name"=>"Calculadora", "description"=>"Calculeitor. matic. 0300003.", "link"=>"http://google.com", "category_id"=>"26"}, "commit"=>"Crear subasta"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "auctions" ("category_id", "created_at", "description", "link", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 26], ["created_at", "2014-11-28 20:43:36.793760"], ["description", "Calculeitor. matic. 0300003."], ["link", "http://google.com"], ["name", "Calculadora"], ["updated_at", "2014-11-28 20:43:36.793760"], ["user_id", 13]]
+  [1m[35m (119.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 165ms (ActiveRecord: 123.0ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 17:43:36 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (2.5ms)
+  [1m[35mAuction Load (1.0ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered auctions/index.html.erb within layouts/application (53.6ms)
+  Rendered application/_header.html.erb (3.5ms)
+Completed 200 OK in 1372ms (Views: 1348.3ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:55:20 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (2.0ms)
+  [1m[35mAuction Load (1.1ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (1.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered auctions/index.html.erb within layouts/application (138.0ms)
+  Rendered application/_header.html.erb (4.7ms)
+Completed 200 OK in 1633ms (Views: 1473.4ms | ActiveRecord: 14.7ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 18:55:27 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MA7x+8Krqvay7Z+Ebd76B/aQwpaj7l+hy029xtlreJQ="}
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  [1m[35mSQL (229.9ms)[0m  UPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 13
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 244ms (ActiveRecord: 232.2ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:55:27 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (4.0ms)
+  [1m[36mAuction Load (1.1ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.6ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (46.0ms)
+  Rendered application/_header.html.erb (2.3ms)
+Completed 200 OK in 1416ms (Views: 1395.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 18:55:33 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (6.5ms)
+  Rendered user_sessions/new.html.erb within layouts/application (17.0ms)
+  Rendered application/_header.html.erb (2.4ms)
+Completed 200 OK in 1027ms (Views: 1023.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 18:55:40 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pxXXuz9TMuxGWyzvsR9DRZy2Hv3ErsNuJ2z/7WIJqbU=", "username"=>"oby", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."username" = 'oby' AND "users"."active" = 't'[0m
+  [1m[35mUser Load (5.2ms)[0m  SELECT  "users".* FROM "users"  WHERE (username = 'oby')  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 588ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:55:41 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (2.6ms)
+  [1m[35mAuction Load (1.8ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.7ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (43.3ms)
+  Rendered application/_header.html.erb (4.4ms)
+Completed 200 OK in 1424ms (Views: 1403.1ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 18:57:02 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pxXXuz9TMuxGWyzvsR9DRZy2Hv3ErsNuJ2z/7WIJqbU="}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mSQL (221.3ms)[0m  [1mUPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 12[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 237ms (ActiveRecord: 222.5ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:57:02 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (1.2ms)
+  [1m[35mAuction Load (1.1ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (33.2ms)
+  Rendered application/_header.html.erb (3.0ms)
+Completed 200 OK in 1392ms (Views: 1374.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 18:57:08 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (6.7ms)
+  Rendered user_sessions/new.html.erb within layouts/application (14.2ms)
+  Rendered application/_header.html.erb (2.1ms)
+Completed 200 OK in 1031ms (Views: 1024.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 18:57:13 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cXvv571wxUKB7eEh6CKFAXMpzjx7A8dfJKhFuiAVg2E=", "username"=>"oby", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."username" = 'oby' AND "users"."active" = 't'
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE (username = 'oby')  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 567ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:57:13 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (2.4ms)
+  [1m[36mAuction Load (0.9ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.7ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (41.6ms)
+  Rendered application/_header.html.erb (5.4ms)
+Completed 200 OK in 1513ms (Views: 1496.5ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 18:57:21 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cXvv571wxUKB7eEh6CKFAXMpzjx7A8dfJKhFuiAVg2E="}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mSQL (190.4ms)[0m  UPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 12
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 206ms (ActiveRecord: 191.7ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:57:21 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (3.5ms)
+  [1m[36mAuction Load (1.5ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.6ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (37.2ms)
+  Rendered application/_header.html.erb (3.2ms)
+Completed 200 OK in 1367ms (Views: 1347.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 18:57:27 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (7.2ms)
+  Rendered user_sessions/new.html.erb within layouts/application (11.9ms)
+  Rendered application/_header.html.erb (2.2ms)
+Completed 200 OK in 1017ms (Views: 1011.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 18:57:32 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"59JZOWB29fbzHjlK/e8EzeE2uOjqqlKQO7hbnHjK5to=", "username"=>"kevin91j", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (3.7ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."username" = 'kevin91j' AND "users"."active" = 't'[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE (username = 'kevin91j')  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 582ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:57:33 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (2.4ms)
+  [1m[35mAuction Load (1.1ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered auctions/index.html.erb within layouts/application (54.2ms)
+  Rendered application/_header.html.erb (3.5ms)
+Completed 200 OK in 1336ms (Views: 1315.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/auctions/11/edit" for 127.0.0.1 at 2014-11-28 18:58:04 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  [1m[35mAuction Load (0.9ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCategory Load (3.1ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (57.6ms)
+  Rendered auctions/edit.html.erb within layouts/application (69.2ms)
+  Rendered application/_header.html.erb (2.9ms)
+Completed 200 OK in 985ms (Views: 943.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:58:12 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (2.4ms)
+  [1m[35mAuction Load (1.0ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered auctions/index.html.erb within layouts/application (46.4ms)
+  Rendered application/_header.html.erb (3.0ms)
+Completed 200 OK in 1061ms (Views: 1040.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/auctions/11/edit" for 127.0.0.1 at 2014-11-28 18:58:18 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  [1m[35mAuction Load (0.5ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCategory Load (2.2ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (45.8ms)
+  Rendered auctions/edit.html.erb within layouts/application (53.3ms)
+  Rendered application/_header.html.erb (3.7ms)
+Completed 200 OK in 956ms (Views: 927.0ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 18:58:23 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"59JZOWB29fbzHjlK/e8EzeE2uOjqqlKQO7hbnHjK5to="}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  [1m[35mSQL (214.8ms)[0m  UPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 13
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 230ms (ActiveRecord: 215.8ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:58:23 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (2.4ms)
+  [1m[36mAuction Load (1.2ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.6ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (32.8ms)
+  Rendered application/_header.html.erb (2.2ms)
+Completed 200 OK in 1394ms (Views: 1379.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 18:58:28 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (5.4ms)
+  Rendered user_sessions/new.html.erb within layouts/application (11.0ms)
+  Rendered application/_header.html.erb (2.4ms)
+Completed 200 OK in 988ms (Views: 984.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 18:58:33 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tga5aq7kjX0DgztbQC+1NikTaTuM5DteEGL1ZL8HTfY=", "username"=>"oby", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."username" = 'oby' AND "users"."active" = 't'[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE (username = 'oby')  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 569ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:58:34 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (2.8ms)
+  [1m[35mAuction Load (1.3ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (44.7ms)
+  Rendered application/_header.html.erb (4.3ms)
+Completed 200 OK in 1368ms (Views: 1350.6ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/auctions/9" for 127.0.0.1 at 2014-11-28 18:58:47 -0300
+Processing by AuctionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Tga5aq7kjX0DgztbQC+1NikTaTuM5DteEGL1ZL8HTfY=", "id"=>"9"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (0.5ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "auctions" SET "active" = ?, "updated_at" = ? WHERE "auctions"."id" = 9[0m  [["active", "f"], ["updated_at", "2014-11-28 21:58:47.781941"]]
+  [1m[35m (294.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 337ms (ActiveRecord: 297.3ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:58:48 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.9ms)
+  [1m[35mAuction Load (0.9ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.7ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (42.3ms)
+  Rendered application/_header.html.erb (5.6ms)
+Completed 200 OK in 1538ms (Views: 1516.0ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/auctions/10" for 127.0.0.1 at 2014-11-28 18:58:55 -0300
+Processing by AuctionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Tga5aq7kjX0DgztbQC+1NikTaTuM5DteEGL1ZL8HTfY=", "id"=>"10"}
+  [1m[36mUser Load (3.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mAuction Load (0.6ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  UPDATE "auctions" SET "active" = ?, "updated_at" = ? WHERE "auctions"."id" = 10  [["active", "f"], ["updated_at", "2014-11-28 21:58:55.502674"]]
+  [1m[36m (138.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 176ms (ActiveRecord: 145.3ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:58:55 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (2.4ms)
+  [1m[36mAuction Load (1.1ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 26]]
+  Rendered auctions/index.html.erb within layouts/application (23.6ms)
+  Rendered application/_header.html.erb (5.3ms)
+Completed 200 OK in 1409ms (Views: 1380.4ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/auctions/11" for 127.0.0.1 at 2014-11-28 18:59:01 -0300
+Processing by AuctionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Tga5aq7kjX0DgztbQC+1NikTaTuM5DteEGL1ZL8HTfY=", "id"=>"11"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mAuction Load (0.5ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  UPDATE "auctions" SET "active" = ?, "updated_at" = ? WHERE "auctions"."id" = 11  [["active", "f"], ["updated_at", "2014-11-28 21:59:01.524124"]]
+  [1m[36m (124.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 159ms (ActiveRecord: 127.5ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:59:01 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (3.5ms)
+  [1m[36mAuction Load (1.2ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (12.3ms)
+  Rendered application/_header.html.erb (4.6ms)
+Completed 200 OK in 1299ms (Views: 1267.1ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 18:59:09 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Tga5aq7kjX0DgztbQC+1NikTaTuM5DteEGL1ZL8HTfY="}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mSQL (198.9ms)[0m  [1mUPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 12[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 214ms (ActiveRecord: 200.1ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:59:09 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (1.7ms)
+  [1m[35mAuction Load (1.6ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (12.2ms)
+  Rendered application/_header.html.erb (3.2ms)
+Completed 200 OK in 1398ms (Views: 1383.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 18:59:15 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (5.4ms)
+  Rendered user_sessions/new.html.erb within layouts/application (10.2ms)
+  Rendered application/_header.html.erb (2.5ms)
+Completed 200 OK in 978ms (Views: 974.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 18:59:20 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cLNHwbllQfoztOtNpl8nARcT3fTIWVGOCIwU+Pg1PlY=", "username"=>"oby", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."username" = 'oby' AND "users"."active" = 't'[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE (username = 'oby')  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 570ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 18:59:20 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (3.8ms)
+  [1m[35mAuction Load (1.8ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (14.4ms)
+  Rendered application/_header.html.erb (6.2ms)
+Completed 200 OK in 1377ms (Views: 1359.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 18:59:28 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (3.2ms)
+  [1m[35mCategory Load (2.3ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (39.5ms)
+  Rendered auctions/new.html.erb within layouts/application (54.7ms)
+  Rendered application/_header.html.erb (3.6ms)
+Completed 200 OK in 1068ms (Views: 1046.5ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-28 19:00:16 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cLNHwbllQfoztOtNpl8nARcT3fTIWVGOCIwU+Pg1PlY=", "auction"=>{"name"=>"Monitor LCD Samsung 22\"", "description"=>"Lorem ipsum sit amet ipsum sit amet ipsum sit amet ipsum sit amet ipsum sit amet.", "link"=>"http://www.madboxpc.com/wp-content/uploads/2010/10/Radeon_HD_6800_slide7-600x340.jpg", "category_id"=>"38"}, "commit"=>"Crear subasta"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "auctions" ("category_id", "created_at", "description", "link", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 38], ["created_at", "2014-11-28 22:00:16.392166"], ["description", "Lorem ipsum sit amet ipsum sit amet ipsum sit amet ipsum sit amet ipsum sit amet."], ["link", "http://www.madboxpc.com/wp-content/uploads/2010/10/Radeon_HD_6800_slide7-600x340.jpg"], ["name", "Monitor LCD Samsung 22\""], ["updated_at", "2014-11-28 22:00:16.392166"], ["user_id", 12]]
+  [1m[35m (231.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 269ms (ActiveRecord: 234.7ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 19:00:16 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (4.3ms)
+  [1m[35mAuction Load (1.1ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 38]]
+  Rendered auctions/index.html.erb within layouts/application (25.3ms)
+  Rendered application/_header.html.erb (5.4ms)
+Completed 200 OK in 1333ms (Views: 1313.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-28 19:00:25 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (2.9ms)
+  [1m[36mCategory Load (2.3ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC[0m
+  Rendered auctions/_form.html.erb (28.7ms)
+  Rendered auctions/new.html.erb within layouts/application (40.9ms)
+  Rendered application/_header.html.erb (3.6ms)
+Completed 200 OK in 982ms (Views: 963.4ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-28 19:00:54 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cLNHwbllQfoztOtNpl8nARcT3fTIWVGOCIwU+Pg1PlY=", "auction"=>{"name"=>"Mouse RAZR", "description"=>"Lorem ipsum sit amet  ipsum sit amet  ipsum sit amet  ipsum sit amet  ipsum sit amet.", "link"=>"http://www.madboxpc.com/wp-content/uploads/2010/10/Radeon_HD_6800_slide7-600x340.jpg", "category_id"=>"41"}, "commit"=>"Crear subasta"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "auctions" ("category_id", "created_at", "description", "link", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["category_id", 41], ["created_at", "2014-11-28 22:00:55.044376"], ["description", "Lorem ipsum sit amet  ipsum sit amet  ipsum sit amet  ipsum sit amet  ipsum sit amet."], ["link", "http://www.madboxpc.com/wp-content/uploads/2010/10/Radeon_HD_6800_slide7-600x340.jpg"], ["name", "Mouse RAZR"], ["updated_at", "2014-11-28 22:00:55.044376"], ["user_id", 12]]
+  [1m[36m (224.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 277ms (ActiveRecord: 227.1ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 19:00:55 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (2.4ms)
+  [1m[36mAuction Load (1.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.6ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 38]]
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 41]]
+  Rendered auctions/index.html.erb within layouts/application (35.3ms)
+  Rendered application/_header.html.erb (6.0ms)
+Completed 200 OK in 1409ms (Views: 1388.2ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 19:01:01 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cLNHwbllQfoztOtNpl8nARcT3fTIWVGOCIwU+Pg1PlY="}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mSQL (224.2ms)[0m  [1mUPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 12[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 240ms (ActiveRecord: 225.5ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 19:01:02 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (1.4ms)
+  [1m[35mAuction Load (1.2ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.7ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 38]]
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 41]]
+  Rendered auctions/index.html.erb within layouts/application (25.9ms)
+  Rendered application/_header.html.erb (4.6ms)
+Completed 200 OK in 1327ms (Views: 1310.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 19:01:08 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (7.3ms)
+  Rendered user_sessions/new.html.erb within layouts/application (12.8ms)
+  Rendered application/_header.html.erb (2.7ms)
+Completed 200 OK in 972ms (Views: 969.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 19:01:13 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M37dW7Qo4kPdfBwaQFosmfFvtspgrQXJAUJdSRqaPhg=", "username"=>"kevin91j", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."username" = 'kevin91j' AND "users"."active" = 't'[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  WHERE (username = 'kevin91j')  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 570ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 19:01:14 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (2.6ms)
+  [1m[35mAuction Load (1.2ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.9ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 38]]
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 41]]
+  Rendered auctions/index.html.erb within layouts/application (29.7ms)
+  Rendered application/_header.html.erb (5.2ms)
+Completed 200 OK in 1437ms (Views: 1417.7ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 19:01:29 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M37dW7Qo4kPdfBwaQFosmfFvtspgrQXJAUJdSRqaPhg="}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  [1m[35mSQL (426.8ms)[0m  UPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 13
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 447ms (ActiveRecord: 428.0ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 19:01:30 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (2.7ms)
+  [1m[36mAuction Load (2.1ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 38]]
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 41]]
+  Rendered auctions/index.html.erb within layouts/application (33.5ms)
+  Rendered application/_header.html.erb (3.3ms)
+Completed 200 OK in 1370ms (Views: 1351.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 19:01:38 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (5.3ms)
+  Rendered user_sessions/new.html.erb within layouts/application (10.4ms)
+  Rendered application/_header.html.erb (2.2ms)
+Completed 200 OK in 1028ms (Views: 1024.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 19:01:45 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HVtIIb2yR2C8AL6jqcRnJ0VUzYtDf7UI/Oj5IfdbMCw=", "username"=>"oby", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."username" = 'oby' AND "users"."active" = 't'
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE (username = 'oby')  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 561ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 19:01:46 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  Rendered auctions/_tabs.html.erb (2.7ms)
+  [1m[36mAuction Load (1.5ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 38]]
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 41]]
+  Rendered auctions/index.html.erb within layouts/application (38.0ms)
+  Rendered application/_header.html.erb (3.6ms)
+Completed 200 OK in 1449ms (Views: 1429.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/auctions/12/edit" for 127.0.0.1 at 2014-11-28 19:01:53 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mAuction Load (0.6ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCategory Load (2.3ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."name" ASC
+  Rendered auctions/_form.html.erb (41.3ms)
+  Rendered auctions/edit.html.erb within layouts/application (47.6ms)
+  Rendered application/_header.html.erb (3.5ms)
+Completed 200 OK in 1101ms (Views: 1076.2ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 19:01:58 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HVtIIb2yR2C8AL6jqcRnJ0VUzYtDf7UI/Oj5IfdbMCw="}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mSQL (501.7ms)[0m  UPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 12
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 517ms (ActiveRecord: 503.2ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 19:01:58 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (1.3ms)
+  [1m[36mAuction Load (1.2ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 38]]
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 41]]
+  Rendered auctions/index.html.erb within layouts/application (29.3ms)
+  Rendered application/_header.html.erb (3.2ms)
+Completed 200 OK in 1374ms (Views: 1353.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-28 19:02:04 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (5.9ms)
+  Rendered user_sessions/new.html.erb within layouts/application (13.3ms)
+  Rendered application/_header.html.erb (2.4ms)
+Completed 200 OK in 1112ms (Views: 1108.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-28 19:02:10 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2IO5TeYZyyUQwnCDwjV/GXOTL0PB/323M+fMIt6RxbQ=", "username"=>"kevin91j", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."username" = 'kevin91j' AND "users"."active" = 't'
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE (username = 'kevin91j')  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 574ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 19:02:10 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1
+  Rendered auctions/_tabs.html.erb (5.6ms)
+  [1m[36mAuction Load (1.6ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 38]]
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 41]]
+  Rendered auctions/index.html.erb within layouts/application (33.2ms)
+  Rendered application/_header.html.erb (4.5ms)
+Completed 200 OK in 1425ms (Views: 1401.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/auctions/12/edit" for 127.0.0.1 at 2014-11-28 19:02:25 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1
+  [1m[36mAuction Load (0.5ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 49ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-28 19:02:25 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (3.0ms)
+  [1m[35mAuction Load (1.4ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 38]]
+  [1m[35mCategory Load (3.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 41]]
+  Rendered auctions/index.html.erb within layouts/application (29.9ms)
+  Rendered application/_header.html.erb (4.7ms)
+Completed 200 OK in 1352ms (Views: 1320.6ms | ActiveRecord: 7.1ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-28 19:02:35 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2IO5TeYZyyUQwnCDwjV/GXOTL0PB/323M+fMIt6RxbQ="}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 13 LIMIT 1[0m
+  [1m[35mSQL (223.6ms)[0m  UPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 13
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 239ms (ActiveRecord: 224.9ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 19:02:36 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (1.2ms)
+  [1m[36mAuction Load (2.2ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 38]]
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 41]]
+  Rendered auctions/index.html.erb within layouts/application (26.7ms)
+  Rendered application/_header.html.erb (3.8ms)
+Completed 200 OK in 1404ms (Views: 1385.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-28 19:02:44 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (1.9ms)
+  [1m[35mAuction Load (1.5ms)[0m  SELECT "auctions".* FROM "auctions"
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1[0m  [["id", 38]]
+  [1m[35mCategory Load (0.4ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = ?  ORDER BY "categories"."name" ASC LIMIT 1  [["id", 41]]
+  Rendered auctions/index.html.erb within layouts/application (36.9ms)
+  Rendered application/_header.html.erb (2.3ms)
+Completed 200 OK in 1143ms (Views: 1128.3ms | ActiveRecord: 2.4ms)

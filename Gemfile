@@ -8,6 +8,10 @@ gem 'dragonfly', '~> 1.0.7'
 # https://github.com/NoamB/sorcery
 gem 'sorcery'
 
+# Usamos 'cancan' para administrar los permisos de los usuarios
+# https://github.com/ryanb/cancan
+gem 'cancan'
+
 # Usamos Hirb para poder visualizar mejor las db
 gem 'hirb'
 # Usamos rspec para probar los modelos
@@ -70,4 +74,3 @@ gem 'validate_url'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

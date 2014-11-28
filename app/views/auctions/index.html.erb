@@ -28,8 +28,8 @@
 						<% if current_user %>
 							<% if a.user_owner?(current_user) %>
 								<%= link_to 'Elegir Ganador', :auctions , class: 'btn btn-success' %>
-								<%= link_to 'Editar', edit_auction_path(a), class: 'btn btn-info' %>
-								<%= link_to "Eliminar", a, method: :delete, data: { confirm:"¿Está seguro?" }, class: 'btn btn-danger' %>		
+								<%= link_to 'Editar', edit_auction_path(a), class: 'btn btn-info' if can?(:update, a) %>
+								<%= link_to "Eliminar", a, method: :delete, data: { confirm:"¿Está seguro?" }, class: 'btn btn-danger' if can?(:destroy, a) %>		
 							<% else %>
 								<%= link_to 'Ofertar', :auctions , class: 'btn btn-success' %>
 							<% end %>

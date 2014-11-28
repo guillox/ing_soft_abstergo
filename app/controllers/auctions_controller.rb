@@ -1,7 +1,7 @@
 class AuctionsController < ApplicationController
-  before_action :require_login, only: [:edit, :update, :destroy]
+  before_action :require_login, only: [ :new, :create, :edit, :update, :destroy ]
   before_action :get_auction, only: [:show, :edit, :update, :destroy]
-  before_action :verify_user, only: [:edit, :update, :destroy]  
+  authorize_resource
   respond_to :html, :xml, :json
 
   def index
@@ -38,11 +38,9 @@ class AuctionsController < ApplicationController
   end
 
   def destroy
-  	if ((@auction.user_id == current_user.id) || (current_user.admin?))
-  		@auction.active = false
-  		@auction.save
-  		redirect_to(:auctions, notice: 'Subasta eliminada con éxito!')
-  	end
+  	@auction.active = false
+  	@auction.save
+  	redirect_to(:auctions, notice: 'Subasta eliminada con éxito!')  	
   end
 
 
@@ -54,13 +52,5 @@ class AuctionsController < ApplicationController
 
     def auction_params
       params.require(:auction).permit(:name, :description, :link, :category_id, :image_id)
-    end
-
-    def verify_user
-      if current_user.id == @auction.user_id || current_user.admin?
-        return true
-      end
-
-      return false
     end
 end

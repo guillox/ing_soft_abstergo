@@ -1,4 +1,4 @@
-<%= form_for :auction, url: auctions_path do |f| %>
+<%= form_for @auction do |f| %>
 
   <% if @auction.errors.any? %>
     <div id="error_explanation">
@@ -38,7 +38,7 @@
 
   <div class="actions">
   	<%= link_to 'Cancelar', auctions_path, class: "btn btn-danger" %>
-    <% if current_page?(action: 'new') %>
+    <% if @auction.new_record? %>
       <%= f.submit "Crear subasta", class: "btn btn-primary" %>
     <% else %>
       <%= f.submit "Guardar cambios", class: "btn btn-primary" %>

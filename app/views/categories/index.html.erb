@@ -15,7 +15,7 @@
 		<tbody>
 			<% @category.each do |category| %>
 				<tr>
-					<td><%= category.nombre %></td>
+					<td><%= category.name %></td>
 					<td>
 						<%= link_to "Editar", edit_category_path(category), class: 'btn btn-info' %>					
 

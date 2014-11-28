@@ -1,17 +1,16 @@
 users = {
-  :user_admin => { :name => "bestnid", :last_name => "bestnid", :username => "bestnid", :email => "admin@bestnid.com.ar", :email_confirmation => "admin@bestnid.com.ar", :password => "gaspar", :password_confirmation => "gaspar", :admin => true, :activo => true },
-  :user_no_admin =>  { :name => "agustin", :last_name => "silva", :username => "oby", :email => "oby@bestnid.com.ar", :email_confirmation => "oby@bestnid.com.ar", :password => "gaspar", :password_confirmation => "gaspar", :admin => true, :activo => true }
+  :user_admin => { :name => "bestnid", :last_name => "bestnid", :username => "bestnid", :email => "admin@bestnid.com.ar", :email_confirmation => "admin@bestnid.com.ar", :password => "gaspar", :password_confirmation => "gaspar", :admin => true, :active => true },
+  :user_no_admin =>  { :name => "agustin", :last_name => "silva", :username => "oby", :email => "oby@bestnid.com.ar", :email_confirmation => "oby@bestnid.com.ar", :password => "gaspar", :password_confirmation => "gaspar", :admin => true, :active => true }
 }
 
 def create_user(user_values)
-  @user = User.new()
+  user = User.new user_values
 
-  user_values.each_pair do |key, value|
-    @user[key.to_sym] = value
-    #puts key, value
-  end
+  # user_values.each_pair do |key, value|
+  #   user.send "#{key}=", value
+  # end
 
-  @user.save
+  user.save
 end
 
 task create_users: :environment do
