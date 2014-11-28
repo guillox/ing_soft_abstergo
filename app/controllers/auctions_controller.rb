@@ -1,5 +1,6 @@
 class AuctionsController < ApplicationController
-  before_action :set_auction, only: [:show, :edit, :update, :destroy]
+  before_action :get_auction, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :xml, :json
 
  	def new
     @auction = Auction.new
@@ -27,19 +28,22 @@ class AuctionsController < ApplicationController
   def edit   
   end
 
-  def update
-    respond_to do |format|
-	    if ((@auction.owner == current_user.username) || (current_user.admin?)) 
-		if @auction.update(auction_params)
-		  format.html { redirect_to @auction, notice: 'Auction was successfully updated.' }
-		  format.json { render :auctions, status: :ok, location: @auction }
-		else
-		  format.html { render :edit }
-		  format.json { render json: @auction.errors, status: :unprocessable_entity }
-		end
-	    end
-    end
+  def update 
+		  if @auction.update(auction_params)
+		    flash[:success] = "Subasta actualizada con éxito."
+        respond_with(@auction, location: auctions_path)
+		  else
+		    render 'edit'
+		  end
   end
+  #def update
+   # if @category.update(category_params)
+    #  flash[:success] = "Categoría editada con éxito."
+     # respond_with(@category, location: categories_path)
+    #else
+    #  render 'edit'
+    # end
+  #end
 
   def delete
   end
@@ -61,12 +65,12 @@ class AuctionsController < ApplicationController
 
 private
   
-    def set_auction
+    def get_auction
       @auction = Auction.find(params[:id])
     end  
 
 
   def auction_params
-    params.require(:auction).permit(:name, :description, :link, :categ.nombre)
+    params.require(:auction).permit(:name, :description, :link, :category)
   end
 end

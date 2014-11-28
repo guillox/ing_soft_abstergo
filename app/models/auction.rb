@@ -1,5 +1,6 @@
 class Auction < ActiveRecord::Base
 	belongs_to :user
+  belongs_to :category
 
 	validates :name, presence: true
 	validates_format_of :name, :with => /[a-z\s]/i, :message => "can only contain letters and numbers."
@@ -8,6 +9,5 @@ class Auction < ActiveRecord::Base
 	validates_format_of :description, :with => /./
   
 	validates :link, url: true
-
 end
 

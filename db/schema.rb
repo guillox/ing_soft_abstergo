@@ -22,8 +22,10 @@ ActiveRecord::Schema.define(version: 20141125001833) do
     t.integer  "user_id"
     t.boolean  "active"
     t.string   "owner"
-    t.string   "category"
+    t.integer  "category_id"
   end
+
+  add_index "auctions", ["category_id"], name: "index_auctions_on_category_id"
 
   create_table "categories", force: true do |t|
     t.string   "nombre"

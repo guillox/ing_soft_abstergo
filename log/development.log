@@ -5951,3 +5951,1670 @@ Processing by AuctionsController#index as HTML
   Rendered auctions/index.html.erb within layouts/application (6.3ms)
   Rendered application/_header.html.erb (0.6ms)
 Completed 200 OK in 159ms (Views: 157.8ms | ActiveRecord: 0.8ms)
+  [1m[36mAuction Load (1.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mAuction Load (1.5ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 11:34:30 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  Rendered auctions/_tabs.html.erb (30.8ms)
+  [1m[36mAuction Load (0.4ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (45.1ms)
+  Rendered application/_header.html.erb (2.6ms)
+Completed 200 OK in 384ms (Views: 356.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 11:34:31 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  Rendered auctions/_tabs.html.erb (2.7ms)
+  [1m[36mAuction Load (0.5ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (11.1ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 174ms (Views: 172.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-26 11:34:36 -0300
+Processing by AuctionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.5ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC[0m
+  Rendered auctions/_form.html.erb (16.1ms)
+  Rendered auctions/new.html.erb within layouts/application (19.1ms)
+  Rendered application/_header.html.erb (1.4ms)
+Completed 200 OK in 170ms (Views: 168.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-26 11:34:45 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "auction"=>{"name"=>"asdasd", "description"=>"asdasdasd", "link"=>"http://google.com", "category"=>""}, "commit"=>"Crear subasta"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "auctions" ("active", "category", "created_at", "description", "link", "name", "owner", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["active", "t"], ["category", ""], ["created_at", "2014-11-26 14:34:45.115272"], ["description", "asdasdasd"], ["link", "http://google.com"], ["name", "asdasd"], ["owner", "ahreloco"], ["updated_at", "2014-11-26 14:34:45.115272"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 8ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:34:45 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.8ms)
+  [1m[36mAuction Load (0.4ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (8.6ms)
+  Rendered application/_header.html.erb (0.8ms)
+Completed 200 OK in 163ms (Views: 161.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/auctions/58/edit" for 127.0.0.1 at 2014-11-26 11:34:47 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"58"}
+  [1m[35mAuction Load (0.3ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 58]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC
+  Rendered auctions/_form.html.erb (3.4ms)
+  Rendered auctions/edit.html.erb within layouts/application (6.0ms)
+  Rendered application/_header.html.erb (0.8ms)
+Completed 200 OK in 155ms (Views: 152.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-26 11:40:27 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "auction"=>{"name"=>"asdasd", "description"=>"asdasdasdasd", "link"=>"http://google.com", "category"=>"animales"}, "commit"=>"Crear subasta"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "auctions" ("active", "category", "created_at", "description", "link", "name", "owner", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["active", "t"], ["category", "animales"], ["created_at", "2014-11-26 14:40:27.902059"], ["description", "asdasdasdasd"], ["link", "http://google.com"], ["name", "asdasd"], ["owner", "ahreloco"], ["updated_at", "2014-11-26 14:40:27.902059"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:40:27 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.4ms)
+  [1m[35mAuction Load (0.4ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (6.5ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 155ms (Views: 154.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/auctions/58/edit" for 127.0.0.1 at 2014-11-26 11:40:35 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mAuction Load (0.1ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 58]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC[0m
+  Rendered auctions/_form.html.erb (6.7ms)
+  Rendered auctions/edit.html.erb within layouts/application (8.1ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 145ms (Views: 143.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-26 11:41:05 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "auction"=>{"name"=>"asdasd", "description"=>"asdasdasd", "link"=>"http://google.com", "category"=>"decoracion"}, "commit"=>"Crear subasta"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "auctions" ("active", "category", "created_at", "description", "link", "name", "owner", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["active", "t"], ["category", "decoracion"], ["created_at", "2014-11-26 14:41:05.082602"], ["description", "asdasdasd"], ["link", "http://google.com"], ["name", "asdasd"], ["owner", "ahreloco"], ["updated_at", "2014-11-26 14:41:05.082602"]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 35ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:41:05 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.2ms)
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (6.6ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 153ms (Views: 151.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/auctions/58" for 127.0.0.1 at 2014-11-26 11:41:19 -0300
+Processing by AuctionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "id"=>"58"}
+  [1m[35mAuction Load (0.1ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 58]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "auctions" SET "active" = ?, "updated_at" = ? WHERE "auctions"."id" = 58[0m  [["active", "f"], ["updated_at", "2014-11-26 14:41:19.400806"]]
+  [1m[35m (6.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 30ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:41:19 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.8ms)
+  [1m[35mAuction Load (0.5ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (7.7ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 168ms (Views: 166.0ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/auctions/59" for 127.0.0.1 at 2014-11-26 11:41:22 -0300
+Processing by AuctionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "id"=>"59"}
+  [1m[36mAuction Load (0.1ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 59]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "auctions" SET "active" = ?, "updated_at" = ? WHERE "auctions"."id" = 59  [["active", "f"], ["updated_at", "2014-11-26 14:41:22.473459"]]
+  [1m[36m (6.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 11ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:41:22 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.1ms)
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (5.5ms)
+  Rendered application/_header.html.erb (0.7ms)
+Completed 200 OK in 154ms (Views: 153.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auctions/60/edit" for 127.0.0.1 at 2014-11-26 11:41:24 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"60"}
+  [1m[35mAuction Load (0.1ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 60]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC
+  Rendered auctions/_form.html.erb (5.4ms)
+  Rendered auctions/edit.html.erb within layouts/application (6.6ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 153ms (Views: 150.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-26 11:41:26 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "auction"=>{"name"=>"asdasd", "description"=>"asdasdasd", "link"=>"http://google.com", "category"=>"lamparas"}, "commit"=>"Crear subasta"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "auctions" ("active", "category", "created_at", "description", "link", "name", "owner", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["active", "t"], ["category", "lamparas"], ["created_at", "2014-11-26 14:41:26.948708"], ["description", "asdasdasd"], ["link", "http://google.com"], ["name", "asdasd"], ["owner", "ahreloco"], ["updated_at", "2014-11-26 14:41:26.948708"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 8ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:41:26 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.3ms)
+  [1m[35mAuction Load (0.4ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (7.6ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 161ms (Views: 160.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/auctions/60" for 127.0.0.1 at 2014-11-26 11:41:30 -0300
+Processing by AuctionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "id"=>"60"}
+  [1m[36mAuction Load (0.1ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 60]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "auctions" SET "active" = ?, "updated_at" = ? WHERE "auctions"."id" = 60  [["active", "f"], ["updated_at", "2014-11-26 14:41:30.581280"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 11ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:41:30 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.0ms)
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (5.0ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 158ms (Views: 157.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:43:24 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  Rendered auctions/_tabs.html.erb (11.5ms)
+  [1m[36mAuction Load (0.2ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (19.7ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 198ms (Views: 194.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/auctions/61/edit" for 127.0.0.1 at 2014-11-26 11:43:26 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"61"}
+  [1m[35mAuction Load (0.3ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 61]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC
+  Rendered auctions/_form.html.erb (5.3ms)
+  Rendered auctions/edit.html.erb within layouts/application (6.6ms)
+  Rendered application/_header.html.erb (0.8ms)
+Completed 200 OK in 153ms (Views: 150.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-26 11:43:29 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "auction"=>{"name"=>"asdasd", "description"=>"asdasdasd", "link"=>"http://google.comertertert", "category"=>""}, "commit"=>"Crear subasta"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "auctions" ("active", "category", "created_at", "description", "link", "name", "owner", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["active", "t"], ["category", ""], ["created_at", "2014-11-26 14:43:29.515020"], ["description", "asdasdasd"], ["link", "http://google.comertertert"], ["name", "asdasd"], ["owner", "ahreloco"], ["updated_at", "2014-11-26 14:43:29.515020"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:43:29 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.1ms)
+  [1m[35mAuction Load (0.4ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (5.9ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 149ms (Views: 147.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/auctions/62" for 127.0.0.1 at 2014-11-26 11:43:34 -0300
+Processing by AuctionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "id"=>"62"}
+  [1m[36mAuction Load (0.1ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 62]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "auctions" SET "active" = ?, "updated_at" = ? WHERE "auctions"."id" = 62  [["active", "f"], ["updated_at", "2014-11-26 14:43:34.135225"]]
+  [1m[36m (6.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 12ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:43:34 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.3ms)
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (5.7ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 153ms (Views: 151.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auctions/61/edit" for 127.0.0.1 at 2014-11-26 11:44:23 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"61"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  Rendered auctions/edit.html.erb within layouts/application (14.2ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `owner' for nil:NilClass):
+    1: <h1>Editar Subasta</h1>
+    2: <% if ((current_user.id = @auction.owner) || (current_user.admin?))%>
+    3: 	<p><%= render 'form' %></p>
+    4: <% else %>
+    5: 	<div class="alert alert-danger" role="alert">ATENCIÓN: No tiene los permisos para acceder a esta pagina</div>
+  app/views/auctions/edit.html.erb:2:in `_app_views_auctions_edit_html_erb__45983714178140472_70028460640220'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.6ms)
+
+
+Started GET "/auctions/61/edit" for 127.0.0.1 at 2014-11-26 11:44:24 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  Rendered auctions/edit.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `owner' for nil:NilClass):
+    1: <h1>Editar Subasta</h1>
+    2: <% if ((current_user.id = @auction.owner) || (current_user.admin?))%>
+    3: 	<p><%= render 'form' %></p>
+    4: <% else %>
+    5: 	<div class="alert alert-danger" role="alert">ATENCIÓN: No tiene los permisos para acceder a esta pagina</div>
+  app/views/auctions/edit.html.erb:2:in `_app_views_auctions_edit_html_erb__45983714178140472_70028448275480'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.6ms)
+
+
+Started GET "/auctions/61/edit" for 127.0.0.1 at 2014-11-26 11:44:32 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"61"}
+  [1m[35mAuction Load (0.1ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 61]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC
+  Rendered auctions/_form.html.erb (6.4ms)
+  Rendered auctions/edit.html.erb within layouts/application (18.8ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 176ms (Views: 168.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/auctions/61/edit" for 127.0.0.1 at 2014-11-26 11:44:45 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  Rendered auctions/edit.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined method `owner' for nil:NilClass):
+    1: <h1>Editar Subasta</h1>
+    2: <% if ((current_user.id = @auction.owner) || (current_user.admin?))%>
+    3: 	<p><%= render 'form' %></p>
+    4: <% else %>
+    5: 	<div class="alert alert-danger" role="alert">ATENCIÓN: No tiene los permisos para acceder a esta pagina</div>
+  app/views/auctions/edit.html.erb:2:in `_app_views_auctions_edit_html_erb__45983714178140472_70028448275480'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.9ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.8ms)
+
+
+Started GET "/auctions/61/edit" for 127.0.0.1 at 2014-11-26 11:48:55 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"61"}
+  [1m[35mAuction Load (0.2ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 61]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC
+  Rendered auctions/_form.html.erb (5.3ms)
+  Rendered auctions/edit.html.erb within layouts/application (17.3ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 178ms (Views: 167.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-26 11:48:57 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "auction"=>{"name"=>"asdasd", "description"=>"asdasdasd", "link"=>"http://google.com", "category"=>""}, "commit"=>"Crear subasta"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "auctions" ("active", "category", "created_at", "description", "link", "name", "owner", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["active", "t"], ["category", ""], ["created_at", "2014-11-26 14:48:57.770796"], ["description", "asdasdasd"], ["link", "http://google.com"], ["name", "asdasd"], ["owner", "ahreloco"], ["updated_at", "2014-11-26 14:48:57.770796"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 8ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:48:57 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.0ms)
+  [1m[35mAuction Load (5.5ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (10.8ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 155ms (Views: 149.1ms | ActiveRecord: 5.6ms)
+
+
+Started DELETE "/auctions/61" for 127.0.0.1 at 2014-11-26 11:49:02 -0300
+Processing by AuctionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "id"=>"61"}
+  [1m[36mAuction Load (0.2ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 61]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "auctions" SET "active" = ?, "updated_at" = ? WHERE "auctions"."id" = 61  [["active", "f"], ["updated_at", "2014-11-26 14:49:02.384466"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 7ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:49:02 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.3ms)
+  [1m[36mAuction Load (0.4ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (7.1ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 156ms (Views: 154.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/auctions/63" for 127.0.0.1 at 2014-11-26 11:49:05 -0300
+Processing by AuctionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "id"=>"63"}
+  [1m[35mAuction Load (0.2ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 63]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "auctions" SET "active" = ?, "updated_at" = ? WHERE "auctions"."id" = 63[0m  [["active", "f"], ["updated_at", "2014-11-26 14:49:05.916231"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 8ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:49:05 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.0ms)
+  [1m[35mAuction Load (0.2ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (4.6ms)
+  Rendered application/_header.html.erb (1.0ms)
+Completed 200 OK in 194ms (Views: 192.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auctions/new" for 127.0.0.1 at 2014-11-26 11:49:08 -0300
+Processing by AuctionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.1ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC
+  Rendered auctions/_form.html.erb (2.2ms)
+  Rendered auctions/new.html.erb within layouts/application (5.4ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 155ms (Views: 153.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-26 11:49:42 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "auction"=>{"name"=>"Lapicera BIC", "description"=>"Lorem ipsum sit amet lore valori.", "link"=>"http://google.com", "category"=>"Animales"}, "commit"=>"Crear subasta"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "auctions" ("active", "category", "created_at", "description", "link", "name", "owner", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["active", "t"], ["category", "Animales"], ["created_at", "2014-11-26 14:49:42.738576"], ["description", "Lorem ipsum sit amet lore valori."], ["link", "http://google.com"], ["name", "Lapicera BIC"], ["owner", "ahreloco"], ["updated_at", "2014-11-26 14:49:42.738576"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:49:42 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (2.1ms)
+  [1m[35mAuction Load (0.6ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (7.5ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 159ms (Views: 157.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/auctions/64/edit" for 127.0.0.1 at 2014-11-26 11:49:46 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mAuction Load (0.2ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 64]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC[0m
+  Rendered auctions/_form.html.erb (2.1ms)
+  Rendered auctions/edit.html.erb within layouts/application (3.4ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 149ms (Views: 145.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auctions/64/edit" for 127.0.0.1 at 2014-11-26 11:50:14 -0300
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"64"}
+  [1m[35mAuction Load (0.1ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 64]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC
+  Rendered auctions/_form.html.erb (5.4ms)
+  Rendered auctions/edit.html.erb within layouts/application (17.8ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 171ms (Views: 162.0ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-26 11:50:15 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "auction"=>{"name"=>"Lapicera BIC", "description"=>"Lorem ipsum sit amet lore valori.", "link"=>"http://google.com", "category"=>""}, "commit"=>"Crear subasta"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "auctions" ("active", "category", "created_at", "description", "link", "name", "owner", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["active", "t"], ["category", ""], ["created_at", "2014-11-26 14:50:15.796864"], ["description", "Lorem ipsum sit amet lore valori."], ["link", "http://google.com"], ["name", "Lapicera BIC"], ["owner", "ahreloco"], ["updated_at", "2014-11-26 14:50:15.796864"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:50:15 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.3ms)
+  [1m[35mAuction Load (0.4ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (8.2ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 157ms (Views: 156.0ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/auctions/64" for 127.0.0.1 at 2014-11-26 11:50:20 -0300
+Processing by AuctionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "id"=>"64"}
+  [1m[36mAuction Load (0.1ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 64]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "auctions" SET "active" = ?, "updated_at" = ? WHERE "auctions"."id" = 64  [["active", "f"], ["updated_at", "2014-11-26 14:50:20.812789"]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 11ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:50:20 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.2ms)
+  [1m[36mAuction Load (0.4ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (5.5ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 153ms (Views: 151.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/auctions/65/edit" for 127.0.0.1 at 2014-11-26 11:52:06 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"65"}
+  [1m[35mAuction Load (0.2ms)[0m  SELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1  [["id", 65]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC
+  Rendered auctions/_form.html.erb (15.9ms)
+  Rendered auctions/edit.html.erb within layouts/application (45.8ms)
+  Rendered application/_header.html.erb (2.3ms)
+Completed 200 OK in 360ms (Views: 328.9ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/auctions" for 127.0.0.1 at 2014-11-26 11:52:08 -0300
+Processing by AuctionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "auction"=>{"name"=>"Lapicera BIC", "description"=>"Lorem ipsum sit amet lore valori.", "link"=>"http://google.com", "category"=>""}, "commit"=>"Crear subasta"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "auctions" ("active", "category", "created_at", "description", "link", "name", "owner", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["active", "t"], ["category", ""], ["created_at", "2014-11-26 14:52:08.668518"], ["description", "Lorem ipsum sit amet lore valori."], ["link", "http://google.com"], ["name", "Lapicera BIC"], ["owner", "ahreloco"], ["updated_at", "2014-11-26 14:52:08.668518"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 11ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:52:08 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (1.7ms)
+  [1m[35mAuction Load (0.4ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (15.0ms)
+  Rendered application/_header.html.erb (1.5ms)
+Completed 200 OK in 171ms (Views: 169.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/auctions/66" for 127.0.0.1 at 2014-11-26 11:52:12 -0300
+Processing by AuctionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2U6PUK3dEJoWxctgICk7gSn7QMYfknzDWYfzz/EmZgs=", "id"=>"66"}
+  [1m[36mAuction Load (0.2ms)[0m  [1mSELECT  "auctions".* FROM "auctions"  WHERE "auctions"."id" = ? LIMIT 1[0m  [["id", 66]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "auctions" SET "active" = ?, "updated_at" = ? WHERE "auctions"."id" = 66  [["active", "f"], ["updated_at", "2014-11-26 14:52:12.680395"]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 15ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-26 11:52:12 -0300
+Processing by AuctionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 15 LIMIT 1
+  Rendered auctions/_tabs.html.erb (1.2ms)
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (5.9ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 162ms (Views: 160.3ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddCategoryToAuction (20141125001833)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "aauctions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "link" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255), "user_id" integer, "active" boolean, "owner" varchar(255), "category" varchar(255)) 
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "auctions"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (34, 'Universo paralelo', 'https://www.google.com', '2014-11-24 23:22:01.046552', '2014-11-24 23:22:01.046552', 'Espejo', NULL, 't', 'awf', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (35, 'Tabla horizontal, con cuatro patas perpendiculares, que dan soporte para apoyar cosas', 'https://www.black-mesa.com/', '2014-11-24 23:22:09.844461', '2014-11-24 23:22:09.844461', 'Mesa', NULL, 't', 'awf', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (36, 'Cantante encerrado en diadema', 'https://www.the-horror.com', '2014-11-24 23:22:27.947839', '2014-11-24 23:22:27.947839', 'Auriculares', NULL, 't', 'awd', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (37, 'Fiat 1 - 1000000 kms recorridos', 'https://www.car.com', '2014-11-24 23:22:38.364746', '2014-11-25 21:15:17.326289', 'AutoRojo', NULL, 'f', 'awd', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (38, 'escupe, muerde, patea, rompe todo, y ensucia', 'https://www.laLlamaQueLlama.com', '2014-11-25 00:45:09.929119', '2014-11-25 01:36:21.275024', 'LlamaMansita', NULL, 'f', 'awf', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (39, 'unica el resto se perdio', 'https://www.silla.com', '2014-11-25 01:30:47.621882', '2014-11-25 01:30:56.373388', 'silla', NULL, 'f', 'awf', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (40, 'Animal de cuatro patas', 'https://www.laLlamaQueLlama.com', '2014-11-25 01:35:28.071712', '2014-11-25 01:36:46.851548', 'La Llama Mansita', NULL, 'f', 'awf', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (41, 'escupe, muerde, patea, rompe todo, y ensucia', 'https://www.laLlamaQueLlama.com', '2014-11-25 01:36:26.665596', '2014-11-25 01:36:26.665596', 'La Llama Mansita', NULL, 't', 'awf', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (42, 'Animal de cuatro patashf', 'https://www.laLlamaQueLlama.com', '2014-11-25 01:36:41.796650', '2014-11-25 01:36:50.540173', 'La Llama Mansita', NULL, 'f', 'awf', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (43, 'escupe, muerde, patea, rompe todo, y ensucia', 'https://www.laLlamaQueLlama.com', '2014-11-25 01:46:15.839383', '2014-11-25 01:46:20.590516', 'La Llama Mansita', NULL, 'f', 'awf', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (44, 'de tela, antes tenia bolsillos, pero se los arrancaron unos osos', 'https://www.pantalon.com', '2014-11-25 02:02:01.088884', '2014-11-25 21:12:22.585222', 'Pantalon', NULL, 'f', 'awf', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (45, 'De Tela, la usaba para limpiar el auto', 'https://www.remera.com', '2014-11-25 02:47:48.074839', '2014-11-25 02:47:53.570912', 'Remera', NULL, 'f', 'awf', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (46, 'De Tela, la usaba para limpiar el auto', 'https://www.remera.com', '2014-11-25 03:22:02.602623', '2014-11-25 03:22:09.158759', 'Remera', NULL, 'f', 'awf', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (47, 'de tela, antes tenia bolsillos, pero se los arrancaron unos osos', 'https://www.remera.com', '2014-11-25 04:04:25.176170', '2014-11-25 04:04:33.040136', 'Remera', NULL, 'f', 'awf', '#<Category:0xba4cd208>')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (48, 'De Tela, la usaba para limpiar el auto', 'https://www.remera.com', '2014-11-25 21:13:40.935108', '2014-11-25 21:13:40.935108', 'Remera', NULL, 't', 'awf', '')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (49, 'De Tela, la usaba para limpiar el auto', 'https://www.remera.com', '2014-11-25 21:13:48.609652', '2014-11-25 21:13:52.529523', 'Remera', NULL, 'f', 'awf', '')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (50, 'De Tela, lo usaba para limpiar el auto', 'https://www.pantalon.com', '2014-11-25 21:14:09.228375', '2014-11-25 21:14:13.767365', 'Pantalon', NULL, 'f', 'awf', '')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (51, 'Fiat 1 - 1000000 kms recorridos', 'https://www.car.com', '2014-11-25 21:15:38.232545', '2014-11-25 21:15:38.232545', 'Auto Rojo', NULL, 't', 'awd', '')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (52, 'Bicicleta en muy buen estado utilizada durante la segunda guerra mundial', 'http://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bicycle_diagram-es.svg/500px-Bicycle_diagram-es.svg.png', '2014-11-25 23:54:33.128514', '2014-11-26 13:40:20.403842', 'Bicicleta', NULL, 'f', 'ahreloco', '')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (53, 'asddddddddddddddddddddddddd assssssssssssssssd dddddddddd', 'http://google.com', '2014-11-26 04:28:04.282499', '2014-11-26 04:28:04.282499', 'asd', NULL, 't', 'kevin91j', '2')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (54, ' rodante flotadora aaaaCasa', 'http://hotmail.com', '2014-11-26 04:32:44.876154', '2014-11-26 04:32:44.876154', 'Pantuflas', NULL, 't', 'kevin91j', '8')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (55, 'Jovenes guerreros la han utilizado durante un centenar..', 'http://guiamania.com', '2014-11-26 04:47:25.343834', '2014-11-26 04:47:25.343834', 'Armadura de Pegaso', NULL, 't', 'kevin91j', '1')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (56, 'sffffffffsdffffffff sdffffffffffffffffff', 'http://asd.com', '2014-11-26 04:51:24.120813', '2014-11-26 04:51:24.120813', 'sdfffffffff', NULL, 't', 'kevin91j', 'animales')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (57, 'Vivamus rutrum lectus sit amet odio tincidunt ornare. Nulla porttitor, augue non rhoncus tempus, tellus odio tristique nisl, a malesuada justo tortor quis ipsum. Aliquam quis turpis eu felis lacinia viverra. Proin nisi quam, tempor ac arcu ac, varius euismod leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas suscipit malesuada nisl, sed bibendum est cursus a. Fusce lobortis, urna id posuere sodales, tortor leo porta dolor, malesuada finibus orci ligula et quam. Aenean id justo sit amet diam vulputate ornare. Donec vel elit in metus vestibulum dignissim ut eget nisl. Quisque fringilla viverra lorem vitae egestas.Vivamus rutrum lectus sit amet odio tincidunt ornare. Nulla porttitor, augue non rhoncus tempus, tellus odio tristique nisl, a malesuada justo tortor quis ipsum. Aliquam quis turpis eu felis lacinia viverra. Proin nisi quam, tempor ac arcu ac, varius euismod leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas suscipit malesuada nisl, sed bibendum est cursus a. Fusce lobortis, urna id posuere sodales, tortor leo porta dolor, malesuada finibus orci ligula et quam. Aenean id justo sit amet diam vulputate ornare. Donec vel elit in metus vestibulum dignissim ut eget nisl. Quisque fringilla viverra lorem vitae egestas.', 'http://google.com', '2014-11-26 10:26:27.966188', '2014-11-26 10:26:27.966188', 'Pantuflas', NULL, 't', 'kevin91j', 'animales')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (58, 'asdasdasd', 'http://google.com', '2014-11-26 14:34:45.115272', '2014-11-26 14:41:19.400806', 'asdasd', NULL, 'f', 'ahreloco', '')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (59, 'asdasdasdasd', 'http://google.com', '2014-11-26 14:40:27.902059', '2014-11-26 14:41:22.473459', 'asdasd', NULL, 'f', 'ahreloco', 'animales')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (60, 'asdasdasd', 'http://google.com', '2014-11-26 14:41:05.082602', '2014-11-26 14:41:30.581280', 'asdasd', NULL, 'f', 'ahreloco', 'decoracion')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (61, 'asdasdasd', 'http://google.com', '2014-11-26 14:41:26.948708', '2014-11-26 14:49:02.384466', 'asdasd', NULL, 'f', 'ahreloco', 'lamparas')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (62, 'asdasdasd', 'http://google.comertertert', '2014-11-26 14:43:29.515020', '2014-11-26 14:43:34.135225', 'asdasd', NULL, 'f', 'ahreloco', '')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (63, 'asdasdasd', 'http://google.com', '2014-11-26 14:48:57.770796', '2014-11-26 14:49:05.916231', 'asdasd', NULL, 'f', 'ahreloco', '')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (64, 'Lorem ipsum sit amet lore valori.', 'http://google.com', '2014-11-26 14:49:42.738576', '2014-11-26 14:50:20.812789', 'Lapicera BIC', NULL, 'f', 'ahreloco', 'Animales')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (65, 'Lorem ipsum sit amet lore valori.', 'http://google.com', '2014-11-26 14:50:15.796864', '2014-11-26 14:50:15.796864', 'Lapicera BIC', NULL, 't', 'ahreloco', '')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aauctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (66, 'Lorem ipsum sit amet lore valori.', 'http://google.com', '2014-11-26 14:52:08.668518', '2014-11-26 14:52:12.680395', 'Lapicera BIC', NULL, 'f', 'ahreloco', '')
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "auctions"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "auctions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "link" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255), "user_id" integer, "active" boolean, "owner" varchar(255), "category" varchar(255)) 
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "aauctions"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (34, 'Universo paralelo', 'https://www.google.com', '2014-11-24 23:22:01.046552', '2014-11-24 23:22:01.046552', 'Espejo', NULL, 't', 'awf', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (35, 'Tabla horizontal, con cuatro patas perpendiculares, que dan soporte para apoyar cosas', 'https://www.black-mesa.com/', '2014-11-24 23:22:09.844461', '2014-11-24 23:22:09.844461', 'Mesa', NULL, 't', 'awf', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (36, 'Cantante encerrado en diadema', 'https://www.the-horror.com', '2014-11-24 23:22:27.947839', '2014-11-24 23:22:27.947839', 'Auriculares', NULL, 't', 'awd', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (37, 'Fiat 1 - 1000000 kms recorridos', 'https://www.car.com', '2014-11-24 23:22:38.364746', '2014-11-25 21:15:17.326289', 'AutoRojo', NULL, 'f', 'awd', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (38, 'escupe, muerde, patea, rompe todo, y ensucia', 'https://www.laLlamaQueLlama.com', '2014-11-25 00:45:09.929119', '2014-11-25 01:36:21.275024', 'LlamaMansita', NULL, 'f', 'awf', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (39, 'unica el resto se perdio', 'https://www.silla.com', '2014-11-25 01:30:47.621882', '2014-11-25 01:30:56.373388', 'silla', NULL, 'f', 'awf', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (40, 'Animal de cuatro patas', 'https://www.laLlamaQueLlama.com', '2014-11-25 01:35:28.071712', '2014-11-25 01:36:46.851548', 'La Llama Mansita', NULL, 'f', 'awf', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (41, 'escupe, muerde, patea, rompe todo, y ensucia', 'https://www.laLlamaQueLlama.com', '2014-11-25 01:36:26.665596', '2014-11-25 01:36:26.665596', 'La Llama Mansita', NULL, 't', 'awf', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (42, 'Animal de cuatro patashf', 'https://www.laLlamaQueLlama.com', '2014-11-25 01:36:41.796650', '2014-11-25 01:36:50.540173', 'La Llama Mansita', NULL, 'f', 'awf', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (43, 'escupe, muerde, patea, rompe todo, y ensucia', 'https://www.laLlamaQueLlama.com', '2014-11-25 01:46:15.839383', '2014-11-25 01:46:20.590516', 'La Llama Mansita', NULL, 'f', 'awf', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (44, 'de tela, antes tenia bolsillos, pero se los arrancaron unos osos', 'https://www.pantalon.com', '2014-11-25 02:02:01.088884', '2014-11-25 21:12:22.585222', 'Pantalon', NULL, 'f', 'awf', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (45, 'De Tela, la usaba para limpiar el auto', 'https://www.remera.com', '2014-11-25 02:47:48.074839', '2014-11-25 02:47:53.570912', 'Remera', NULL, 'f', 'awf', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (46, 'De Tela, la usaba para limpiar el auto', 'https://www.remera.com', '2014-11-25 03:22:02.602623', '2014-11-25 03:22:09.158759', 'Remera', NULL, 'f', 'awf', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (47, 'de tela, antes tenia bolsillos, pero se los arrancaron unos osos', 'https://www.remera.com', '2014-11-25 04:04:25.176170', '2014-11-25 04:04:33.040136', 'Remera', NULL, 'f', 'awf', '#<Category:0xba4cd208>')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (48, 'De Tela, la usaba para limpiar el auto', 'https://www.remera.com', '2014-11-25 21:13:40.935108', '2014-11-25 21:13:40.935108', 'Remera', NULL, 't', 'awf', '')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (49, 'De Tela, la usaba para limpiar el auto', 'https://www.remera.com', '2014-11-25 21:13:48.609652', '2014-11-25 21:13:52.529523', 'Remera', NULL, 'f', 'awf', '')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (50, 'De Tela, lo usaba para limpiar el auto', 'https://www.pantalon.com', '2014-11-25 21:14:09.228375', '2014-11-25 21:14:13.767365', 'Pantalon', NULL, 'f', 'awf', '')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (51, 'Fiat 1 - 1000000 kms recorridos', 'https://www.car.com', '2014-11-25 21:15:38.232545', '2014-11-25 21:15:38.232545', 'Auto Rojo', NULL, 't', 'awd', '')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (52, 'Bicicleta en muy buen estado utilizada durante la segunda guerra mundial', 'http://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bicycle_diagram-es.svg/500px-Bicycle_diagram-es.svg.png', '2014-11-25 23:54:33.128514', '2014-11-26 13:40:20.403842', 'Bicicleta', NULL, 'f', 'ahreloco', '')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (53, 'asddddddddddddddddddddddddd assssssssssssssssd dddddddddd', 'http://google.com', '2014-11-26 04:28:04.282499', '2014-11-26 04:28:04.282499', 'asd', NULL, 't', 'kevin91j', '2')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (54, ' rodante flotadora aaaaCasa', 'http://hotmail.com', '2014-11-26 04:32:44.876154', '2014-11-26 04:32:44.876154', 'Pantuflas', NULL, 't', 'kevin91j', '8')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (55, 'Jovenes guerreros la han utilizado durante un centenar..', 'http://guiamania.com', '2014-11-26 04:47:25.343834', '2014-11-26 04:47:25.343834', 'Armadura de Pegaso', NULL, 't', 'kevin91j', '1')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (56, 'sffffffffsdffffffff sdffffffffffffffffff', 'http://asd.com', '2014-11-26 04:51:24.120813', '2014-11-26 04:51:24.120813', 'sdfffffffff', NULL, 't', 'kevin91j', 'animales')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (57, 'Vivamus rutrum lectus sit amet odio tincidunt ornare. Nulla porttitor, augue non rhoncus tempus, tellus odio tristique nisl, a malesuada justo tortor quis ipsum. Aliquam quis turpis eu felis lacinia viverra. Proin nisi quam, tempor ac arcu ac, varius euismod leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas suscipit malesuada nisl, sed bibendum est cursus a. Fusce lobortis, urna id posuere sodales, tortor leo porta dolor, malesuada finibus orci ligula et quam. Aenean id justo sit amet diam vulputate ornare. Donec vel elit in metus vestibulum dignissim ut eget nisl. Quisque fringilla viverra lorem vitae egestas.Vivamus rutrum lectus sit amet odio tincidunt ornare. Nulla porttitor, augue non rhoncus tempus, tellus odio tristique nisl, a malesuada justo tortor quis ipsum. Aliquam quis turpis eu felis lacinia viverra. Proin nisi quam, tempor ac arcu ac, varius euismod leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas suscipit malesuada nisl, sed bibendum est cursus a. Fusce lobortis, urna id posuere sodales, tortor leo porta dolor, malesuada finibus orci ligula et quam. Aenean id justo sit amet diam vulputate ornare. Donec vel elit in metus vestibulum dignissim ut eget nisl. Quisque fringilla viverra lorem vitae egestas.', 'http://google.com', '2014-11-26 10:26:27.966188', '2014-11-26 10:26:27.966188', 'Pantuflas', NULL, 't', 'kevin91j', 'animales')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (58, 'asdasdasd', 'http://google.com', '2014-11-26 14:34:45.115272', '2014-11-26 14:41:19.400806', 'asdasd', NULL, 'f', 'ahreloco', '')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (59, 'asdasdasdasd', 'http://google.com', '2014-11-26 14:40:27.902059', '2014-11-26 14:41:22.473459', 'asdasd', NULL, 'f', 'ahreloco', 'animales')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (60, 'asdasdasd', 'http://google.com', '2014-11-26 14:41:05.082602', '2014-11-26 14:41:30.581280', 'asdasd', NULL, 'f', 'ahreloco', 'decoracion')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (61, 'asdasdasd', 'http://google.com', '2014-11-26 14:41:26.948708', '2014-11-26 14:49:02.384466', 'asdasd', NULL, 'f', 'ahreloco', 'lamparas')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (62, 'asdasdasd', 'http://google.comertertert', '2014-11-26 14:43:29.515020', '2014-11-26 14:43:34.135225', 'asdasd', NULL, 'f', 'ahreloco', '')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (63, 'asdasdasd', 'http://google.com', '2014-11-26 14:48:57.770796', '2014-11-26 14:49:05.916231', 'asdasd', NULL, 'f', 'ahreloco', '')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (64, 'Lorem ipsum sit amet lore valori.', 'http://google.com', '2014-11-26 14:49:42.738576', '2014-11-26 14:50:20.812789', 'Lapicera BIC', NULL, 'f', 'ahreloco', 'Animales')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (65, 'Lorem ipsum sit amet lore valori.', 'http://google.com', '2014-11-26 14:50:15.796864', '2014-11-26 14:50:15.796864', 'Lapicera BIC', NULL, 't', 'ahreloco', '')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auctions" ("id","description","link","created_at","updated_at","name","user_id","active","owner","category") VALUES (66, 'Lorem ipsum sit amet lore valori.', 'http://google.com', '2014-11-26 14:52:08.668518', '2014-11-26 14:52:12.680395', 'Lapicera BIC', NULL, 'f', 'ahreloco', '')
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "aauctions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20141125001833'
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCategoryToAuction (20141125001833)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "auctions" ADD "category_id" integer[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_auctions_on_category_id" ON "auctions" ("category_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141125001833"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (2.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCategories (20141107125405)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141107125405"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to SorceryCore (20141117041754)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "last_name" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "salt" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141117041754"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to SorceryRememberMe (20141117153510)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "remember_me_token" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "remember_me_token_expires_at" datetime
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141117153510"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to AddActivoToUser (20141121115029)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD "activo" boolean
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141121115029"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to AddAdminToUser (20141121115435)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "admin" boolean
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141121115435"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Migrating to SorceryResetPassword (20141121124143)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "reset_password_token" varchar(255)
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD "reset_password_token_expires_at" datetime[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "reset_password_email_sent_at" datetime
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141121124143"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAuctions (20141121145556)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "auctions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "link" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141121145556"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddNameToAuction (20141121172511)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "auctions" ADD "name" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141121172511"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddUserIdToAuction (20141124152239)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "auctions" ADD "user_id" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141124152239"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddActiveToAuction (20141124155351)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "auctions" ADD "active" boolean[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141124155351"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddOwnerToAuction (20141124202049)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "auctions" ADD "owner" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141124202049"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddCategoryToAuction (20141125001833)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "auctions" ADD "category_id" integer[0m
+  [1m[35m (0.3ms)[0m  CREATE  INDEX "index_auctions_on_category_id" ON "auctions" ("category_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141125001833"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mCategory Load (1.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC[0m
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC LIMIT 1[0m
+  [1m[36mCategory Load (1.1ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Accesorios para Vehículos' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.901252"], ["nombre", "Accesorios para Vehículos"], ["updated_at", "2014-11-27 23:56:32.901252"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Animales y Mascotas' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.906223"], ["nombre", "Animales y Mascotas"], ["updated_at", "2014-11-27 23:56:32.906223"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Antigüedades' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.911361"], ["nombre", "Antigüedades"], ["updated_at", "2014-11-27 23:56:32.911361"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Arte y Artesanías' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.914101"], ["nombre", "Arte y Artesanías"], ["updated_at", "2014-11-27 23:56:32.914101"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Bebés' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.916856"], ["nombre", "Bebés"], ["updated_at", "2014-11-27 23:56:32.916856"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Cámaras y Accesorios' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.921077"], ["nombre", "Cámaras y Accesorios"], ["updated_at", "2014-11-27 23:56:32.921077"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Celulares y Teléfonos' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.925854"], ["nombre", "Celulares y Teléfonos"], ["updated_at", "2014-11-27 23:56:32.925854"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Coleccionables y Hobbies' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.930007"], ["nombre", "Coleccionables y Hobbies"], ["updated_at", "2014-11-27 23:56:32.930007"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Computación' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.933308"], ["nombre", "Computación"], ["updated_at", "2014-11-27 23:56:32.933308"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Consolas y Videojuegos' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.937140"], ["nombre", "Consolas y Videojuegos"], ["updated_at", "2014-11-27 23:56:32.937140"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Delicatessen y Vinos' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.943766"], ["nombre", "Delicatessen y Vinos"], ["updated_at", "2014-11-27 23:56:32.943766"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Deportes y Fitness' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.947722"], ["nombre", "Deportes y Fitness"], ["updated_at", "2014-11-27 23:56:32.947722"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Electrodomésticos y Aires Ac.' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.951306"], ["nombre", "Electrodomésticos y Aires Ac."], ["updated_at", "2014-11-27 23:56:32.951306"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Electrónica, Audio y Vídeo' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.954905"], ["nombre", "Electrónica, Audio y Vídeo"], ["updated_at", "2014-11-27 23:56:32.954905"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Entradas para Eventos' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.961156"], ["nombre", "Entradas para Eventos"], ["updated_at", "2014-11-27 23:56:32.961156"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Hogar, Muebles y Jardín' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.966602"], ["nombre", "Hogar, Muebles y Jardín"], ["updated_at", "2014-11-27 23:56:32.966602"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Industrias y Oficinas' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.981762"], ["nombre", "Industrias y Oficinas"], ["updated_at", "2014-11-27 23:56:32.981762"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Instrumentos Musicales' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.987943"], ["nombre", "Instrumentos Musicales"], ["updated_at", "2014-11-27 23:56:32.987943"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Joyas y Relojes' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.993157"], ["nombre", "Joyas y Relojes"], ["updated_at", "2014-11-27 23:56:32.993157"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Juegos y Juguetes' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.996316"], ["nombre", "Juegos y Juguetes"], ["updated_at", "2014-11-27 23:56:32.996316"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Libros, Revistas y Comics' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:32.999555"], ["nombre", "Libros, Revistas y Comics"], ["updated_at", "2014-11-27 23:56:32.999555"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Música, Películas y Series' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:33.002836"], ["nombre", "Música, Películas y Series"], ["updated_at", "2014-11-27 23:56:33.002836"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Ropa y Accesorios' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:33.005774"], ["nombre", "Ropa y Accesorios"], ["updated_at", "2014-11-27 23:56:33.005774"]]
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Salud y Belleza' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:33.012590"], ["nombre", "Salud y Belleza"], ["updated_at", "2014-11-27 23:56:33.012590"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Otras categorías' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-27 23:56:33.016096"], ["nombre", "Otras categorías"], ["updated_at", "2014-11-27 23:56:33.016096"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[36mCategory Load (1.4ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC[0m
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'oby' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'obylacueva' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "username"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 0]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'admin' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'admin@bestnid.com.ar' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'admin' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'admin@bestnid.com.ar' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'admin' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'admin@bestnid.com.ar' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'oby' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oby_laceuva@hotmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'oby' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oby_laceuva@hotmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'oby' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oby_laceuva@hotmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'oby' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oby@hotmail.com' LIMIT 1
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-11-28 00:26:31.030374"], ["crypted_password", "$2a$10$CE58QBwcvjmdouxFQcoDqOf.P57l2biHnYP7L622b///RQE3IY8za"], ["email", "oby@hotmail.com"], ["last_name", "silva"], ["name", "agustin"], ["salt", "hNThwdLpjMxArCvmxM3X"], ["updated_at", "2014-11-28 00:26:31.030374"], ["username", "oby"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAuction Load (0.2ms)[0m  [1mSELECT "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'oby' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oby@bestnid.com.ar' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'oby' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oby@bestnid.com.ar' LIMIT 1
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("activo", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activo", "t"], ["admin", "t"], ["created_at", "2014-11-28 02:01:03.014907"], ["crypted_password", "$2a$10$VqoVV.rnNA6bvqkVrAn7kO1MgTmrhdCRr5Dd/ZiXQ8s34CuM27jZS"], ["email", "oby@bestnid.com.ar"], ["last_name", "silva"], ["name", "agustin"], ["salt", "ys8hgC2A2qraAMdEdY5N"], ["updated_at", "2014-11-28 02:01:03.014907"], ["username", "oby"]]
+SQLite3::ReadOnlyException: attempt to write a readonly database: INSERT INTO "users" ("activo", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'oby' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oby@bestnid.com.ar' LIMIT 1
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("activo", "admin", "created_at", "crypted_password", "email", "id", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activo", "t"], ["admin", "t"], ["created_at", "2014-11-28 02:01:03.014907"], ["crypted_password", "$2a$10$.RAnabNhfknFnUbw5o0Fve5.hkAWFUyo9QQY6wtijsnF6O6ntSzxy"], ["email", "oby@bestnid.com.ar"], ["id", 99], ["last_name", "silva"], ["name", "agustin"], ["salt", "iWWbB9kDZvx7QNzLPmia"], ["updated_at", "2014-11-28 02:01:03.014907"], ["username", "oby"]]
+SQLite3::ReadOnlyException: attempt to write a readonly database: INSERT INTO "users" ("activo", "admin", "created_at", "crypted_password", "email", "id", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'oby' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oby@hotmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-11-28 02:06:19.248356"], ["crypted_password", "$2a$10$CE/D7j/SKG.cnEMAiQtFNOFZq.NNIv9SFuVQiJ1rrYpUP7E1Wwv1S"], ["email", "oby@hotmail.com"], ["last_name", "silva"], ["name", "agustin"], ["salt", "EDVeqpNAw6Fww6ZZproA"], ["updated_at", "2014-11-28 02:06:19.248356"], ["username", "oby"]]
+SQLite3::ReadOnlyException: attempt to write a readonly database: INSERT INTO "users" ("created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 23:17:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (5.0ms)
+  [1m[35mAuction Load (0.2ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (10.6ms)
+  Rendered application/_header.html.erb (2.5ms)
+Completed 200 OK in 342ms (Views: 316.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-27 23:17:21 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (1.5ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.9ms)
+  Rendered application/_header.html.erb (1.3ms)
+Completed 200 OK in 175ms (Views: 154.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-11-27 23:17:24 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (28.3ms)
+  Rendered users/new.html.erb within layouts/application (29.4ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 181ms (Views: 179.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-11-27 23:17:44 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ILGRMo5LCBB8hwV1TYwZpDKUXTcuKeuHtq+ETlfG9LQ=", "user"=>{"name"=>"Kevin", "last_name"=>"Gomez", "username"=>"kevin91j", "email"=>"kevin91j@hotmail.com", "email_confirmation"=>"kevin91j@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrarme"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kevin91j' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'kevin91j@hotmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("activo", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["activo", "t"], ["admin", "f"], ["created_at", "2014-11-28 02:17:45.054753"], ["crypted_password", "$2a$10$3.JEDKl2I7ZbB3x0DfQPQuvl8OyIRmhKwdV7YUyLHs/6NL5EQSWFu"], ["email", "kevin91j@hotmail.com"], ["last_name", "Gomez"], ["name", "Kevin"], ["salt", "2Mgheq9qspKWY7yPsBxJ"], ["updated_at", "2014-11-28 02:17:45.054753"], ["username", "kevin91j"]]
+SQLite3::ReadOnlyException: attempt to write a readonly database: INSERT INTO "users" ("activo", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 129ms
+
+ActiveRecord::StatementInvalid (SQLite3::ReadOnlyException: attempt to write a readonly database: INSERT INTO "users" ("activo", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)):
+  app/controllers/users_controller.rb:23:in `create'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 23:18:45 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (0.4ms)
+  [1m[35mAuction Load (0.2ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (1.5ms)
+  Rendered application/_header.html.erb (3.3ms)
+Completed 200 OK in 154ms (Views: 152.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 23:18:45 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (0.4ms)
+  [1m[36mAuction Load (0.2ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (1.7ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 157ms (Views: 156.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-27 23:18:49 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (0.7ms)
+  Rendered user_sessions/new.html.erb within layouts/application (1.4ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 153ms (Views: 151.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-27 23:18:54 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ILGRMo5LCBB8hwV1TYwZpDKUXTcuKeuHtq+ETlfG9LQ=", "username"=>"kevin91j", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."username" = 'kevin91j' AND "users"."activo" = 't'
+  Rendered user_sessions/_form.html.erb (1.3ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 154ms (Views: 148.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-11-27 23:18:57 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (6.3ms)
+  Rendered users/new.html.erb within layouts/application (7.8ms)
+  Rendered application/_header.html.erb (0.4ms)
+Completed 200 OK in 165ms (Views: 164.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-11-27 23:19:01 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ILGRMo5LCBB8hwV1TYwZpDKUXTcuKeuHtq+ETlfG9LQ=", "user"=>{"name"=>"", "last_name"=>"", "username"=>"", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrarme"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = '' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/_form.html.erb (6.2ms)
+  Rendered users/new.html.erb within layouts/application (6.8ms)
+  Rendered application/_header.html.erb (0.4ms)
+Completed 200 OK in 178ms (Views: 162.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-11-27 23:19:14 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ILGRMo5LCBB8hwV1TYwZpDKUXTcuKeuHtq+ETlfG9LQ=", "user"=>{"name"=>"Asd", "last_name"=>"asd", "username"=>"asd", "email"=>"asd@hotmail.com", "email_confirmation"=>"asd@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrarme"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'asd' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'asd@hotmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("activo", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["activo", "t"], ["admin", "f"], ["created_at", "2014-11-28 02:19:15.031050"], ["crypted_password", "$2a$10$hlkqtf3QfmGhVbFRmCUCOuAl352O/8NDkdd3y.4PKs4WIQTSaAbZy"], ["email", "asd@hotmail.com"], ["last_name", "asd"], ["name", "Asd"], ["salt", "ZGQzJLC9HrVoVB66CXH2"], ["updated_at", "2014-11-28 02:19:15.031050"], ["username", "asd"]]
+SQLite3::ReadOnlyException: attempt to write a readonly database: INSERT INTO "users" ("activo", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 122ms
+
+ActiveRecord::StatementInvalid (SQLite3::ReadOnlyException: attempt to write a readonly database: INSERT INTO "users" ("activo", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)):
+  app/controllers/users_controller.rb:23:in `create'
+
+
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/oby/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddCategoryToAuction (20141125001833)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "aauctions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "link" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255), "user_id" integer, "active" boolean, "owner" varchar(255), "category_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "tindex_aauctions_on_category_id" ON "aauctions" ("category_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "auctions"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "auctions"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "auctions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "link" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255), "user_id" integer, "active" boolean, "owner" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aauctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aauctions_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aauctions"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "aauctions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20141125001833'
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCategoryToAuction (20141125001833)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "auctions" ADD "category_id" integer[0m
+SQLite3::ReadOnlyException: attempt to write a readonly database: ALTER TABLE "auctions" ADD "category_id" integer
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCategoryToAuction (20141125001833)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "auctions" ADD "category_id" integer[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_auctions_on_category_id" ON "auctions" ("category_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141125001833"]]
+  [1m[36m (6.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_auctions_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_me_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mCategory Load (1.2ms)[0m  [1mSELECT "categories".* FROM "categories"   ORDER BY "categories"."nombre" ASC[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 1]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 2]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 4]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 7]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 9]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 6]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 11]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 12]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 13]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 14]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 15]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 16]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 17]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 18]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 19]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 20]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 21]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 22]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 25]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 23]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 24]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Accesorios para Vehículos' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.453886"], ["nombre", "Accesorios para Vehículos"], ["updated_at", "2014-11-28 02:24:14.453886"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.2ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Animales y Mascotas' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.458788"], ["nombre", "Animales y Mascotas"], ["updated_at", "2014-11-28 02:24:14.458788"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Antigüedades' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.462441"], ["nombre", "Antigüedades"], ["updated_at", "2014-11-28 02:24:14.462441"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Arte y Artesanías' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.465210"], ["nombre", "Arte y Artesanías"], ["updated_at", "2014-11-28 02:24:14.465210"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Bebés' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.470150"], ["nombre", "Bebés"], ["updated_at", "2014-11-28 02:24:14.470150"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Cámaras y Accesorios' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.475081"], ["nombre", "Cámaras y Accesorios"], ["updated_at", "2014-11-28 02:24:14.475081"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Celulares y Teléfonos' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.478644"], ["nombre", "Celulares y Teléfonos"], ["updated_at", "2014-11-28 02:24:14.478644"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Coleccionables y Hobbies' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.482164"], ["nombre", "Coleccionables y Hobbies"], ["updated_at", "2014-11-28 02:24:14.482164"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.2ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Computación' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.504299"], ["nombre", "Computación"], ["updated_at", "2014-11-28 02:24:14.504299"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Consolas y Videojuegos' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.509671"], ["nombre", "Consolas y Videojuegos"], ["updated_at", "2014-11-28 02:24:14.509671"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Delicatessen y Vinos' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.513389"], ["nombre", "Delicatessen y Vinos"], ["updated_at", "2014-11-28 02:24:14.513389"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Deportes y Fitness' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.518531"], ["nombre", "Deportes y Fitness"], ["updated_at", "2014-11-28 02:24:14.518531"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Electrodomésticos y Aires Ac.' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.523334"], ["nombre", "Electrodomésticos y Aires Ac."], ["updated_at", "2014-11-28 02:24:14.523334"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Electrónica, Audio y Vídeo' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.529136"], ["nombre", "Electrónica, Audio y Vídeo"], ["updated_at", "2014-11-28 02:24:14.529136"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.2ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Entradas para Eventos' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.535238"], ["nombre", "Entradas para Eventos"], ["updated_at", "2014-11-28 02:24:14.535238"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Hogar, Muebles y Jardín' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.539565"], ["nombre", "Hogar, Muebles y Jardín"], ["updated_at", "2014-11-28 02:24:14.539565"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Industrias y Oficinas' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.542541"], ["nombre", "Industrias y Oficinas"], ["updated_at", "2014-11-28 02:24:14.542541"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Instrumentos Musicales' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.545535"], ["nombre", "Instrumentos Musicales"], ["updated_at", "2014-11-28 02:24:14.545535"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Joyas y Relojes' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.548106"], ["nombre", "Joyas y Relojes"], ["updated_at", "2014-11-28 02:24:14.548106"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Juegos y Juguetes' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.550742"], ["nombre", "Juegos y Juguetes"], ["updated_at", "2014-11-28 02:24:14.550742"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Libros, Revistas y Comics' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.554122"], ["nombre", "Libros, Revistas y Comics"], ["updated_at", "2014-11-28 02:24:14.554122"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Música, Películas y Series' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.557672"], ["nombre", "Música, Películas y Series"], ["updated_at", "2014-11-28 02:24:14.557672"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Ropa y Accesorios' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.561356"], ["nombre", "Ropa y Accesorios"], ["updated_at", "2014-11-28 02:24:14.561356"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Salud y Belleza' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.564724"], ["nombre", "Salud y Belleza"], ["updated_at", "2014-11-28 02:24:14.564724"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.4ms)[0m  SELECT  1 AS one FROM "categories"  WHERE "categories"."nombre" = 'Otras categorías' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-28 02:24:14.570335"], ["nombre", "Otras categorías"], ["updated_at", "2014-11-28 02:24:14.570335"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 23:24:25 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (4.6ms)
+  [1m[35mAuction Load (0.2ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (9.1ms)
+  Rendered application/_header.html.erb (2.2ms)
+Completed 200 OK in 310ms (Views: 286.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 23:24:25 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (0.6ms)
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (2.4ms)
+  Rendered application/_header.html.erb (0.4ms)
+Completed 200 OK in 157ms (Views: 155.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-11-27 23:24:28 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (19.3ms)
+  Rendered users/new.html.erb within layouts/application (20.4ms)
+  Rendered application/_header.html.erb (1.4ms)
+Completed 200 OK in 183ms (Views: 166.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-11-27 23:24:43 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ILGRMo5LCBB8hwV1TYwZpDKUXTcuKeuHtq+ETlfG9LQ=", "user"=>{"name"=>"Kevin", "last_name"=>"Gomez", "username"=>"kevin91j", "email"=>"kevin91j@hotmail.com", "email_confirmation"=>"kevin91j@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrarme"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kevin91j' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'kevin91j@hotmail.com' LIMIT 1
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("activo", "admin", "created_at", "crypted_password", "email", "last_name", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activo", "t"], ["admin", "f"], ["created_at", "2014-11-28 02:24:43.428015"], ["crypted_password", "$2a$10$EJIu3g1b5xH8mC86Nx2JeeuQG38GcLXsQHXtADu7R68kl0380gzT6"], ["email", "kevin91j@hotmail.com"], ["last_name", "Gomez"], ["name", "Kevin"], ["salt", "r9tkPWnMdPqT84wxa6sW"], ["updated_at", "2014-11-28 02:24:43.428015"], ["username", "kevin91j"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/users
+Completed 302 Found in 133ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-27 23:24:43 -0300
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-27 23:24:43 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (1.5ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 152ms (Views: 151.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2014-11-27 23:24:56 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ILGRMo5LCBB8hwV1TYwZpDKUXTcuKeuHtq+ETlfG9LQ=", "username"=>"kevin91j", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."username" = 'kevin91j' AND "users"."activo" = 't'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE (username = 'kevin91j')  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 117ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-27 23:24:56 -0300
+Processing by AuctionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered auctions/_tabs.html.erb (2.3ms)
+  [1m[35mAuction Load (0.2ms)[0m  SELECT "auctions".* FROM "auctions"
+  Rendered auctions/index.html.erb within layouts/application (3.7ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 161ms (Views: 159.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-27 23:24:58 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ILGRMo5LCBB8hwV1TYwZpDKUXTcuKeuHtq+ETlfG9LQ="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mSQL (2.8ms)[0m  UPDATE "users" SET "remember_me_token" = NULL, "remember_me_token_expires_at" = NULL WHERE "users"."id" = 2
+Redirected to http://localhost:3000/auctions
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/auctions" for 127.0.0.1 at 2014-11-27 23:24:58 -0300
+Processing by AuctionsController#index as HTML
+  Rendered auctions/_tabs.html.erb (0.4ms)
+  [1m[36mAuction Load (0.2ms)[0m  [1mSELECT "auctions".* FROM "auctions"[0m
+  Rendered auctions/index.html.erb within layouts/application (1.7ms)
+  Rendered application/_header.html.erb (0.4ms)
+Completed 200 OK in 153ms (Views: 152.1ms | ActiveRecord: 0.2ms)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAuction Load (0.1ms)[0m  [1mSELECT "auctions".* FROM "auctions"  WHERE "auctions"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 2]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
