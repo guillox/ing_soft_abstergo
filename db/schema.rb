@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141128031302) do
+ActiveRecord::Schema.define(version: 20141121124143) do
 
   create_table "auctions", force: true do |t|
     t.string   "name"
@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20141128031302) do
     t.datetime "updated_at"
     t.integer  "category_id"
     t.integer  "user_id"
-    t.integer  "image_id"
   end
 
   add_index "auctions", ["category_id"], name: "index_auctions_on_category_id"
@@ -30,13 +29,7 @@ ActiveRecord::Schema.define(version: 20141128031302) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "images", force: true do |t|
-    t.string   "image_uid"
-    t.string   "image_name"
+    t.boolean  "active",     default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end

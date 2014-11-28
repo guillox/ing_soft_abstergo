@@ -4,6 +4,7 @@ class CreateCategories < ActiveRecord::Migration
       add_reference :auctions, :category, index: true
       
       t.string :name
+      t.boolean :active, default: true
 
       t.timestamps
     end

@@ -1,23 +1,15 @@
-<% if current_user %>
-	 <% if current_user.admin? %>
-		<% if @category.errors.any?  %>
-			<div class="alert alert-danger" role="alert">
-				<%= @category.errors.get(:name).first %>
-			</div>
-		<% end %>
+<% if @category.errors.any?  %>
+	<div class="alert alert-danger" role="alert">
+		<%= @category.errors.get(:name).first %>
+	</div>
+<% end %>
 
-		<%= form_for @category do |f| %>		
-			<div class="form-group">
-				<%= f.label :Name %>
-				<%= f.text_field :name, class: 'form-control', placeholder: 'Ej: muebles, vestimentas, etc.' %>
-			</div>
+<%= form_for @category do |f| %>		
+	<div class="form-group">
+		<%= f.label :Name %>
+		<%= f.text_field :name, class: 'form-control', placeholder: 'Ej: muebles, vestimentas, etc.' %>
+	</div>
 
-			<%= link_to "Cancelar", categories_path, class: 'btn btn-danger' %>
-			<%= f.submit "Guardar", class: 'btn btn-primary' %>			
-		<% end %>
-	<% else %>
-		<div class="alert alert-danger" role="alert">ATENCIÓN: No tiene los permisos para acceder a esta pagina</div>
-	<% end %>
-<% else %>
-	<div class="alert alert-danger" role="alert">ATENCIÓN: No tiene los permisos para acceder a esta pagina</div>
+	<%= link_to "Cancelar", categories_path, class: 'btn btn-danger' %>
+	<%= f.submit "Guardar", class: 'btn btn-primary' %>			
 <% end %>

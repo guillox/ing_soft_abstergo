@@ -1,5 +1,9 @@
 class CategoriesController < ApplicationController
-  before_action :get_category, only: [:edit, :update, :destroy]
+  before_action :require_login, only: [ :new, :create, :edit, :update, :destroy ]
+  before_action :get_category, only: [ :edit, :update, :destroy ]
+
+  authorize_resource
+
   respond_to :html, :xml, :json
 
   def index
@@ -14,8 +18,7 @@ class CategoriesController < ApplicationController
   	@category = Category.new(category_params)
 
     if @category.save
-      flash[:success] = "Categoria creada con éxito."
-      respond_with(@category, location: categories_path)
+      redirect_to(:categories, notice: "Categoría '#{@category.name}' creada con éxito!")
     else
       render 'new'
     end
@@ -25,18 +28,24 @@ class CategoriesController < ApplicationController
   end
 
   def update
+    name = @category.name
+
     if @category.update(category_params)
-      flash[:success] = "Categoría editada con éxito."
-      respond_with(@category, location: categories_path)
+      redirect_to(:categories, notice: "Categoría '#{name}' actualizada a '#{@category.name}'")
     else
       render 'edit'
     end
   end
 
   def destroy  	
-  	@category.destroy
-    flash[:alert] = "Categoría eliminada con éxito."
-    respond_with(@category, location: categories_path)
+    @category.active = !@category.active
+    @category.save
+
+    if @category.active
+      redirect_to(:categories, notice: "Categoría '#{@category.name}' desactivada!")
+    else
+      redirect_to(:categories, notice: "Categoría '#{@category.name}' activada!")
+    end
   end  
 
 
