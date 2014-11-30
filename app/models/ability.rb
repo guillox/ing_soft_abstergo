@@ -11,7 +11,8 @@ class Ability
       can :manage, :all
     else
       can [:read, :create], Auction
-      can [:update, :destroy], Auction do |auction| auction.user == user end    
+      can [:update], Auction do |auction| auction.user == user && auction.bids.empty? end    
+      can [:destroy], Auction do |auction| auction.user == user end
 
       can [:create], Bid    
     end
