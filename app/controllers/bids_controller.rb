@@ -1,6 +1,9 @@
 class BidsController < ApplicationController
   # http://librosweb.es/libro/introduccion_rails/capitulo_6.html
-  
+  before_action :require_login, only: [ :new, :create, :edit, :update, :destroy ]
+  authorize_resource
+  respond_to :html, :xml, :json
+
   def index
   end
 
@@ -13,6 +16,9 @@ class BidsController < ApplicationController
   def create
     @auction = Auction.find(params[:auction_id])
     @bid = @auction.bids.create(bid_params)
+    @bid.user_id = current_user.id
+    @bid.save
+    
     redirect_to auction_path(@auction)
   end
 

@@ -11,7 +11,9 @@ class Ability
       can :manage, :all
     else
       can [:read, :create], Auction
-      can [:update, :destroy], Auction do |auction| auction.user == user end
+      can [:update, :destroy], Auction do |auction| auction.user == user end    
+
+      can [:create], Bid    
     end
 
     # Define abilities for the passed in user here. For example:

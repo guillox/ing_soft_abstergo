@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20141129024810) do
   add_index "auctions", ["user_id"], name: "index_auctions_on_user_id"
 
   create_table "bids", force: true do |t|
+    t.integer  "user_id"
     t.integer  "auction_id"
     t.text     "reason"
     t.datetime "created_at"
