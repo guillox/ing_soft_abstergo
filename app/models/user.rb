@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	has_many :auctions, dependent: :destroy
+	#has_many :bids
   authenticates_with_sorcery!
 
 	validates :name, presence: true

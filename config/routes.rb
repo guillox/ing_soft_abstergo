@@ -1,10 +1,28 @@
 Rails.application.routes.draw do  
+  get 'bids/index'
+
+  get 'bids/show'
+
+  get 'bids/new'
+
+  get 'bids/create'
+
+  get 'bids/edit'
+
+  get 'bids/update'
+
+  get 'bids/destroy'
+
   root :to => 'auctions#index'
 
   resources :user_sessions
   resources :users
   resources :password_resets
-  resources :auctions
+  
+  resources :auctions do
+    resources :bids
+  end
+  
   resources :categories
 
   get 'login' => 'user_sessions#new', :as => :login

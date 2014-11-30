@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121124143) do
+ActiveRecord::Schema.define(version: 20141129024810) do
 
   create_table "auctions", force: true do |t|
     t.string   "name"
     t.text     "description"
-    t.string   "link"
     t.boolean  "active",      default: true
+    t.string   "image_uid"
+    t.string   "image_name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"
@@ -26,6 +27,13 @@ ActiveRecord::Schema.define(version: 20141121124143) do
 
   add_index "auctions", ["category_id"], name: "index_auctions_on_category_id"
   add_index "auctions", ["user_id"], name: "index_auctions_on_user_id"
+
+  create_table "bids", force: true do |t|
+    t.integer  "auction_id"
+    t.text     "reason"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", force: true do |t|
     t.string   "name"
