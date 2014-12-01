@@ -1,8 +1,0 @@
-<h1>Mis Ofertas</h1>
-
-<% @bid.each do |bid| %>
-    <div class="span2 well">
-        <p><strong><%= bid.user_id.username %></strong> <%= bid.created_at.to_formatted_s(:db) %></p>
-        <%= bid.reason %>
-    </div>
-<% end %>
