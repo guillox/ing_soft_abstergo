@@ -5,7 +5,6 @@ class BidsController < ApplicationController
   respond_to :html, :xml, :json
 
   def index
-	@bids = Bid.all
   end
 
   def show

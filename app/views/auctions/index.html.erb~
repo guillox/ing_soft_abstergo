@@ -26,6 +26,7 @@
 
 					<td>
 						<%= link_to 'Ver', auction_path(a), class: 'btn btn-warning' %>				
+						<%= link_to 'sdgsdsds', bid_path(a), class: 'btn btn-warning' %>
 						<% if current_user %>
 							<% if a.user_owner?(current_user) %>
 								<% if  a.bids.empty? %>
