@@ -5,6 +5,7 @@ class BidsController < ApplicationController
   respond_to :html, :xml, :json
 
   def index
+	@bids = Bid.all
   end
 
   def show
@@ -35,6 +36,6 @@ class BidsController < ApplicationController
   private
 
     def bid_params
-      params.require(:bid).permit(:reason)
+      params.require(:bid).permit(:reason, :price)
     end
 end

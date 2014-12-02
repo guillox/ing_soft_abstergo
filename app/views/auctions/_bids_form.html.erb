@@ -12,6 +12,7 @@
     <% end %>
 
   <% elsif @auction.bids.exists?(user_id: current_user.id) %>
+  
     <h3>Razón de mi oferta</h3>
 
     <%= @auction.bids.where(user_id: current_user.id).pluck(:reason).first %>

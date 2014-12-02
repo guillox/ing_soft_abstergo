@@ -3,5 +3,8 @@
 
   <% if current_user %>
     <li class="<%= 'active' if current_page?('/auctions/new') %>"><%= link_to "Crear Subasta", new_auction_path %></li>
+    <li class="<%= 'active' if current_page?('/auctions/show') %>"><%= link_to "Mis Subastas", auctions_path %></li>
+    <li class="<%= 'active' if current_page?('/bids/index') %>"><%= link_to "Mis Ofertas", auctions_path %></li>
   <% end %>
 </ul>
+

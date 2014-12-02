@@ -1,2 +1,8 @@
-<h1>Bids#index</h1>
-<p>Find me in app/views/bids/index.html.erb</p>
+<h1>Mis Ofertas</h1>
+
+<% @bid.each do |bid| %>
+    <div class="span2 well">
+        <p><strong><%= bid.user_id.username %></strong> <%= bid.created_at.to_formatted_s(:db) %></p>
+        <%= bid.reason %>
+    </div>
+<% end %>
