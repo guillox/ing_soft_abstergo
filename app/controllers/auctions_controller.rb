@@ -9,7 +9,7 @@ class AuctionsController < ApplicationController
   end
 
   def show
-    @bid = @auction.bids.build
+    #@bid = @auction.bids.build
   end
 
  	def new
