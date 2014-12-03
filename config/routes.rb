@@ -1,18 +1,4 @@
 Rails.application.routes.draw do  
-  get 'bids/index'
-
-  get 'bids/show'
-
-  get 'bids/new'
-
-  get 'bids/create'
-
-  get 'bids/edit'
-
-  get 'bids/update'
-
-  get 'bids/destroy'
-
   root :to => 'auctions#index'
 
   resources :user_sessions
@@ -20,7 +6,7 @@ Rails.application.routes.draw do
   resources :password_resets
   
   resources :auctions do
-    resources :bids
+    resources :bids, only: :create
   end
   
   resources :categories

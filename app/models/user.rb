@@ -17,5 +17,13 @@ class User < ActiveRecord::Base
 	validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 	validates :email_confirmation, presence: true, on: :create
 
+	def bid_from_auction(auction)
+		bids.from_auction(auction).first
+	end
+
+	def oferto_en?(auction)
+		bid_from_auction(auction).present?
+	end
+
 end
 

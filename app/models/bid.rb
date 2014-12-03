@@ -6,5 +6,7 @@ class Bid < ActiveRecord::Base
   #validates :price, presence: true
   #validates :price, numericality:true
   #validates_inclusion_of :price,in: 1..999999999999999
+
+  scope :from_auction, ->(an_auction) { where auction_id: an_auction.id }
   
 end

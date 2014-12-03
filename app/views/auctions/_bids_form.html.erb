@@ -11,18 +11,32 @@
       </div>
     <% end %>
 
-  <% elsif @auction.bids.exists?(user_id: current_user.id) %>
+  <% elsif current_user.bids.from_auction(@auction).exists? %>
   
     <h3>Razón de mi oferta</h3>
 
-    <%= @auction.bids.where(user_id: current_user.id).pluck(:reason).first %>
+    <%= current_user.bid_from_auction(@auction).reason %>
 
   <% else %>
 
-    <% if !Bid.exists?(user_id: current_user.id, auction_id: @auction.id) %>
+    <%# !Bid.exists?(user_id: current_user.id, auction_id: @auction.id) %>
+    <% if !current_user.oferto_en?(@auction) %>
       <h3>Publica tu oferta:</h3>
 
-      <%= form_for([@auction, @auction.bids.build]) do |f| %>
+      <%#= form_for([@auction, @auction.bids.build]) do |f| %>
+      <%= form_for(@bid, url: auction_bids_path(@auction)) do |f| %>
+
+      <%#= form_for @auction do |f| %>
+      <!-- UPDATE /auctions/1 -->
+
+      <%#= form_for @auction.bids.build do |f| %>
+      <%#= form_for @bid do |f| %>
+      <!-- CREATE /bids -->
+
+      <%#= form_for([@auction, @auction.bids.build]) do |f| %>
+      <%#= form_for(@bid, url: auction_bids_path(@auction)) do |f| %>
+      <!-- CREATE /auctions/1/bids -->
+
         <div class="form-group">
           <%= f.text_area :reason, class: "form-control" %>
         </div>
