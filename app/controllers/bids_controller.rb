@@ -1,7 +1,7 @@
 class BidsController < ApplicationController
   # http://librosweb.es/libro/introduccion_rails/capitulo_6.html
   before_action :require_login, only: [ :new, :create, :edit, :update, :destroy ]
-  authorize_resource
+  #authorize_resource #Si no soy admin con esta linea sin comentar no puedo ver la lista de mis ofertas.
   respond_to :html, :xml, :json
 
   def index

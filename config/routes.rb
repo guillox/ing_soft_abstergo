@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :bids, only: :create
   end
   
+	get '/bids', to: 'bids#index'
+
   resources :categories
 
   get 'login' => 'user_sessions#new', :as => :login
