@@ -2,11 +2,11 @@
 
 <%= render "tabs" %>
 
-<% Bid.all.each do |bid| %>
+<% Bid.all.each do |b| %>
     <div class="span2 well">
-				<% if bid.user_id == current_user %>
-				  <p><strong><%= bid.user_id.username %></strong> <%= bid.created_at.to_formatted_s(:db) %></p>
-				  <%= bid.reason %>
+				<% if b.user_id == current_user.id %>
+				  <div><strong><%= User.find(b.user_id).username %>, Fecha y Hora: (<%= b.created_at.to_formatted_s(:db) %>) </strong> <%= link_to Auction.find(b.auction_id).name , auction_path(b.auction_id) , class: 'btn btn-primary' %></div>
+				  <%= b.reason %>
 				<% end %>
     </div>
 <% end %>
