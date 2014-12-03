@@ -5,6 +5,7 @@ class CreateBids < ActiveRecord::Migration
       t.belongs_to :auction
 
       t.text :reason
+      t.decimal :price
 
       t.timestamps
     end

@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20141129024810) do
     t.integer  "user_id"
     t.integer  "auction_id"
     t.text     "reason"
+    t.decimal  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
