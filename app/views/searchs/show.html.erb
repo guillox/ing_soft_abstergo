@@ -1,0 +1,9 @@
+<% Auction.all.each do |aux| %>
+	<% if aux.name.downcase().include? @nombre.downcase() %>
+		<li>
+			<%= aux.name %>
+			<%= link_to "Ver", auction_path(aux) %>
+		</li>
+	<% end %>
+<% end %>
+

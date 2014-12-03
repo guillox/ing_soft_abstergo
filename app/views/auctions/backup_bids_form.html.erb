@@ -1,17 +1,19 @@
-<% if current_user == @auction.user %>
-  <h3>Razones de oferta</h3>
+<% if current_user %>
+  
+  <% if @auction.user == current_user %>
 
-  <% @auction.bids.each do |b| %>
-    
-			<% unless b.user.nil? %>
-				<div class="span2 well">
-					<div><strong><%= User.find(b.user_id).username %>, Fecha y Hora: (<%= b.created_at.to_formatted_s(:db) %>) </strong></div>
-        	<div><%= b.reason %></div>
-    		</div>
-			<% end %>
+    <h3>Razones de oferta</h3>
 
-	<% end %>
- <% elsif current_user.bids.from_auction(@auction).exists? %>
+    <% @auction.bids.each do |b| %>
+      <div class="span2 well">
+				<if b.user_id != 0>
+					<%= User.find(4).username %>
+          <%= b.reason %>
+				<% end %>
+      </div>
+    <% end %>
+
+  <% elsif current_user.bids.from_auction(@auction).exists? %>
   
     <h3>Razón de mi oferta</h3>
 
@@ -46,4 +48,4 @@
     <% end %>
 
   <% end %>
-
+<% end %>
