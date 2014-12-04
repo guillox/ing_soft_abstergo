@@ -5,8 +5,8 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th class="col-sm-8">Nombre</th>
-			<th class="col-sm-4">Acción</th>
+			<th class="col-sm-7">Nombre</th>
+			<th class="col-sm-5">Acción</th>
 			
 		</tr>
 	</thead>

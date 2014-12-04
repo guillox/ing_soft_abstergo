@@ -1,0 +1,4 @@
+<ul class="nav nav-tabs">
+  <li class="<%= 'active' if current_page?(:controller => 'categories', :action => 'index') %>"><%= link_to "Ver todas", categories_path %></li>
+	<li class="<%= 'active' if current_page?(:controller => 'categories', :action => 'new') %>"><%= link_to "Crear categoría", new_category_path %></li>
+</ul>
