@@ -36,17 +36,21 @@
       <%#= form_for([@auction, @auction.bids.build]) do |f| %>
       <%#= form_for(@bid, url: auction_bids_path(@auction)) do |f| %>
       <!-- CREATE /auctions/1/bids -->
-<div class="row">
-  <div class="col-md-"> 
-  </div>
-</div>
-        <div class="form-group">
-          <%= f.text_area :reason, class: "form-control" %>
-        </div>
 
-        <%= f.submit "Ofertar" %>
+          <div class="form-group">
+            <%= f.label :reason, "Razón" %>
+            <%= f.text_area :reason, class: "form-control" %>
+          </div>  
+
+          <div class="form-group">
+            <%= f.label :price, "Precio" %>
+            <%= f.text_field :price, class: "form-control", placeholder: "Ej. 256.64" %>
+          </div>        
+
+        <%= f.submit "Ofertar", class: "btn btn-primary" %>
       <% end %>
     <% end %>
 
   <% end %>
+
 <% end %>
