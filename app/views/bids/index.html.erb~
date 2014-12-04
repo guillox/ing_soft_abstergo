@@ -1,4 +1,4 @@
-<h1>Mis Ofertas Realizadas</h1>
+<h1>Mis Ofertas</h1>
 
 <%= render "tabs" %>
 
