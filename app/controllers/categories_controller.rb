@@ -1,8 +1,8 @@
 class CategoriesController < ApplicationController
   before_action :require_login, only: [ :new, :create, :edit, :update, :destroy ]
-  before_action :get_category, only: [ :edit, :update, :destroy ]
+  before_action :get_category, only: [ :edit, :update, :destroy, :show ]
 
-  authorize_resource
+  #authorize_resource
 
   respond_to :html, :xml, :json
 
@@ -25,6 +25,9 @@ class CategoriesController < ApplicationController
   end
 
   def edit    
+  end
+
+  def show    
   end
 
   def update

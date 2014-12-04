@@ -16,22 +16,22 @@
       
 		
 
-      <ul class="nav navbar-nav navbar-right">	     
-	     <% if current_user %>
-	       <% if current_user.admin? %>
-    			 <li><%= link_to "Usuarios", users_path %></li>
-    			 <li><%= link_to "Categorias", categories_path %></li>
-      	 <% end %>
-				 <li><%= link_to "Buscar",  new_search_path %></li> 
-         <li><%= link_to "Subastas",  auctions_path %></li>        
-  	     <li><%= link_to "Nueva Subasta",  new_auction_path %></li>
-         <li><%= link_to "Editar perfil", edit_user_path(current_user) %></li>
-         <li><%= link_to "Salir", :logout, method: :post %></li>	  
-				 
-       <% else %>
-          <li><%= link_to "Regístrate", new_user_path %></li>
-          <li><%= link_to "Ingresa", :login %></li>
-      <% end %>
+	<ul class="nav navbar-nav navbar-right">
+	<li><%= link_to "Categorias", categories_path %></li>
+	<li><%= link_to "Subastas",  auctions_path %></li>
+	<% if current_user %>
+		<% if current_user.admin? %>
+			<li><%= link_to "Usuarios", users_path %></li>
+		<% end %>
+		<li><%= link_to "Buscar",  new_search_path %></li> 
+		<li><%= link_to "Nueva Subasta",  new_auction_path %></li>
+		<li><%= link_to "Editar perfil", edit_user_path(current_user) %></li>
+		<li><%= link_to "Salir", :logout, method: :post %></li>	  
+			 
+	<% else %>
+		<li><%= link_to "Regístrate", new_user_path %></li>
+		<li><%= link_to "Ingresa", :login %></li>
+	<% end %>
         <li><a href="#"><span class="glyphicon glyphicon-question-sign"><%# ayuda_path %></span></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->

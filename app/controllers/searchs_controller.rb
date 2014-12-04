@@ -5,6 +5,7 @@ class SearchsController < ApplicationController
 
 	def show
 		@nombre = params[:name]
+		@cat = params[:category_id]
 	end
 
   def result
