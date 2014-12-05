@@ -45,5 +45,12 @@ class User < ActiveRecord::Base
 		return self.bids.from_auction(auction).first.reason
 	end
 
+	def get_price(auction)
+		return self.bids.from_auction(auction).first.price
+	end
+
+	def get_created_at(auction)
+		return self.bids.from_auction(auction).first.created_at
+	end
 end
 

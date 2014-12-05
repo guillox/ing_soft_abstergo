@@ -17,7 +17,11 @@
 		
 
 	<ul class="nav navbar-nav navbar-right">
-	<li><%= link_to "Categorias", categories_path %></li>
+	<li>
+    <% if current_user && current_user.admin? %>
+      <%= link_to "Categorias" , categories_path %>
+    <% end %>
+  </li>
 	<li><%= link_to "Subastas",  auctions_path %></li>
 	<% if current_user %>
 		<% if current_user.admin? %>

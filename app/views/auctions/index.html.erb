@@ -6,9 +6,10 @@
 	<thead>
 		<tr>
 			<th class="col-sm-2">Nombre</th>
-			<th class="col-sm-4">Descripcion</th>
+			<th class="col-sm-3">Descripcion</th>
 			<th class="col-sm-2">Categoria</th>
 			<th class="col-sm-1">Inicio</th>
+			<th class="col-sm-1">Fin</th>
 			<th class="col-sm-1">Subastador</th>
 			<th class="col-sm-2">Acción</th>
 		</tr>
@@ -21,7 +22,8 @@
 					<td><%= a.name %></td>
 					<td><%= truncate(a.description, length: 120, omission: '...') %></td>
 					<td><%= a.category.name %></td>
-					<td><%= a.category.created_at.strftime("%d %b. %Y") %></td>
+					<td><%= a.created_at.strftime("%d %b. %Y") %></td>
+					<td><%= a.ends_at.strftime("%d %b. %Y") %></td>
 					<td><%= a.user.username %></td>
 
 					<td>
