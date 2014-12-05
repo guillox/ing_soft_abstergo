@@ -4,7 +4,7 @@ class StatisticsController < ApplicationController
   end
 
   def show
-	@name = params[:name]
+	@nombres = params[:name]
 	@month = params[:month]
 	@year = params[:year]
   end

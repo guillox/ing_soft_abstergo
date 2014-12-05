@@ -23,7 +23,7 @@
 					<td><%= truncate(a.description, length: 120, omission: '...') %></td>
 					<td><%= a.category.name %></td>
 					<td><%= a.created_at.strftime("%d %b. %Y") %></td>
-					<td><%= a.ends_at.strftime("%d %b. %Y") %></td>
+					<td><%=# a.ends_at.strftime("%d %b. %Y") %></td>
 					<td><%= a.user.username %></td>
 
 					<td>

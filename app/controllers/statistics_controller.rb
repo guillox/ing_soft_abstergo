@@ -1,4 +1,5 @@
 class StatisticsController < ApplicationController
+  authorize_resource
   def index
 	@statistics = Statistic.all  
   end

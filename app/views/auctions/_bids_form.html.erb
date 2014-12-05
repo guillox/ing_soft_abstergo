@@ -15,7 +15,15 @@
 
     <h3>Razón de mi oferta</h3>
 
-    <%= current_user.get_reason(@auction) %>
+    <%#= current_user.get_reason(@auction) %>
+    <%#= current_user.get_price(@auction) %>
+
+    <div class="span2 well">
+      <p><strong><%= current_user.username %></strong> <%= current_user.get_created_at(@auction).to_formatted_s(:db) %> <span class="btn btn-primary"><%= number_to_currency(current_user.get_price(@auction)) %></span>
+
+      </p>
+      <p><%= current_user.get_reason(@auction) %></p>
+    </div>
 
   <% else %>
 
@@ -23,8 +31,19 @@
     <% if !current_user.has_bids?(@auction) %>
       <h3>Publica tu oferta:</h3>
 
-      <%= form_for([@auction, @auction.bids.build]) do |f| %>
-      <%#= form_for(@bid, url: auction_bids_path(@auction)) do |f| %>
+      <% if @bid.errors.any? %>
+      <div id="error_explanation">
+        <ul>
+          <% @bid.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+
+      <% end %>
+
+      <%#= form_for([@auction, @auction.bids.build]) do |f| %>
+      <%= form_for(@bid, url: auction_bids_path(@auction)) do |f| %>
 
       <%#= form_for @auction do |f| %>
       <!-- UPDATE /auctions/1 -->

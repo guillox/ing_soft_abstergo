@@ -10,6 +10,7 @@ class AuctionsController < ApplicationController
 
   def show
     #@bid = @auction.bids.build
+    @bid = Bid.new
   end
 
  	def new
@@ -19,6 +20,7 @@ class AuctionsController < ApplicationController
   def create
     @auction = Auction.new(auction_params)
     @auction.user_id = current_user.id 
+    @auction.ends_at = @auction.created_at + 20.days
 
     if @auction.save
       redirect_to(:auctions, notice: 'Subasta creada con éxito!')

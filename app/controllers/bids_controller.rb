@@ -5,7 +5,7 @@ class BidsController < ApplicationController
   respond_to :html, :xml, :json
 
   def index
-	@bids = Bid.all
+	 @bids = Bid.where(user_id: current_user.id)
   end
 
   def show
@@ -16,12 +16,15 @@ class BidsController < ApplicationController
 
   def create
     @auction = Auction.find(params[:auction_id])
-
     @bid = @auction.bids.create(bid_params)
     @bid.user_id = current_user.id
-    @bid.save
-    
-    redirect_to auction_path(@auction)
+
+    if @bid.save
+      redirect_to auction_path(@auction)
+    else
+      render 'auctions/show'
+    end
+
   end
 
   def edit

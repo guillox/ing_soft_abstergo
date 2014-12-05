@@ -8,5 +8,4 @@ class Bid < ActiveRecord::Base
   #validates_inclusion_of :price,in: 1..999999999999999
 
   scope :from_auction, -> (an_auction) { where auction_id: an_auction.id }
-  
 end

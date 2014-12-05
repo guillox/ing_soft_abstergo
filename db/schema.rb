@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20141205043638) do
     t.boolean  "active",      default: true
     t.string   "image_uid"
     t.string   "image_name"
+    t.datetime "ends_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"

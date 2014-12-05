@@ -6,6 +6,7 @@ class CreateAuctions < ActiveRecord::Migration
       t.boolean :active, default: true
       t.string :image_uid
       t.string :image_name  # Optional - if you want urls to end with the original filename
+      t.timestamp :ends_at
       
       t.timestamps
     end

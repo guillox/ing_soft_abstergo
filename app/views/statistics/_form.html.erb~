@@ -18,7 +18,7 @@
 
 				<td><div class="form-group"><%= select(@object, :month, (01..12), :include_blank => true) %></div></td>
 
-				<td><div class="form-group"><%= select(@object, :year, (2010..2030), :include_blank => true) %></div></td>
+				<td><div class="form-group"><%= select(@object, :year, (2000..2015), :include_blank => true) %></div></td>
 
 				<td><div class="form-group"><%= submit_tag("Buscar") %></div></td>
 			</tr>	  

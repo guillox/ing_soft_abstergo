@@ -4,6 +4,7 @@ auctions = {
 
 def create_auction(auction_values)
   auction = Auction.new auction_values
+  auction.ends_at = (Time.now + 20.days)
   auction.save
 end
 
