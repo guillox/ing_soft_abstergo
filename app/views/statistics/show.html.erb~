@@ -1,0 +1,70 @@
+<%= render 'form' %> 
+<hr width="0%" />
+
+<h3>Resultados: </h3> 
+
+<% unless @month.empty?%>
+	<strong>Mes: <%= @month%> </strong>
+<%end%>
+
+<% unless @year.empty?%>
+	<strong>Año: <%= @year%> </strong>
+<%end%>
+
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th class="col-sm-4">Usuario</th>
+			<th class="col-sm-5">Subasta</th>
+			<th class="col-sm-1">Activa</th>
+			<th class="col-sm-2">Acción</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<%i=0%>
+		<%j=0%>
+		<%k=0%>
+		<% Auction.all.each do |est| %>
+			<% if est.user.username.downcase().include? @nombres.downcase() %>				
+				<tr>
+					<% if ((est.created_at.strftime("%Y") == @year) || (@year.empty?))%>
+						<% if ( (@month.empty?))%>
+							<td><%= est.user.username %></td>
+							<td><%= est.name %></td>
+							<% if est.active%>
+								<td> Si </td>
+								<% i=i+1%>
+							<% else %>
+								<td> No </td>
+								<% k=k+1%>
+							<% end %>
+							<td><%= link_to "Ver", auction_path(est) , class: 'btn btn-warning' %></td>
+							<%j=j+1%>
+						<% end %>
+					<% end %>
+				</tr>
+			<% end %>
+		<% end %>
+		<% if j == 0%>
+			<td> No se encontraron resultados </td>
+			<td> - </td>
+			<td> - </td>
+			<td> No se puede realizar ninguna acción </td>
+		<% end %>
+	</tbody>
+</table>
+
+<div>
+	<strong>Total: <%= j%> Subastas encontradas</strong>
+</div>
+
+<div>
+	<strong>Total: <%= i%> Subastas Activas Actualmente</strong>
+</div>
+
+<div>
+	<strong>Total: <%= k%> Subastas Terminadas</strong>
+</div>
+
