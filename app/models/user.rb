@@ -4,11 +4,11 @@ class User < ActiveRecord::Base
   authenticates_with_sorcery!
 
 	validates :name, presence: true
-	validates_format_of :name, :with => /\A((?:[-a-z]+))\z/i, :message => "can only contain letters."
+	validates_format_of :name, :with => /\A((?:[-a-z]+))\z/i
 	validates :last_name, presence: true
-	validates_format_of :last_name, :with => /\A((?:[-a-z]+))\z/i, :message => "can only contain letters."
+	validates_format_of :last_name, :with => /\A((?:[-a-z]+))\z/i
 	validates :username, uniqueness: true
-	validates_format_of :username, :with => /\A((?:[-a-z0-9]+))\z/i ,:message => "can only contain letters and numbers."
+	validates_format_of :username, :with => /\A((?:[-a-z0-9]+))\z/i
 
 	validates :password, length: { minimum: 6 }, confirmation: true, on: :create
 	validates :password_confirmation, presence: true, on: :create

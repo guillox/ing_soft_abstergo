@@ -23,8 +23,19 @@
     <% if !current_user.has_bids?(@auction) %>
       <h3>Publica tu oferta:</h3>
 
-      <%= form_for([@auction, @auction.bids.build]) do |f| %>
-      <%#= form_for(@bid, url: auction_bids_path(@auction)) do |f| %>
+      <% if @bid.errors.any? %>
+      <div id="error_explanation">
+        <ul>
+          <% @bid.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+
+      <% end %>
+
+      <%#= form_for([@auction, @auction.bids.build]) do |f| %>
+      <%= form_for(@bid, url: auction_bids_path(@auction)) do |f| %>
 
       <%#= form_for @auction do |f| %>
       <!-- UPDATE /auctions/1 -->
