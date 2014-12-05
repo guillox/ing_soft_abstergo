@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :user_sessions
   resources :users
   resources :password_resets
-	resources :searchs
+  resources :searchs
   resources :statistics
   
   resources :auctions do
@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   
 	get '/bids', to: 'bids#index'
 	get '/bids/edit', to: 'bids#edit'
+
+	get '/auction/myAuctions', to: 'auctions#myAuctions'
 
   resources :categories
 
