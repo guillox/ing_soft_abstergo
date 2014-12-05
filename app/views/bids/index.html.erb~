@@ -8,6 +8,7 @@
 			<strong><%= bid.user.username %></strong>
 			<%= bid.created_at.to_formatted_s(:db) %> <%= link_to Auction.find(bid.auction_id).name , auction_path(bid.auction_id) , class: 'btn btn-warning' %>
 			<span class="btn btn-success"><%= number_to_currency(bid.user.get_price(bid.auction)) %></span>
+			<!--  <%=# link_to "Editar Oferta", bid_edit_path(bid), class: 'btn btn-primary' %>  -->
 		</div>
 
 		<%= bid.reason %>

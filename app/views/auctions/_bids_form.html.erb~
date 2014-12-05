@@ -19,7 +19,7 @@
     <%#= current_user.get_price(@auction) %>
 
     <div class="span2 well">
-      <p><strong><%= current_user.username %></strong> <%= current_user.get_created_at(@auction).to_formatted_s(:db) %> <span class="btn btn-success"><%= number_to_currency(current_user.get_price(@auction)) %></span>
+      <p><strong><%= current_user.username %></strong> <%= current_user.get_created_at(@auction).to_formatted_s(:db) %> <span class="btn btn-primary"><%= number_to_currency(current_user.get_price(@auction)) %></span>
 
       </p>
       <p><%= current_user.get_reason(@auction) %></p>
