@@ -1,7 +1,7 @@
 <% if current_user %>
   
   <% if current_user == @auction.user  %> 
-    <h3>Razones de oferta</h3>
+   
 
     <% @auction.bids.each do |bid| %>
       <div class="span2 well">

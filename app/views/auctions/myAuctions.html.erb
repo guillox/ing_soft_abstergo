@@ -6,8 +6,9 @@
 	<thead>
 		<tr>
 			<th class="col-sm-2">Nombre</th>
-			<th class="col-sm-3">Descripcion</th>
+			<th class="col-sm-2">Descripcion</th>
 			<th class="col-sm-2">Categoria</th>
+			<th class="col-sm-1">Ofertas</th>
 			<th class="col-sm-1">Inicio</th>
 			<th class="col-sm-1">Fin</th>
 			<th class="col-sm-3">Acción</th>
@@ -22,6 +23,13 @@
 						<td><%= a.name %></td>
 						<td><%= truncate(a.description, length: 120, omission: '...') %></td>
 						<td><%= a.category.name %></td>
+						<% m=0 %>						
+						<% Bid.all.each do |b| %>
+							<% if b.auction_id == a.id%>
+								<% m=m+1 %>
+							<% end %>
+						<% end %>
+						<td><%= m %></td>
 						<td><%= a.created_at.strftime("%d %b. %Y") %></td>
 						<td><%= a.ends_at.strftime("%d %b. %Y") %></td>
 
