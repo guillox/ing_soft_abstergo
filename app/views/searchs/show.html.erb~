@@ -16,7 +16,7 @@
 		<% Auction.all.each do |aux| %>
 			<% if aux.name.downcase().include? @nombre.downcase() %>
 				<tr>
-					<% if ((aux.category_id.to_i == @cat.to_i) || (@cat.empty?))%>
+					<% if ((@cat.empty?) || (aux.category_id.to_i == @cat.to_i))  %>
 						<td><%= aux.name %></td>
 						<td><%= link_to "Ver", auction_path(aux) , class: 'btn btn-warning' %></td>
 						<%i=i+1%>
