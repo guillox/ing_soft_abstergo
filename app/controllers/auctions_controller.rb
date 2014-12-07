@@ -5,7 +5,7 @@ class AuctionsController < ApplicationController
   respond_to :html, :xml, :json
 
   def index
-    @auction = Auction.all
+    @auction = Auction.where(active: true)
   end
 
   def myAuctions 
