@@ -5,3 +5,6 @@ AGUSTIN
     # Siendo usuario registrado, puedo editar subastas de otros usuarios vía URL [HECHO]
     # La tab 'Mis Ofertas' se encontraba desmarcada cuando era mi current_page [HECHO]
     # Se puede editar el nombre de usuario [HECHO]
+
+  7/12 -- 16:30 hs.
+    # El buscador se encuentra mal ubicado; agregar CSS; refactorizar [HECHO]

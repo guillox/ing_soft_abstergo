@@ -1,12 +1,12 @@
-<%= render 'form' %> 
-<hr width="0%" />
+<%#= render 'form' %> 
+<!--<hr width="0%" />-->
 
-<h3>Resultados de la Búsqueda:</h3>
+<h1>Resultados de la búsqueda</h1>
 
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th class="col-sm-7">Subasta</th>
+			<th class="col-sm-8">Subasta</th>
 			<th class="col-sm-4">Acción</th>
 		</tr>
 	</thead>
@@ -16,7 +16,7 @@
 		<% Auction.all.each do |aux| %>
 			<% if aux.name.downcase().include? @nombre.downcase() %>
 				<tr>
-					<% if ((aux.category_id.to_i == @cat.to_i) || (@cat.empty?))%>
+					<% if aux.category_id.to_i == @cat.to_i || @cat.to_i == 0 %>
 						<td><%= aux.name %></td>
 						<td><%= link_to "Ver", auction_path(aux) , class: 'btn btn-warning' %></td>
 						<%i=i+1%>
