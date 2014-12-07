@@ -16,9 +16,9 @@
 	</thead>
 
 	<tbody>
-		<% Auction.all.each do |a| %>
-			<% if a.user == current_user%>
-				<% if a.active %>
+		<% current_user.get_auctions.each do |a| %>
+			<%# if a.user == current_user%>
+				<%# if a.active %>
 					<tr>
 						<td><%= a.name %></td>
 						<td><%= truncate(a.description, length: 120, omission: '...') %></td>
@@ -47,10 +47,8 @@
 
 						</td>
 					</tr>
-				<% end %>
-			<% end %>
+				<%# end %>
+			<%# end %>
 		<% end %>  
 	</tbody>
 </table>
-
-<p><strong>Usuario: <%= current_user.username%></strong></p> <p><strong>Email: <%= current_user.email%></strong></p>

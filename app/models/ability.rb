@@ -10,7 +10,7 @@ class Ability
     if user.admin?
       can :manage, :all
     else
-      can [:read, :create], Auction
+      can [:read, :create, :myAuctions], Auction
       can [:update], Auction do |auction| auction.user == user && auction.bids.empty? end    
       can [:destroy], Auction do |auction| auction.user == user end
 

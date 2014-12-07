@@ -52,5 +52,9 @@ class User < ActiveRecord::Base
 	def get_created_at(auction)
 		return self.bids.from_auction(auction).first.created_at
 	end
+
+	def get_auctions
+		return Auction.where(user_id: self.id, active: true)
+	end
 end
 

@@ -1,1 +1,7 @@
 -Al Ofertar, si se vuelve a la pagina anterior, se da la posibilidad de editar, pero si se acepta nuevamente, se crea una nueva oferta (no se deberia poder ofertar mas de una vez por subasta).
+
+AGUSTIN
+  7/12 -- 15.30 hs.
+    # Siendo usuario registrado, puedo editar subastas de otros usuarios vía URL [HECHO]
+    # La tab 'Mis Ofertas' se encontraba desmarcada cuando era mi current_page [HECHO]
+    # Se puede editar el nombre de usuario [HECHO]

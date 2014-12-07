@@ -1,7 +1,7 @@
 class AuctionsController < ApplicationController
   before_action :require_login, only: [ :new, :create, :edit, :update, :destroy ]
   before_action :get_auction, only: [:show, :edit, :update, :destroy]
-  #authorize_resource con esta linea sin comentar, no puedo acceder a "Mis Subastas"
+  authorize_resource #con esta linea sin comentar, no puedo acceder a "Mis Subastas"
   respond_to :html, :xml, :json
 
   def index
@@ -9,7 +9,7 @@ class AuctionsController < ApplicationController
   end
 
   def myAuctions 
-	@auction = Auction.all  
+    #@auction = Auction.all  
   end
 
   def show
