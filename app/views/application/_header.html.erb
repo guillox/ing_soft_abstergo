@@ -32,7 +32,9 @@
 			<li><%= link_to "Usuarios", users_path %></li>
 			<li><%= link_to "Estadisticas", new_statistic_path %></li>
 		<% end %>
-		<li><%= link_to "Categorias" , categories_path %></li>
+		<% if current_user.admin? %>
+      <li><%= link_to "Categorias" , categories_path %></li>
+    <% end %>
 		<li><%= link_to "Nueva Subasta",  new_auction_path %></li>
 		<li><%= link_to current_user.username , user_path(current_user)%></li>
 		<li><%= link_to "Editar perfil", edit_user_path(current_user) %></li>

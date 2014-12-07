@@ -2,9 +2,12 @@
 
 AGUSTIN
   7/12 -- 15.30 hs.
-    # Siendo usuario registrado, puedo editar subastas de otros usuarios vía URL [HECHO]
-    # La tab 'Mis Ofertas' se encontraba desmarcada cuando era mi current_page [HECHO]
-    # Se puede editar el nombre de usuario [HECHO]
+    # Siendo usuario registrado, puedo editar subastas de otros usuarios vía URL [FIXED]
+    # La tab 'Mis Ofertas' se encontraba desmarcada cuando era mi current_page [FIXED]
+    # Se puede editar el nombre de usuario [FIXED]
 
   7/12 -- 16:30 hs.
-    # El buscador se encuentra mal ubicado; agregar CSS; refactorizar [HECHO]
+    # El buscador se encuentra mal ubicado; agregar CSS; refactorizar [FIXED]
+
+  7/12 -- 17:30 hs.
+    # Siendo usuario registrado se pueden acceder a las vistas de categorias [FIXED]
