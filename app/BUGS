@@ -1,6 +1,10 @@
--Al Ofertar, si se vuelve a la pagina anterior, se da la posibilidad de editar, pero si se acepta nuevamente, se crea una nueva oferta (no se deberia poder ofertar mas de una vez por subasta).
+BUGS:
 
-AGUSTIN
+2-app/views/bids/edit.html.erb -> error en pasaje de parametros al presionar el boton "Editar"
+
+
+
+AGUSTÍN ###################################################################################
   7/12 -- 15.30 hs.
     # Siendo usuario registrado, puedo editar subastas de otros usuarios vía URL [FIXED]
     # La tab 'Mis Ofertas' se encontraba desmarcada cuando era mi current_page [FIXED]
@@ -12,3 +16,14 @@ AGUSTIN
   7/12 -- 17:30 hs.
     # Siendo usuario registrado se pueden acceder a las vistas de categorias [FIXED]
     # Agrupar "Editar usuario" y "Salir" en un Dropdown button [FIXED]
+
+  -----------------
+  8/12 -- 15:00 hs.
+    # Al ofertar, si se vuelve a la página anterior, se da la posibilidad de editar, pero
+    si se acepta nuevamente, se crea una nueva oferta (no se debería poder ofertar más
+    de una vez por subasta) [FIXED]
+
+
+ARIEL #####################################################################################
+  8/12 -- 01:36
+    #camino alterno para ver el listado de categorias [FIXED]

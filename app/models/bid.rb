@@ -4,8 +4,9 @@ class Bid < ActiveRecord::Base
 
   validates :reason, presence: true
   validates :price, presence: true, numericality: { greater_than_or_equal_to: 1 }
-  #validates :price, numericality:true
-  #validates_inclusion_of :price,in: 1..999999999999999
+  
+  validates_uniqueness_of :user_id, scope: :auction_id
+  validates_presence_of :user_id
 
   scope :from_auction, -> (an_auction) { where auction_id: an_auction.id }
 end

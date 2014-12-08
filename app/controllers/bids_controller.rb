@@ -28,9 +28,12 @@ class BidsController < ApplicationController
   end
 
   def edit
+     @bid = params[:bid]
   end
 
   def update
+    @reason = params[:reason]
+    @price = params[:price]
   end
 
   def destroy

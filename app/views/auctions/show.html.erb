@@ -9,7 +9,7 @@
     <%= image_tag Auction.first.image.thumb('400x400').url if Auction.first.image_stored? %>
   </div>
   <div>
-	<strong>Fin de la Subasta: <%= @auction.ends_at.strftime("%d %b. %Y") %></strong>
+	
   </div>
   <div class="col-md-8">
     <h3>Autor</h3>
@@ -17,6 +17,9 @@
 
     <h3>Descripción</h3>
     <%= @auction.description %>
+
+    <h3>Fin de la subasta</h3>
+    <%= @auction.ends_at.strftime("%d %b. %Y") %>
   </div>
 </div>
 

@@ -1,58 +1,58 @@
 <% if current_user %>
-  
-  <% if current_user == @auction.user  %> 
-    <h3>Razones de oferta</h3>
+  	<% if current_user == @auction.user  %> 
+    	<h3>Razones de oferta</h3>
 
-    <% @auction.bids.each do |bid| %>
-      <div class="span2 well">
-          <p><strong><%= bid.user.username %></strong> <%= bid.created_at.to_formatted_s(:db) %></p>
-          <p><%= bid.reason %></p>
-      </div>
+    	<% @auction.bids.each do |bid| %>
+    		<div class="span2 well">
+        		<p><strong><%= bid.user.username %></strong> <%= bid.created_at.to_formatted_s(:db) %></p>
+        		<p><%= bid.reason %></p>
+      		</div>
+    	<% end %>
+
+  	<% elsif current_user.has_bids?(@auction) %>
+
+    	<h3>Razón de mi oferta</h3>
+
+    	<div class="span2 well">
+    		<p><strong><%= current_user.username %></strong> <%= current_user.get_created_at(@auction).to_formatted_s(:db) %> <span class="btn btn-success"><%= number_to_currency(current_user.get_price(@auction)) %></span>
+        	<% @auction.bids.each do |bid| %>
+        		<% if  current_user.id == bid.user_id %>
+            		<%= link_to "Editar Oferta", bids_edit_path(:bid => bid), class: 'btn btn-primary' %>
+          		<% end %>
+        	<% end %>  
+      		</p>
+      		<p><%= current_user.get_reason(@auction) %></p>
+    	</div>
+
+    <% else %>
+	    <% if !current_user.has_bids?(@auction) %>
+    		<h3>Publica tu oferta:</h3>
+    
+    		<% if @bid.errors.any? %>
+    			<div id="error_explanation">
+        			<ul>
+        				<% @bid.errors.full_messages.each do |message| %>
+            				<li><%= message %></li>
+          				<% end %>
+        			</ul>
+      			</div>
+
+    		<% end %>
+    	  
+    	    <%= form_for(@bid, url: auction_bids_path(@auction)) do |f| %>
+	        	<div class="form-group">
+	            	<%= f.label :reason, "Razón" %>
+	            	<%= f.text_area :reason, class: "form-control" %>
+	        	</div>  
+
+	        	<div class="form-group">
+	        	    <%= f.label :price, "Precio" %>
+	        	    <%= f.text_field :price, class: "form-control", placeholder: "Ej. 256.64" %>
+	        	</div>        
+	
+	           <%= f.submit "Ofertar", class: "btn btn-primary" %>
+    	    <% end %>
+   		<% end %>
     <% end %>
-
-  <% elsif current_user.has_bids?(@auction) %>
-
-    <h3>Razón de mi oferta</h3>
-
-    <div class="span2 well">
-      <p><strong><%= current_user.username %></strong> <%= current_user.get_created_at(@auction).to_formatted_s(:db) %> <span class="btn btn-success"><%= number_to_currency(current_user.get_price(@auction)) %></span>
-
-      </p>
-      <p><%= current_user.get_reason(@auction) %></p>
-    </div>
-
-  <% else %>
-
-    <% if !current_user.has_bids?(@auction) %>
-      <h3>Publica tu oferta:</h3>
-
-      <% if @bid.errors.any? %>
-      <div id="error_explanation">
-        <ul>
-          <% @bid.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-
-      <% end %>
-
-      <%= form_for(@bid, url: auction_bids_path(@auction)) do |f| %>
-
-          <div class="form-group">
-            <%= f.label :reason, "Razón" %>
-            <%= f.text_area :reason, class: "form-control" %>
-          </div>  
-
-          <div class="form-group">
-            <%= f.label :price, "Precio" %>
-            <%= f.text_field :price, class: "form-control", placeholder: "Ej. 256.64" %>
-          </div>        
-
-        <%= f.submit "Ofertar", class: "btn btn-primary" %>
-      <% end %>
-    <% end %>
-
-  <% end %>
-
 <% end %>
+
