@@ -24,8 +24,11 @@ end
 gem 'rails', '4.1.6'
 
 # Usamos postgress por compatibilidad con heroku
+ gem 'pg'
+ gem 'rails_12factor'
 group :production do
  gem 'pg'
+ gem 'rails_12factor'
 end
 #Usamos sqlite3 para desarrollo y testeo
 group :development, :test do
