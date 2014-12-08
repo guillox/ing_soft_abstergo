@@ -12,6 +12,3 @@ AGUSTIN
   7/12 -- 17:30 hs.
     # Siendo usuario registrado se pueden acceder a las vistas de categorias [FIXED]
     # Agrupar "Editar usuario" y "Salir" en un Dropdown button [FIXED]
-
-  8/12 -- 01:36
-    #se supone que los usuarios y no usuarios puedan ver el listado de categorias [FIXED]
