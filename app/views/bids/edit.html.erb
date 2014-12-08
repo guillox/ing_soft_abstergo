@@ -1,2 +1,27 @@
-<h1>Bids#edit</h1>
-<p>Find me in app/views/bids/edit.html.erb</p>
+<h1>Editar Oferta</h1>
+
+<% if Bid.find(@bid).errors.any? %>
+    <div id="error_explanation">
+        <ul>
+	        <% Bid.find(@bid).errors.full_messages.each do |message| %>
+	            <li><%= message %></li>
+	        <% end %>
+        </ul>
+    </div>
+<% end %>
+
+<%= form_for @bid, url: auction_bids_path(Auction.find(Bid.find(@bid).auction_id)) do |f| %>
+	
+    <div class="form-group">
+      <%= f.label :reason, "Razón" %>
+      <%= f.text_area :reason, class: "form-control", value: Bid.find(@bid).reason %>
+    </div>  
+
+    <div class="form-group">
+      <%= f.label :price, "Precio" %>
+      <%= f.text_field :price, class: "form-control", placeholder: "Ej. 256.64", value: Bid.find(@bid).price %>
+    </div>        
+
+    <%= f.submit "Editar", class: "btn btn-primary" %>
+
+<% end %>
