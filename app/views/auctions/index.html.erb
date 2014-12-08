@@ -16,8 +16,10 @@
 	</thead>
 
 	<tbody>
-		<% Auction.all.each do |a| %>
-			<% if a.active %>
+		<% @auction.each do |a| %>
+			<% if Time.now < a.ends_at %>
+		<%# Auction.all.each do |a| %>
+			<%# if a.active %>
 				<tr>
 					<td><%= a.name %></td>
 					<td><%= truncate(a.description, length: 120, omission: '...') %></td>

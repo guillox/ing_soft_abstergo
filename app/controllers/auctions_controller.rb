@@ -12,6 +12,11 @@ class AuctionsController < ApplicationController
     #@auction = Auction.all  
   end
 
+  def finalizar
+    @auction = Auction.where("ends_at <= ?", Time.now)
+    @auction = @auction.where(user_id: current_user.id, active: true)
+  end
+
   def show
     #@bid = @auction.bids.build
     @bid = Bid.new

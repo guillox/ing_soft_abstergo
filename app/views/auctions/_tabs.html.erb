@@ -6,6 +6,7 @@
 	    <li class="<%= 'active' if current_page?('/auctions/new') %>"><%= link_to "Crear Subasta", new_auction_path %></li>
 	    <li class="<%= 'active' if current_page?('/auction/myAuctions') %>"><%= link_to "Mis Subastas", auction_myAuctions_path %></li>
 	    <li class="<%= 'active' if current_page?('/bids/index') %>"><%= link_to "Mis Ofertas", bids_path %></li>
+      <li class="<%= 'active' if current_page?('/auction/finalizar') %>"><%= link_to "Finalizar", auction_finalizar_path %></li>
 	  <% end %>
 	</ul>
 <% end %>

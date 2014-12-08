@@ -5,12 +5,14 @@ class Ability
 
     user ||= User.new  # guest user (not logged in)
 
-    can :read, Auction
+    #can :read, Auction
+    can :read, Auction do |auction| auction.active? && auction.ends_at > Time.now end
 
     if user.admin?
       can :manage, :all
     else
-      can [:read, :create, :myAuctions], Auction
+      can :read, Auction do |auction| auction.user == user && auction.active? && auction.ends_at <= Time.now end
+      can [:create, :myAuctions, :finalizar], Auction
       can [:update], Auction do |auction| auction.user == user && auction.bids.empty? end    
       can [:destroy], Auction do |auction| auction.user == user end
 
