@@ -34,7 +34,8 @@ class BidsController < ApplicationController
   def update
     @bid = Bid.find params[:id]
     @bid.update bid_params
-    redirect_to edit_bid_path(@bid)
+	redirect_to bids_path
+    #redirect_to edit_bid_path(@bid)
   end
 
   def destroy
