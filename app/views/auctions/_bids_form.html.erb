@@ -4,7 +4,7 @@
 
     	<% @auction.bids.each do |bid| %>
     		<div class="span2 well">
-        		<p><strong><%= bid.user.username %></strong> <%= bid.created_at.to_formatted_s(:db) %> <%= link_to "Elegir oferta", {}, class: "btn btn-success", data: { confirm: "¿Desea que la oferta seleccionada sea la ganadora?" } %> </p>
+        		<p><strong><%= bid.user.username %></strong> <%= bid.created_at.to_formatted_s(:db) %> <%= link_to "Elegir oferta", elegir_bid_path(bid), method: :patch, class: "btn btn-success", data: { confirm: "¿Desea que la oferta seleccionada sea la ganadora?" } %> </p>
         		<p><%= bid.reason %></p>
       		</div>
     	<% end %>
@@ -27,7 +27,7 @@
     		<p><strong><%= current_user.username %></strong> <%= current_user.get_created_at(@auction).to_formatted_s(:db) %> <span class="btn btn-success"><%= number_to_currency(current_user.get_price(@auction)) %></span>
         	<% @auction.bids.each do |bid| %>
         		<% if  current_user.id == bid.user_id %>
-            		<%= link_to "Editar Oferta", bids_edit_path(:bid => bid), class: 'btn btn-primary' %>
+            		<%= link_to "Editar Oferta", edit_bid_path(bid), class: 'btn btn-primary' %>
           		<% end %>
         	<% end %>  
       		</p>

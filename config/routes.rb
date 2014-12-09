@@ -9,11 +9,15 @@ Rails.application.routes.draw do
   resources :statistics
   
   resources :auctions do
+    # get :me, on: :collection
     resources :bids, only: :create
   end
   
-	get '/bids', to: 'bids#index'
-	get '/bids/edit', to: 'bids#edit'
+  resources :bids, only: [:index, :edit, :update] do
+    # collection => /bids/elegir => elegir_bids_path
+    # member => /bids/1/elegir => elegir_bid_path(bid)
+    patch :elegir, on: :member
+  end
 
 	get '/auction/myAuctions', to: 'auctions#myAuctions'
   get '/auction/finalizar', to: 'auctions#finalizar'

@@ -1,16 +1,16 @@
 <h1>Editar Oferta</h1>
 
-<% if Bid.find(@bid).errors.any? %>
+<% if @bid.errors.any? %>
     <div id="error_explanation">
         <ul>
-	        <% Bid.find(@bid).errors.full_messages.each do |message| %>
+	        <% @bid.errors.full_messages.each do |message| %>
 	            <li><%= message %></li>
 	        <% end %>
         </ul>
     </div>
 <% end %>
 
-<%= form_for @bid, url: auction_bids_path(Auction.find(Bid.find(@bid).auction_id)) do |f| %>
+<%= form_for @bid do |f| %>
 	
     <div class="form-group">
       <%= f.label :reason, "Razón" %>
@@ -19,7 +19,7 @@
 
     <div class="form-group">
       <%= f.label :price, "Precio" %>
-      <%= f.text_field :price, class: "form-control", placeholder: "Ej. 256.64", value: Bid.find(@bid).price %>
+      <%= f.text_field :price, class: "form-control", placeholder: "Ej. 256.64" %>
     </div>        
 
     <%= f.submit "Editar", class: "btn btn-primary" %>

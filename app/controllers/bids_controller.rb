@@ -28,20 +28,30 @@ class BidsController < ApplicationController
   end
 
   def edit
-     @bid = params[:bid]
+     @bid = Bid.find params[:id]
   end
 
   def update
-    @reason = params[:reason]
-    @price = params[:price]
+    @bid = Bid.find params[:id]
+    @bid.update bid_params
+    redirect_to edit_bid_path(@bid)
   end
 
   def destroy
   end
 
+  def elegir
+    @bid = Bid.find params[:id]
+    @auction = @bid.auction
+    @auction.active = false
+    
+    # elegir el bid para este auction
+    redirect_to @auction
+  end
+
   private
 
     def bid_params
-      params.require(:bid).permit(:reason, :price, :id)
+      params.require(:bid).permit(:reason, :price)
     end
 end

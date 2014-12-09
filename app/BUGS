@@ -1,9 +1,3 @@
-BUGS:
-
-2-app/views/bids/edit.html.erb -> error en pasaje de parametros al presionar el boton "Editar"
-
-
-
 AGUSTÍN ###################################################################################
   7/12 -- 15.30 hs.
     # Siendo usuario registrado, puedo editar subastas de otros usuarios vía URL [FIXED]
@@ -22,6 +16,10 @@ AGUSTÍN #######################################################################
     # Al ofertar, si se vuelve a la página anterior, se da la posibilidad de editar, pero
     si se acepta nuevamente, se crea una nueva oferta (no se debería poder ofertar más
     de una vez por subasta) [FIXED]
+
+  ------------------
+  9/12 -- 18:30 hs.
+    # app/views/bids/edit.html.erb -> error en pasaje de parametros al presionar el boton "Editar" [FIXED]
 
 
 ARIEL #####################################################################################
