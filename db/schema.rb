@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20141205043638) do
     t.string   "image_uid"
     t.string   "image_name"
     t.datetime "ends_at"
+    t.integer  "ganador"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"

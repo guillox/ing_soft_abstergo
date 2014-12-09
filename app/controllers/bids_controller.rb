@@ -44,6 +44,9 @@ class BidsController < ApplicationController
     @bid = Bid.find params[:id]
     @auction = @bid.auction
     @auction.active = false
+    @auction.ganador = @bid.user_id
+
+    @auction.save
     
     # elegir el bid para este auction
     redirect_to @auction
