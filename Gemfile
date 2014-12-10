@@ -16,19 +16,16 @@ gem 'cancan'
 gem 'hirb'
 # Usamos rspec para probar los modelos
 group :development, :test do
-	gem 'rspec-rails','~> 3.0.0'
-	gem 'letter_opener'
-	gem 'quiet_assets'
+  gem 'rspec-rails','~> 3.0.0'
+  gem 'letter_opener'
+  gem 'quiet_assets'
 end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 
 # Usamos postgress por compatibilidad con heroku
- gem 'pg'
- gem 'rails_12factor'
 group :production do
  gem 'pg'
- gem 'rails_12factor'
 end
 #Usamos sqlite3 para desarrollo y testeo
 group :development, :test do

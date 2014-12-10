@@ -14,15 +14,17 @@
 	<tbody>
 		<%i=0%>
 		<% Auction.all.each do |aux| %>
-			<% if aux.name.downcase().include? @nombre.downcase() %>
-				<tr>
-					<% if aux.category_id.to_i == @cat.to_i || @cat.to_i == 0 %>
-						<td><%= aux.name %></td>
-						<td><%= link_to "Ver", auction_path(aux) , class: 'btn btn-warning' %></td>
-						<%i=i+1%>
-					<% end %>
-				</tr>
-			<% end %>
+			<% if Time.now < aux.ends_at %>
+				<% if aux.name.downcase().include? @nombre.downcase() %>
+					<tr>
+						<% if aux.category_id.to_i == @cat.to_i || @cat.to_i == 0 %>
+							<td><%= aux.name %></td>
+							<td><%= link_to "Ver", auction_path(aux) , class: 'btn btn-warning' %></td>
+							<%i=i+1%>
+						<% end %>
+					</tr>
+				<% end %>
+				<% end %>
 		<% end %>
 		<% if i == 0%>
 			<td> No se encontro ninguna subasta </td>

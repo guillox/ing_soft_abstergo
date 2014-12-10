@@ -17,6 +17,15 @@ class AuctionsController < ApplicationController
     @auction = @auction.where(user_id: current_user.id, active: true)
   end
 
+  def finalizadas
+    @auction = Auction.where.not(bid_ganador: nil)
+    @auction = @auction.where(user_id: current_user.id, active: false)
+  end
+
+  def ganadas    
+    @auction = Auction.where(user_ganador: current_user.id, active: false)
+  end
+
   def show
     #@bid = @auction.bids.build
     @bid = Bid.new

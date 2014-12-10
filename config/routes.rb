@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
 	get '/auction/myAuctions', to: 'auctions#myAuctions'
   get '/auction/finalizar', to: 'auctions#finalizar'
+  get '/auction/finalizadas', to: 'auctions#finalizadas'
+  get '/auction/ganadas', to: 'auctions#ganadas'
 
   resources :categories
 

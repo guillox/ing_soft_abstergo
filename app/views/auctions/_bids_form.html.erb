@@ -1,5 +1,13 @@
 <% if current_user %>
-  	<% if current_user == @auction.user && @auction.ends_at <= Time.now %> 
+    <% if current_user == @auction.user && !@auction.active? && @auction.bid_ganador != nil %>
+      <h3>Oferta ganadora</h3>
+      <div class="span2 well">
+      <% user_ganador = User.find(@auction.user_ganador) %>
+      <% bid_ganador = Bid.find(@auction.bid_ganador) %>
+      <p><strong><%= user_ganador.username %></strong> <%= bid_ganador.created_at.to_formatted_s(:db) %></p>
+      <p><%= bid_ganador.reason %></p>
+          </div>
+  	<% elsif current_user == @auction.user && @auction.ends_at <= Time.now %> 
     	<h3>Razones de oferta</h3>
 
     	<% @auction.bids.each do |bid| %>
@@ -26,7 +34,7 @@
     	<div class="span2 well">
     		<p><strong><%= current_user.username %></strong> <%= current_user.get_created_at(@auction).to_formatted_s(:db) %> <span class="btn btn-success"><%= number_to_currency(current_user.get_price(@auction)) %></span>
         	<% @auction.bids.each do |bid| %>
-        		<% if  current_user.id == bid.user_id %>
+        		<% if  current_user.id == bid.user_id && @auction.active? %>
             		<%= link_to "Editar Oferta", edit_bid_path(bid), class: 'btn btn-primary' %>
           		<% end %>
         	<% end %>  

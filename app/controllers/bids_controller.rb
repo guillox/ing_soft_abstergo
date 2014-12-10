@@ -34,7 +34,8 @@ class BidsController < ApplicationController
   def update
     @bid = Bid.find params[:id]
     @bid.update bid_params
-    redirect_to edit_bid_path(@bid)
+	  redirect_to bids_path
+    #redirect_to edit_bid_path(@bid)
   end
 
   def destroy
@@ -44,10 +45,12 @@ class BidsController < ApplicationController
     @bid = Bid.find params[:id]
     @auction = @bid.auction
     @auction.active = false
+    @auction.bid_ganador = @bid.id
+    @auction.user_ganador = @bid.user_id
     @auction.save
     
     # elegir el bid para este auction
-    redirect_to @auction
+    redirect_to(:auctions, notice: 'Subasta finalizada con éxito!')    
   end
 
   private

@@ -16,10 +16,12 @@ ActiveRecord::Schema.define(version: 20141205043638) do
   create_table "auctions", force: true do |t|
     t.string   "name"
     t.text     "description"
-    t.boolean  "active",      default: true
+    t.boolean  "active",       default: true
     t.string   "image_uid"
     t.string   "image_name"
     t.datetime "ends_at"
+    t.integer  "bid_ganador"
+    t.integer  "user_ganador"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"
